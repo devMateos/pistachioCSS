@@ -1,4 +1,114 @@
+/* ----- TOKENS ----- */
+:root {
+  /* Font */
+  --font-heading: 'Montserrat';
+  --font-body: 'Nunito';
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-XXL: 4rem;
+  --font-size-XL: 3.2rem;
+  --font-size-L: 2.4rem;
+  --font-size-M: 2rem;
+  --font-size-S: 1.6rem;
+  --font-size-XS: 1.2rem;
+
+  /* Spacing */
+  --spacing-unit: .4rem;
+
+  --spacing-XS: var(--spacing-unit));
+  --spacing-S: calc(var(--spacing-unit) * 2);
+  --spacing-M: calc(var(--spacing-unit) * 4);
+  --spacing-L: calc(var(--spacing-unit) * 6);
+  --spacing-XL: calc(var(--spacing-unit) * 8);
+  --spacing-XXL: calc(var(--spacing-unit) * 10);
+
+  /* Colors */
+  --color-light: #F8F9FA;
+  --color-dark: #343A40;
+  --color-darker: #212529;
+  --color-accent: #639F55;
+  --color-action: #478054;
+  --color-gray: #E9ECEF;
+  --color-gray-secondary: #DEE2E6;
+  --color-accept: var(var(--color-accent));
+  --color-deny: #FF7272;
+  --color-deny-secondary: #EE0000;
+  --color-interface: var(--color-dark);
+  --color-text: var(--color-light);
+  --color-borders: var(--color-gray);
+}
+
+/* Reset styles */
+html {
+  font-size: 62.5%;   /* 1rem = 10px */
+}
 * {
-  font-family: 'Nunito';
-  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a, button {
+  text-decoration: none;
+}
+
+
+/* ----- ATOMS ----- */
+
+/* Interface Color */
+body {
+  background-color: var(--color-interface);
+}
+
+/* Links */
+a {
+  color: var(--color-text);
+}
+a:hover {
+  color: var(--color-action);
+}
+
+/* Lists */
+li {
+  list-style: none;
+}
+
+/* Text */
+a, button, div, li, p, small, form * {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-regular);
+}
+p {
+  margin-top: var(--spacing-S);
+}
+small {
+  font-size: var(--font-size-XS);
+}
+/* Headings */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: var(--font-heading);
+}
+h1, .h1 {
+  font-size: var(--font-size-XXL);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-XXL);
+}
+h2, .h2 {
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--spacing-S);
+}
+h3, .h3 {
+  font-size: var(--font-size-L);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--spacing-S);
+}
+h4, .h4 {
+  font-size: var(--font-size-M);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--spacing-S);
 }
