@@ -1,6 +1,8 @@
 /* ----- TOKENS ----- */
+
+/* CSS Variables */
 :root {
-  /* Font */
+  /* Fonts */
   --font-heading: 'Montserrat';
   --font-body: 'Nunito';
   
@@ -18,7 +20,7 @@
   /* Spacing */
   --spacing-unit: .4rem;
 
-  --spacing-XS: var(--spacing-unit));
+  --spacing-XS: var(--spacing-unit);
   --spacing-S: calc(var(--spacing-unit) * 2);
   --spacing-M: calc(var(--spacing-unit) * 4);
   --spacing-L: calc(var(--spacing-unit) * 6);
@@ -39,8 +41,15 @@
   --color-interface: var(--color-dark);
   --color-text: var(--color-light);
   --color-borders: var(--color-gray);
+
+  /* Borders */
+  --border-width: 2px;
+  --border-style: solid;
+  --border-round: var(--spacing-L);
+  --border-rounded: var(--spacing-M);
 }
 
+/* TODO: Improve Reset style. Info in this video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
 /* Reset styles */
 html {
   font-size: 62.5%;   /* 1rem = 10px */
@@ -53,9 +62,9 @@ html {
 a, button {
   text-decoration: none;
 }
-
-
-/* ----- ATOMS ----- */
+li {
+  list-style: none;
+}
 
 /* Interface Color */
 body {
@@ -70,24 +79,18 @@ a:hover {
   color: var(--color-action);
 }
 
-/* Lists */
-li {
-  list-style: none;
-}
-
 /* Text */
-a, button, div, li, p, small, form * {
+a, div, li, p, small {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-regular);
-}
-p {
   margin-top: var(--spacing-S);
 }
 small {
   font-size: var(--font-size-XS);
 }
+
 /* Headings */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: var(--font-heading);

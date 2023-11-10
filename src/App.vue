@@ -16,7 +16,7 @@ import SplashScreen from './components/SplashScreen.vue';
   <h3>heading 3</h3>
   <h4>heading 4</h4>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae in reiciendis laborum deserunt quo maxime.</p>
-  <small>small text</small>
+  <small>small text</small><br>
   <a href="www.google.com">link</a>
   <ul>
     <li>list item</li>
