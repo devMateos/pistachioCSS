@@ -28,25 +28,36 @@
   --spacing-XXL: calc(var(--spacing-unit) * 10);
 
   /* Colors */
+
+  /* Brand colors */
+  --color-brand: #98cf58;
+  /* Action colors */
+  --color-action-primary: #639F55;
+  --color-action-secondary: #478054;
+  /* Gray colors */
   --color-light: #F8F9FA;
+  --color-light-gray: #E9ECEF;
+  --color-gray: #DEE2E6;
   --color-dark: #343A40;
   --color-darker: #212529;
-  --color-accent: #639F55;
-  --color-action: #478054;
-  --color-gray: #E9ECEF;
-  --color-gray-secondary: #DEE2E6;
-  --color-accept: var(var(--color-accent));
-  --color-deny: #FF7272;
-  --color-deny-secondary: #EE0000;
-  --color-interface: var(--color-dark);
+  /* Boolean colors */
+  --color-affirmative: #11922f;
+  --color-affirmative-secondary: #61ab72;
+  --color-negative: #FF7272;
+  --color-negative-secondary: #EE0000;
+  /* Background colors */
+  --color-background-primary: var(--color-dark);
+  --color-background-secondary: var(--color-darker);
+  /* Text colors */
   --color-text: var(--color-light);
-  --color-borders: var(--color-gray);
-
+  
   /* Borders */
-  --border-width: 2px;
+  --border-color: var(--color-gray);
   --border-style: solid;
-  --border-round: var(--spacing-L);
+  --border-width: 2px;
+  --border-sharp: 0;
   --border-rounded: var(--spacing-M);
+  --border-round: var(--spacing-L);
 }
 
 /* TODO: Improve Reset style. Info in this video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
@@ -68,7 +79,7 @@ li {
 
 /* Interface Color */
 body {
-  background-color: var(--color-interface);
+  background-color: var(--color-background-primary);
 }
 
 /* Links */
@@ -76,7 +87,7 @@ a {
   color: var(--color-text);
 }
 a:hover {
-  color: var(--color-action);
+  color: var(--color-action-primary);
 }
 
 /* Text */
@@ -114,4 +125,14 @@ h4, .h4 {
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-medium);
   margin-top: var(--spacing-S);
+}
+
+/* input */
+input {
+  border: var(--border-style) var(--border-width) var(--border-color);
+  border-radius: var(--border-round);
+  outline: none;
+}
+input:focus {
+  border-color: var(--color-affirmative);
 }
