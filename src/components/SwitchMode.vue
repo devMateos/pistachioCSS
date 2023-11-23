@@ -5,6 +5,7 @@
 #change {
   background-color: blue;
   color: white;
+  cursor: pointer;
   height: fit-content;
   margin-top: 30px;
   padding: 25px;

@@ -40,9 +40,41 @@ import SwitchMode from './components/SwitchMode.vue';
       <br>
       <button class="form__button button--primary">Button</button>
     </form>
+    <a href="" class="button button--secondary">CTA</a>
+    <a href="" class="button button--negative">Reset</a>
 
+    <nav>
+      <ul class="header__nav">
+        <li class="navbar__button navbar__button--active"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+      </ul>
+    </nav>
+
+    <a class="nav-button">
+      <svg class="nav-button__icon" width="12" height="12" viewBox="0 0 11 10" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.3333 5L0.999919 5M0.999919 5L4.99992 1M0.999919 5L4.99992 9" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      Back
+    </a>
+    <a class="nav-button">
+      <svg class="nav-button__icon" width="12" height="12" viewBox="0 0 11 10" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 5H10.3333M10.3333 5L6.33333 9M10.3333 5L6.33333 1" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      Next
+    </a>
     <SwitchMode />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.header__nav {
+  display: flex;
+  gap: var(--spacing-L);
+}
+</style>

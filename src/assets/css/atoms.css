@@ -2,14 +2,15 @@
 
 /* Links */
 a {
-  color: var(--color-text);
+  color: var(--color-action);
 }
 a:hover {
-  color: var(--color-action-primary);
+  color: var(--color-action-secondary);
+  cursor: pointer;
 }
 
 /* Text */
-a, div, label, li, p, small {
+div, label, li, p, small {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-size-S);
@@ -59,9 +60,9 @@ h4, .h4 {
   appearance: auto;
   border: var(--border-style) var(--border-width) var(--border-color);
   border-radius: var(--border-round);
-  height: 3.2rem;
+  height: var(--font-size-XL);
   padding: 0;
-  width: 3.2rem;
+  width: var(--font-size-XL);
 }
 .form__input-color::-webkit-color-swatch-wrapper {
   padding: 0;
@@ -94,26 +95,80 @@ h4, .h4 {
   color: var(--color-gray);
 }
 .form__button {
+  border: var(--border-style) var(--border-width) transparent;
   border-radius: var(--border-round);
+  cursor: pointer;
   font-family: var(--font-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-XS) var(--spacing-S);
 }
 
+/* Buttons */
+.button {
+  border-radius: var(--border-round);
+  display: flex;
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-bold);
+  justify-content: center;
+  margin: var(--spacing-S) 0;
+  min-width: 9.6rem;
+  padding: var(--spacing-XS) var(--spacing-S);
+  width: fit-content;
+}
 .button--primary {
   background-color: var(--color-action);
-  border: none;
   color: var(--color-light);
 }
 .button--primary:hover {
   background-color: var(--color-action-secondary);
 }
 .button--secondary {
+  background-color: var(--color-background-primary);
   border: var(--border-style) var(--border-width) var(--color-action);
   color: var(--color-action);
 }
 .button--secondary:hover {
   border-color: var(--color-action-secondary);
   color: var(--color-action-secondary);
+}
+.button--negative {
+  background-color: var(--color-background-primary);
+  border: var(--border-style) var(--border-width) var(--color-negative);
+  color: var(--color-negative);
+}
+.button--negative:hover {
+  border-color: var(--color-negative-secondary);
+  color: var(--color-negative-secondary);
+}
+
+/* Nav Buttons */
+.navbar__button a {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-bold);
+}
+.navbar__button:hover a {
+  color: var(--color-action-secondary);
+}
+.navbar__button--active a {
+  color: var(--color-action);
+}
+
+.nav-button {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  gap: var(--spacing-XS);
+}
+.nav-button__icon {
+  stroke: var(--color-text);
+}
+.nav-button:hover * {
+  color: var(--color-action-secondary);
+}
+.nav-button:hover .nav-button__icon {
+  stroke: var(--color-action-secondary);
 }
