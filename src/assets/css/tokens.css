@@ -32,8 +32,8 @@
   /* Brand colors */
   --color-brand: #98cf58;
   /* Action colors */
-  --color-action-primary: #639F55;
-  --color-action-secondary: #478054;
+  --color-green-primary: #639F55;
+  --color-green-secondary: #478054;
   /* Gray colors */
   --color-light: #F8F9FA;
   --color-light-gray: #E9ECEF;
@@ -45,14 +45,8 @@
   --color-affirmative-secondary: #61ab72;
   --color-negative: #FF7272;
   --color-negative-secondary: #EE0000;
-  /* Background colors */
-  --color-background-primary: var(--color-dark);
-  --color-background-secondary: var(--color-darker);
-  /* Text colors */
-  --color-text: var(--color-light);
-  
+
   /* Borders */
-  --border-color: var(--color-gray);
   --border-style: solid;
   --border-width: 2px;
   --border-sharp: 0;

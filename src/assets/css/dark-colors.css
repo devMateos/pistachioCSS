@@ -1,0 +1,12 @@
+.dark-mode {
+  /* Background colors */
+  --color-background-primary: var(--color-dark);
+  --color-background-secondary: var(--color-darker);
+  /* Text colors */
+  --color-text: var(--color-light);
+  /* Affirmative colors */
+  --color-action: var(--color-green-secondary);
+  --color-action-secondary: var(--color-green-primary);
+  /* Border colors */
+  --border-color: var(--color-gray);
+}

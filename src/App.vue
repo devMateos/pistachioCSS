@@ -1,7 +1,6 @@
 <script setup>
 import SplashScreen from './components/SplashScreen.vue';
-
-
+import SwitchMode from './components/SwitchMode.vue';
 </script>
 
 <template>
@@ -26,20 +25,23 @@ import SplashScreen from './components/SplashScreen.vue';
     </ul>
     <form action="">
       <label for="form">form label</label><br>
-      <input type="text" name="" id="" placeholder="input de ejemplo">
+      <input type="text" name="" id="" placeholder="input de ejemplo" class="form__input-item">
       <br>
-      <!-- The second value will be selected initially -->
-      <select name="select">
+      <input type="number" name="" id="" class="form__input-item">
+      <br>
+      <select name="select" class="form__input-item">
         <option value="value1">Value 1</option>
         <option value="value2" selected>Value 2</option>
         <option value="value3">Value 3</option>
       </select>
       <br>
-      <input type="color" name="" id="">
-      <input type="checkbox" name="" id="">
+      <input type="color" name="" id="" value="#98cf58" class="form__input-color">
+      <input type="checkbox" name="" id="" class="form__input-checkbox">
       <br>
-      <button>Button</button>
+      <button class="form__button button--primary">Button</button>
     </form>
+
+    <SwitchMode />
   </main>
 </template>
 

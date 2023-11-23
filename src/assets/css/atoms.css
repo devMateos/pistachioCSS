@@ -48,41 +48,72 @@ h4, .h4 {
 
 /* FORMS */
 /* input */
-input, textarea, select {
+.form__input-item {     /* inputs (text, number, etc.), textarea, select */
   border: var(--border-style) var(--border-width) var(--border-color);
   border-radius: var(--border-round);
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
   width: 15.2rem;
 }
-input:focus, textarea:focus, select:focus {
-  border-color: var(--color-affirmative);
-}
-input:disabled, textarea:disabled, select:disabled {
-  background-color: var(--color-dark);
-  color: var(--color-gray);
-}
-input[type='text'] {
-}
-input[type='color'] {
+.form__input-color {
+  appearance: auto;
+  border: var(--border-style) var(--border-width) var(--border-color);
+  border-radius: var(--border-round);
   height: 3.2rem;
   padding: 0;
   width: 3.2rem;
 }
-input[type='checkbox'] {
+.form__input-color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.form__input-color::-webkit-color-swatch {
+  border-radius: var(--border-round);
+}
+.form__input-checkbox {
   appearance: none;
   background-image: url('/src/assets/icons/checkbox-not-checked.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--color-negative);
-  border-color: var(--color-negative-secondary);
+  border: var(--border-style) var(--border-width) var(--color-negative-secondary);
   border-radius: var(--border-round);
   height: 2.4rem;
   width: 2.4rem;
 }
-input[type='checkbox']:checked {
+.form__input-checkbox:checked {
   border-color: var(--color-affirmative);
   background-color: var(--color-affirmative);
   background-image: url('/src/assets/icons/checkbox-checked.svg');
+}
+.form__input-item:focus, .form__input-color:focus {
+  border-color: var(--color-affirmative);
+}
+.form__input-item:disabled, .form__input-color:disabled {
+  background-color: var(--color-dark);
+  color: var(--color-gray);
+}
+.form__button {
+  border-radius: var(--border-round);
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-XS) var(--spacing-S);
+}
+
+.button--primary {
+  background-color: var(--color-action);
+  border: none;
+  color: var(--color-light);
+}
+.button--primary:hover {
+  background-color: var(--color-action-secondary);
+}
+.button--secondary {
+  border: var(--border-style) var(--border-width) var(--color-action);
+  color: var(--color-action);
+}
+.button--secondary:hover {
+  border-color: var(--color-action-secondary);
+  color: var(--color-action-secondary);
 }
