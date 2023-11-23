@@ -58,10 +58,11 @@
   --border-sharp: 0;
   --border-rounded: var(--spacing-M);
   --border-round: var(--spacing-L);
-}
 
+}
+  
 /* TODO: Improve Reset style. Info in this video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
-/* Reset styles */
+/* RESET STYLES */
 html {
   font-size: 62.5%;   /* 1rem = 10px */
 }
@@ -82,57 +83,10 @@ body {
   background-color: var(--color-background-primary);
 }
 
-/* Links */
-a {
-  color: var(--color-text);
+/* Spacing */
+main {
+  padding: 0 var(--spacing-M);
 }
-a:hover {
-  color: var(--color-action-primary);
-}
-
-/* Text */
-a, div, li, p, small {
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-regular);
-  margin-top: var(--spacing-S);
-}
-small {
-  font-size: var(--font-size-XS);
-}
-
-/* Headings */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: var(--font-heading);
-}
-h1, .h1 {
-  font-size: var(--font-size-XXL);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-XXL);
-}
-h2, .h2 {
-  font-size: var(--font-size-XL);
-  font-weight: var(--font-weight-bold);
-  margin-top: var(--spacing-S);
-}
-h3, .h3 {
-  font-size: var(--font-size-L);
-  font-weight: var(--font-weight-medium);
-  margin-top: var(--spacing-S);
-}
-h4, .h4 {
-  font-size: var(--font-size-M);
-  font-weight: var(--font-weight-medium);
-  margin-top: var(--spacing-S);
-}
-
-/* input */
-input {
-  border: var(--border-style) var(--border-width) var(--border-color);
-  border-radius: var(--border-round);
-  outline: none;
-}
-input:focus {
-  border-color: var(--color-affirmative);
+section {
+  padding: var(--spacing-M) 0;
 }

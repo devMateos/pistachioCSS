@@ -1,0 +1,88 @@
+/* ATOMS */
+
+/* Links */
+a {
+  color: var(--color-text);
+}
+a:hover {
+  color: var(--color-action-primary);
+}
+
+/* Text */
+a, div, label, li, p, small {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-regular);
+  padding: var(--spacing-XS) 0;
+}
+small {
+  font-size: var(--font-size-XS);
+}
+
+/* Headings */
+h1, .h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-XXL);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-L) 0;
+}
+h2, .h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-XS) 0;
+}
+h3, .h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-L);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-XS) 0;
+}
+h4, .h4 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-M);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-XS) 0;
+}
+
+/* FORMS */
+/* input */
+input, textarea, select {
+  border: var(--border-style) var(--border-width) var(--border-color);
+  border-radius: var(--border-round);
+  outline: none;
+  padding: var(--spacing-XS) var(--spacing-S);
+  width: 15.2rem;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-affirmative);
+}
+input:disabled, textarea:disabled, select:disabled {
+  background-color: var(--color-dark);
+  color: var(--color-gray);
+}
+input[type='text'] {
+}
+input[type='color'] {
+  height: 3.2rem;
+  padding: 0;
+  width: 3.2rem;
+}
+input[type='checkbox'] {
+  appearance: none;
+  background-image: url('/src/assets/icons/checkbox-not-checked.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-negative);
+  border-color: var(--color-negative-secondary);
+  border-radius: var(--border-round);
+  height: 2.4rem;
+  width: 2.4rem;
+}
+input[type='checkbox']:checked {
+  border-color: var(--color-affirmative);
+  background-color: var(--color-affirmative);
+  background-image: url('/src/assets/icons/checkbox-checked.svg');
+}
