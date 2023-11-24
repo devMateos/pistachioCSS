@@ -10,7 +10,7 @@ a:hover {
 }
 
 /* Text */
-div, label, li, p, small {
+label, li, p, small {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-size-S);
@@ -20,7 +20,12 @@ div, label, li, p, small {
 small {
   font-size: var(--font-size-XS);
 }
-
+div {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-regular);
+}
 /* Headings */
 h1, .h1 {
   font-family: var(--font-heading);
