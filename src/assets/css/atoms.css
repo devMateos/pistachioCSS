@@ -48,7 +48,7 @@ h4, .h4 {
 }
 
 /* FORMS */
-/* input */
+/* Input */
 .form__input-item {     /* inputs (text, number, etc.), textarea, select */
   border: var(--border-style) var(--border-width) var(--border-color);
   border-radius: var(--border-round);
@@ -56,6 +56,7 @@ h4, .h4 {
   padding: var(--spacing-XS) var(--spacing-S);
   width: 15.2rem;
 }
+/* Input color */
 .form__input-color {
   appearance: auto;
   border: var(--border-style) var(--border-width) var(--border-color);
@@ -64,12 +65,20 @@ h4, .h4 {
   padding: 0;
   width: var(--font-size-XL);
 }
+.form__input-item:focus, .form__input-color:focus {
+  border-color: var(--color-affirmative);
+}
+.form__input-item:disabled, .form__input-color:disabled {
+  background-color: var(--color-dark);
+  color: var(--color-gray);
+}
 .form__input-color::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 .form__input-color::-webkit-color-swatch {
   border-radius: var(--border-round);
 }
+/* Input checkbox */
 .form__input-checkbox {
   appearance: none;
   background-image: url('/src/assets/icons/checkbox-not-checked.svg');
@@ -87,13 +96,25 @@ h4, .h4 {
   background-color: var(--color-affirmative);
   background-image: url('/src/assets/icons/checkbox-checked.svg');
 }
-.form__input-item:focus, .form__input-color:focus {
+/* Input radio */
+.form__input-radio {
+  appearance: none;
+  border: var(--border-style) var(--border-width) var(--border-color);
+  border-radius: var(--border-round);
+  margin: 0 var(--spacing-XS);
+  height: var(--spacing-M);
+  width: var(--spacing-M);
+}
+.form__input-radio:focus {
   border-color: var(--color-affirmative);
 }
-.form__input-item:disabled, .form__input-color:disabled {
-  background-color: var(--color-dark);
-  color: var(--color-gray);
+.form__input-radio:checked {
+  background-color: var(--color-affirmative-secondary);
 }
+.form__input-radio:indeterminate {
+  background-color: var(--color-negative);
+}
+
 .form__button {
   border: var(--border-style) var(--border-width) transparent;
   border-radius: var(--border-round);

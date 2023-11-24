@@ -38,6 +38,25 @@ import SwitchMode from './components/SwitchMode.vue';
       <input type="color" name="" id="" value="#98cf58" class="form__input-color">
       <input type="checkbox" name="" id="" class="form__input-checkbox">
       <br>
+      <div>
+        <legend>Select a maintenance drone:</legend>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="huey" name="drone" value="huey" checked />
+          <label for="huey">Huey</label>
+        </div>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="dewey" name="drone" value="dewey" />
+          <label for="dewey">Dewey</label>
+        </div>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="louie" name="drone" value="louie" />
+          <label for="louie">Louie</label>
+        </div>
+      </div>
+
       <button class="form__button button--primary">Button</button>
     </form>
     <a href="" class="button button--secondary">CTA</a>
