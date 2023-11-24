@@ -114,7 +114,7 @@ h4, .h4 {
 .form__input-radio:indeterminate {
   background-color: var(--color-negative);
 }
-
+/* Form buttons */
 .form__button {
   border: var(--border-style) var(--border-width) transparent;
   border-radius: var(--border-round);
