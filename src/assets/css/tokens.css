@@ -1,6 +1,23 @@
 /* ----- TOKENS ----- */
 
 /* CSS Variables */
+/* Responsive measures */
+
+@media (max-width: 768px) {
+  :root {
+    --responsive-multiplier-unit: .75;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  :root {
+    --responsive-multiplier-unit: .825;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --responsive-multiplier-unit: 1;
+  }
+}
 :root {
   /* Fonts */
   --font-heading: 'Montserrat';
@@ -10,15 +27,15 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --font-size-XXL: 4rem;
-  --font-size-XL: 3.2rem;
-  --font-size-L: 2.4rem;
-  --font-size-M: 2rem;
-  --font-size-S: 1.6rem;
-  --font-size-XS: 1.2rem;
+  --font-size-XXL: calc(var(--responsive-multiplier-unit) * 4rem);
+  --font-size-XL: calc(var(--responsive-multiplier-unit) * 3.2rem);
+  --font-size-L: calc(var(--responsive-multiplier-unit) * 2.4rem);
+  --font-size-M: calc(var(--responsive-multiplier-unit) * 2rem);
+  --font-size-S: calc(var(--responsive-multiplier-unit) * 1.6rem);
+  --font-size-XS: calc(var(--responsive-multiplier-unit) * 1.2rem);
 
   /* Spacing */
-  --spacing-unit: .4rem;
+  --spacing-unit: calc(var(--responsive-multiplier-unit) * .4rem);
 
   --spacing-XS: var(--spacing-unit);
   --spacing-S: calc(var(--spacing-unit) * 2);
@@ -54,6 +71,7 @@
   --border-round: var(--spacing-L);
 
 }
+
   
 /* TODO: Improve Reset style. Info in this video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
 /* RESET STYLES */
@@ -79,7 +97,7 @@ body {
 
 /* Spacing */
 main {
-  padding: 0 var(--spacing-M);
+  padding: 0 var(--spacing-XL);
 }
 section {
   padding: var(--spacing-M) 0;

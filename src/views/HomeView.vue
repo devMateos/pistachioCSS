@@ -1,13 +1,13 @@
 <script setup>
-import SwitchMode from '@/components/SwitchMode.vue';
+import Header from '@/components/organisms/Header.vue';
 </script>
 
 <template>
+  <Header />
   <div>
     <router-link to="/">Home</router-link><br>
     <router-link to="/init">Init</router-link>
   </div>
-  <router-view />
   <main>
     <h1>heading 1</h1>
     <h2>heading 2</h2>
@@ -85,14 +85,8 @@ import SwitchMode from '@/components/SwitchMode.vue';
       </svg>
       Next
     </a>
-    <SwitchMode />
   </main>
 </template>
 
-<style scoped>
-.header__nav {
-  display: flex;
-  gap: var(--spacing-L);
-}
-</style>
+<style scoped></style>
 
