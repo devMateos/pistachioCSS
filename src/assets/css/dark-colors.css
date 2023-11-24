@@ -8,5 +8,5 @@
   --color-action: var(--color-green-secondary);
   --color-action-secondary: var(--color-green-primary);
   /* Border colors */
-  --border-color: var(--color-gray);
+  --border-color: var(--color-light-gray);
 }

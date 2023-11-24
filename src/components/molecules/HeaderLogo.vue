@@ -13,6 +13,7 @@ function reload() {
 .header__logo {
   cursor: pointer;
   display: flex;
+  gap: var(--spacing-XS);
   height: 100%;
 }
 </style>
