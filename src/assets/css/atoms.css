@@ -55,7 +55,7 @@ h4, .h4 {
 /* FORMS */
 /* Input */
 .form__input-item {     /* inputs (text, number, etc.), textarea, select */
-  border: var(--border-style) var(--border-width) var(--border-color);
+  border: var(--border-standard);
   border-radius: var(--border-round);
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
@@ -64,7 +64,7 @@ h4, .h4 {
 /* Input color */
 .form__input-color {
   appearance: auto;
-  border: var(--border-style) var(--border-width) var(--border-color);
+  border: var(--border-standard);
   border-radius: var(--border-round);
   height: var(--font-size-XL);
   padding: 0;
@@ -104,7 +104,7 @@ h4, .h4 {
 /* Input radio */
 .form__input-radio {
   appearance: none;
-  border: var(--border-style) var(--border-width) var(--border-color);
+  border: var(--border-standard);
   border-radius: var(--border-round);
   margin: 0 var(--spacing-XS);
   height: var(--spacing-M);
@@ -138,7 +138,6 @@ h4, .h4 {
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
   justify-content: center;
-  margin: var(--spacing-S) 0;
   min-width: 9.6rem;
   padding: var(--spacing-XS) var(--spacing-S);
   width: fit-content;
@@ -149,6 +148,7 @@ h4, .h4 {
 }
 .button--primary:hover {
   background-color: var(--color-action-secondary);
+  color: var(--color-light);
 }
 .button--secondary {
   background-color: var(--color-background-primary);
