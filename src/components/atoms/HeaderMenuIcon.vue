@@ -1,16 +1,10 @@
 <script setup>
-import { defineEmits, ref } from "vue";
-const emit = defineEmits(['click']);
+import { ref } from "vue";
 
 let headerMenuOpen = ref(false);
-
-const toggleMenu = () => {
-  headerMenuOpen.value = !headerMenuOpen.value
-  emit('click', headerMenuOpen.value);
-}
 </script>
 <template>
-  <button @click='toggleMenu'>
+  <button @click='headerMenuOpen = !headerMenuOpen'>
     <svg v-if="headerMenuOpen" class="header-menu__icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd"

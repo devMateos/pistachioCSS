@@ -1,34 +1,23 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 import HeaderLogo from '@/components/molecules/HeaderLogo.vue';
 import HeaderNav from '@/components/molecules/HeaderNav.vue';
 import SwitchModeButton from '@/components/atoms/SwitchModeButton.vue';
 import HeaderMenuIcon from '../atoms/HeaderMenuIcon.vue';
 
-const mobileScreen = window.innerWidth < 778;
-console.log(mobileScreen, innerWidth);
-let headerMenuOpen = ref();
-const toggleMenu = (data) => {
-  headerMenuOpen.value = data;
+let isMenuActive = ref(false);
+
+let toggleMenu = () => {
+  isMenuActive.value = !isMenuActive.value;
 }
 
-handleResize();
-window.addEventListener('resize', handleResize);
-
-function handleResize() {
-  if (mobileScreen) {
-    headerMenuOpen.value = false;
-  } else {
-    headerMenuOpen.value = true;
-  }
-}
 </script>
 <template>
   <header>
     <HeaderLogo />
     <HeaderMenuIcon @click="toggleMenu" />
-    <div v-show="!mobileScreen || (mobileScreen && headerMenuOpen)" class="header__right-column">
+    <div :class="{ 'header__menu': true, 'header__mobile-menu--active': isMenuActive }">
       <HeaderNav />
       <SwitchModeButton />
     </div>
@@ -46,11 +35,11 @@ header {
   position: relative;
 }
 
-.header__right-column {
+.header__menu {
   align-items: center;
   background-color: var(--color-background-primary);
   border-bottom: var(--border-standard);
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: var(--spacing-XL);
   height: fit-content;
@@ -61,9 +50,14 @@ header {
   width: 100vw;
 }
 
+@media(max-width: 777px) {
+  .header__mobile-menu--active {
+    display: flex;
+  }
+}
 
 @media(min-width: 778px) {
-  .header__right-column {
+  .header__menu {
     border: none;
     display: flex;
     flex-direction: row;
