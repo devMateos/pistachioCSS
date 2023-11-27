@@ -90,10 +90,16 @@ const showMenu = (data) => {
 }
 @media(min-width: 778px) {
   .left-aside {
-    border-left: var(--border-standard);
+    border-right: var(--border-standard);
   }
   .side-navmenu {
     display: flex;
+  }
+  .side-navmenu .nav-menu__category > ul {
+    display: none;
+  }
+  .side-navmenu .navbar__button--active > ul {
+    display: block;
   }
 }
 </style>

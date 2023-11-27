@@ -131,18 +131,17 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
       </svg>
       Next
     </a>
-  </main>
-</div>
+    </main>
+  </div>
 </template>
 
-<style scoped>
-@media(min-width: 778px) {
-  .grid-layout{
+<style>
+.grid-layout{
   display: grid;
   grid-template-areas:
-    "header header header header header header header header header header header header"
-    "sidebar sidebar main main main main main main main main main main";
-  grid-template-columns: repeat(12, 1fr);
+  "header"
+  "sidebar"
+  "main";
   grid-template-rows: auto;
   height: 100vh;
   position: fixed;
@@ -153,12 +152,21 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
 }
 .l-sidebar {
   grid-area: sidebar;
-  overflow-y: scroll;
 }
 .l-main {
   grid-area: main;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+@media(min-width: 778px) {
+  .grid-layout{
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    "sidebar sidebar main main main main main main main main main main";
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+  }
+  .l-sidebar {
+    overflow-y: auto;
   }
 }
 </style>
-

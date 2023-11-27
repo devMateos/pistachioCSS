@@ -200,3 +200,11 @@ h4, .h4 {
 }
 
 /* Scrollbar */
+*::-webkit-scrollbar {
+  width: var(--spacing-S);
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: var(--border-round);
+}
