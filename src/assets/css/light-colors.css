@@ -9,6 +9,4 @@
   --color-action-secondary: var(--color-green-secondary);
   /* Border colors */
   --border-color: var(--color-gray);
-  /* Scrollbar color */
-  --scrollbar-color: var(--color-light-gray);
 }
