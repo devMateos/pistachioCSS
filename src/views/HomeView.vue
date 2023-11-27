@@ -1,6 +1,7 @@
 <script setup>
 import Header from '@/components/organisms/Header.vue';
 import SideMenu from '@/components/organisms/SideMenu.vue';
+import StartView from './StartView.vue';
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
     <Header class="l-header"/>
     <SideMenu class="l-sidebar"/>
     <main class="l-main">
+      <StartView/>
     <!-- <h1>heading 1</h1>
     <h2>heading 2</h2>
     <h3>heading 3</h3>

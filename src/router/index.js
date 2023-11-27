@@ -5,7 +5,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: HomeView },
-    { path: '/init', component: import('../views/InitView.vue') },
   ]
 })
 

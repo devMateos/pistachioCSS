@@ -49,19 +49,19 @@
   /* Brand colors */
   --color-brand: #98cf58;
   /* Action colors */
-  --color-green-primary: #639F55;
-  --color-green-secondary: #478054;
+  --color-accent-primary: #639F55;
+  --color-accent-secondary: #478054;
+  /* Boolean colors */
+  --color-affirmative: #11922f;
+  --color-affirmative-secondary: #61ab72;
+  --color-negative: #FF7272;
+  --color-negative-secondary: #EE0000;
   /* Gray colors */
   --color-light: #F8F9FA;
   --color-light-gray: #E9ECEF;
   --color-gray: #DEE2E6;
   --color-dark: #343A40;
   --color-darker: #212529;
-  /* Boolean colors */
-  --color-affirmative: #11922f;
-  --color-affirmative-secondary: #61ab72;
-  --color-negative: #FF7272;
-  --color-negative-secondary: #EE0000;
 
   /* Borders */
   --border-style: solid;
