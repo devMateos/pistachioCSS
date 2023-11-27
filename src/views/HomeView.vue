@@ -1,9 +1,11 @@
 <script setup>
 import Header from '@/components/organisms/Header.vue';
+import SideMenu from '@/components/organisms/SideMenu.vue';
 </script>
 
 <template>
   <Header />
+  <SideMenu />
   <div>
     <router-link to="/">Home</router-link><br>
     <router-link to="/init">Init</router-link>
