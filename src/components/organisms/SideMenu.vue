@@ -90,6 +90,7 @@ const showMenu = (data) => {
 }
 @media(min-width: 778px) {
   .left-aside {
+    border-bottom: none;
     border-right: var(--border-standard);
   }
   .side-navmenu {

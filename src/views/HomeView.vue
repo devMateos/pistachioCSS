@@ -8,7 +8,7 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
     <Header class="l-header"/>
     <SideMenu class="l-sidebar"/>
     <main class="l-main">
-    <h1>heading 1</h1>
+    <!-- <h1>heading 1</h1>
     <h2>heading 2</h2>
     <h3>heading 3</h3>
     <h4>heading 4</h4>
@@ -130,7 +130,7 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
           stroke-linejoin="round" />
       </svg>
       Next
-    </a>
+    </a> -->
     </main>
   </div>
 </template>
@@ -142,8 +142,6 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
   "header"
   "sidebar"
   "main";
-  grid-template-rows: auto;
-  height: 100vh;
   position: fixed;
   width: 100vw;
 }
@@ -163,7 +161,9 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
     "header header header header header header header header header header header header"
     "sidebar sidebar main main main main main main main main main main";
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
     height: 100vh;
+
   }
   .l-sidebar {
     overflow-y: auto;
