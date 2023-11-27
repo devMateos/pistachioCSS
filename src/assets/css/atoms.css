@@ -198,3 +198,5 @@ h4, .h4 {
 .nav-button:hover .nav-button__icon {
   stroke: var(--color-action-secondary);
 }
+
+/* Scrollbar */

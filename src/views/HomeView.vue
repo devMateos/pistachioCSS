@@ -4,13 +4,10 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
 </script>
 
 <template>
-  <Header />
-  <SideMenu />
-  <div>
-    <router-link to="/">Home</router-link><br>
-    <router-link to="/init">Init</router-link>
-  </div>
-  <main>
+  <div class="grid-layout">
+    <Header class="l-header"/>
+    <SideMenu class="l-sidebar"/>
+    <main class="l-main">
     <h1>heading 1</h1>
     <h2>heading 2</h2>
     <h3>heading 3</h3>
@@ -23,6 +20,53 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
       <li>list item</li>
       <li>list item</li>
     </ul>
+    <form action="">
+      <label for="form">form label</label><br>
+      <input type="text" name="" id="" placeholder="input de ejemplo" class="form__input-item">
+      <br>
+      <input type="number" name="" id="" class="form__input-item">
+      <br>
+      <select name="select" class="form__input-item">
+        <option value="value1">Value 1</option>
+        <option value="value2" selected>Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+      <br>
+      <input type="color" name="" id="" value="#98cf58" class="form__input-color">
+      <input type="checkbox" name="" id="" class="form__input-checkbox">
+      <br>
+      <div>
+        <legend>Select a maintenance drone:</legend>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="huey" name="drone" value="huey" checked />
+          <label for="huey">Huey</label>
+        </div>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="dewey" name="drone" value="dewey" />
+          <label for="dewey">Dewey</label>
+        </div>
+
+        <div>
+          <input class="form__input-radio" type="radio" id="louie" name="drone" value="louie" />
+          <label for="louie">Louie</label>
+        </div>
+      </div>
+
+      <button class="form__button button--primary">Button</button>
+    </form>
+    <a href="" class="button button--secondary">CTA</a>
+    <a href="" class="button button--negative">Reset</a>
+
+    <nav>
+      <ul class="header__nav">
+        <li class="navbar__button navbar__button--active"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+        <li class="navbar__button"><a href="">headerbtn</a></li>
+      </ul>
+    </nav>
     <form action="">
       <label for="form">form label</label><br>
       <input type="text" name="" id="" placeholder="input de ejemplo" class="form__input-item">
@@ -88,7 +132,33 @@ import SideMenu from '@/components/organisms/SideMenu.vue';
       Next
     </a>
   </main>
+</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media(min-width: 778px) {
+  .grid-layout{
+  display: grid;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "sidebar sidebar main main main main main main main main main main";
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+}
+.l-header {
+  grid-area: header;
+}
+.l-sidebar {
+  grid-area: sidebar;
+  overflow-y: scroll;
+}
+.l-main {
+  grid-area: main;
+  overflow-y: scroll;
+  }
+}
+</style>
 

@@ -65,6 +65,7 @@ const showMenu = (data) => {
 <style>
 .left-aside {
   border-bottom: var(--border-style) .1rem var(--color-light-gray);
+  background-color: (--color-background-primary);
 }
 
 .side-navmenu {
@@ -86,5 +87,13 @@ const showMenu = (data) => {
 .nav-menu__item{
   font-weight: var(--font-weight-medium);
   margin: var(--spacing-S) 0 0 var(--spacing-S);
+}
+@media(min-width: 778px) {
+  .left-aside {
+    border-left: var(--border-standard);
+  }
+  .side-navmenu {
+    display: flex;
+  }
 }
 </style>

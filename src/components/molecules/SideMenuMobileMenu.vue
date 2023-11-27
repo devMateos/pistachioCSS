@@ -1,5 +1,5 @@
 <script setup>
-import { defineEmits, ref } from 'vue';
+import { ref } from 'vue';
 let isSideMenuActive = ref(false);
 
 const emit = defineEmits('open-menu');
