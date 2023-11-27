@@ -170,16 +170,16 @@ h4, .h4 {
 }
 
 /* Nav Buttons */
-.navbar__button a {
+.navbar__button > a {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
 }
-.navbar__button:hover a {
+.navbar__button > a:hover {
   color: var(--color-action-secondary);
 }
-.navbar__button--active a {
+.navbar__button--active > a {
   color: var(--color-action);
 }
 

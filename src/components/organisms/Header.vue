@@ -48,6 +48,7 @@ header {
   position: absolute;
   top: 8rem;
   width: 100vw;
+  z-index: 1;
 }
 
 @media(max-width: 777px) {
