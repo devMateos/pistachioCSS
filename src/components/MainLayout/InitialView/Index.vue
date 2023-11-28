@@ -90,22 +90,22 @@ let lightColors = [
 let darkColors = [
   {
     cssVariable: '--color-background-primary',
-    colorCode: 'var(--color-dark)',
+    colorCode: findColor('--color-dark'),
   }, {
     cssVariable: '--color-background-secondary',
-    colorCode: 'var(--color-darker)',
+    colorCode: findColor('--color-darker'),
   }, {
     cssVariable: '--color-text',
-    colorCode: 'var(--color-light)',
+    colorCode: findColor('--color-light'),
   }, {
     cssVariable: '--color-action',
-    colorCode: 'var(--color-accent-secondary)',
+    colorCode: findColor('--color-accent-secondary'),
   }, {
     cssVariable: '--color-action-secondary',
-    colorCode: 'var(--color-accent-primary)',
+    colorCode: findColor('--color-accent-primary'),
   }, {
     cssVariable: '--border-color',
-    colorCode: 'var(--color-light-gray)',
+    colorCode: findColor('--color-light-gray'),
   },
 ];
 
