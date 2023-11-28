@@ -30,6 +30,7 @@ const props = defineProps({
         >
           <input type="color" class="form__input-color"
           :value="`${color.colorCode}`"
+          @input="color.colorCode = $event.target.value"
           >
           <RemoveButton/>
         </div>
@@ -62,7 +63,6 @@ label.h3 {
   grid-template-columns: repeat(3, 1fr);
 }
 .card__color-item {
-  align-items: center;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-XS);
@@ -70,6 +70,9 @@ label.h3 {
 .form__input-color {
   height: 8rem;
   width: 100%;
+}
+.remove-button {
+  margin-left: var(--spacing-S);
 }
 .add-button {
   position: relative;
