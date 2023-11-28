@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import InitialForm from './InitialForm.vue';
 
 let colors = ref([{
   /* BRAND COLORS */
@@ -52,32 +53,41 @@ let colors = ref([{
     },
   ],
 }]);
-console.log(colors.value[0]);
+
+
+const findColor = (colorVariable) => {
+  for (let key in colors.value[0]) {
+    let color = colors.value[0][key].find(color => color.cssVariable === colorVariable);
+    if (color) {
+      return color.colorCode;
+    }
+  }
+  return undefined;
+}
 /* LIGHT MODE COLORS */
-/* let lightColors = ref([
+let lightColors = [
   {
     cssVariable: '--color-background-primary',
-    colorCode: 'var(--color-light)',
+    colorCode: findColor('--color-light'),
   }, {
     cssVariable: '--color-background-secondary',
-    colorCode: 'var(--color-light-gray)',
+    colorCode: findColor('--color-light-gray'),
   }, {
     cssVariable: '--color-text',
-    colorCode: 'var(--color-darker)',
+    colorCode: findColor('--color-darker'),
   }, {
     cssVariable: '--color-action',
-    colorCode: 'var(--color-accent-primary)',
+    colorCode: findColor('--color-accent-primary'),
   }, {
     cssVariable: '--color-action-secondary',
-    colorCode: 'var(--color-accent-secondary)',
+    colorCode: findColor('--color-accent-secondary'),
   }, {
     cssVariable: '--border-color',
-    colorCode: 'var(--color-gray)',
+    colorCode: findColor('--color-gray'),
   },
-]); */
-
+];
 /* DARK MODE COLORS */
-/* let darkColors = ref([
+let darkColors = [
   {
     cssVariable: '--color-background-primary',
     colorCode: 'var(--color-dark)',
@@ -97,28 +107,43 @@ console.log(colors.value[0]);
     cssVariable: '--border-color',
     colorCode: 'var(--color-light-gray)',
   },
-]); */
+];
+
+colors.value[0].light = lightColors;
+colors.value[0].dark = darkColors;
+console.log(
+  colors.value[0],
+  lightColors,
+  darkColors
+);
+
 
 /* let typographies = ref([]); */
 
 </script>
+
 <template>
   <section>
     <div class="h1">Let's Start</div>
-    <h2>Enter the colors of your application or website</h2>
-    <form class="start-form__colors">
-      <div class="form__category-color"
-      v-for="(colorCategory, key) in colors[0]" :key="key">
-        <label
+      <InitialForm
+        :formSection="'Colors'"
+        :formSectionTitle="'Enter the colors of your application or website'"
+        :formItemsList="colors[0]"
+      />
+      <!-- <h2></h2>
+      <form class="start-form__colors">
+        <div class="form__category-color"
+        v-for="(colorCategory, key) in colors[0]" :key="key">
+          <label
           :for="`${key} colors`">{{ key }} Colors</label>
-        <div
-          v-for="(color, index) in colorCategory" :key="index">
-          <input type="text" :value="`${color.cssVariable}`">
-          <input type="color"
-          :value="`${color.colorCode}`">
+          <div
+            v-for="(color, index) in colorCategory" :key="index">
+            <input type="text" :value="`${color.cssVariable}`">
+            <input type="color"
+            :value="`${color.colorCode}`">
+          </div><br>
         </div><br>
-      </div><br>
-    </form>
+      </form> -->
   </section>
 </template>
 <style></style>

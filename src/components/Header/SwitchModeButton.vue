@@ -15,7 +15,6 @@ function toggleVersion() {
 }
 function switchMode() {
   document.documentElement.classList.add(`${version.value}-mode`);
-  console.log(version.value);
 }
 </script>
 

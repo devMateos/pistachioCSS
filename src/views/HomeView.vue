@@ -1,15 +1,14 @@
 <script setup>
 import Header from '@/components/Header/Index.vue';
 import SideMenu from '@/components/SideMenu/Index.vue';
-import StartView from '@/views/StartView.vue';
+import MainLayout from '@/components/MainLayout/Index.vue';
 </script>
 
 <template>
   <div class="grid-layout">
     <Header class="l-header"/>
     <SideMenu class="l-sidebar"/>
-    <main class="l-main">
-      <StartView/>
+    <MainLayout class="l-main"/>
     <!-- <h1>heading 1</h1>
     <h2>heading 2</h2>
     <h3>heading 3</h3>
@@ -133,7 +132,7 @@ import StartView from '@/views/StartView.vue';
       </svg>
       Next
     </a> -->
-    </main>
+
   </div>
 </template>
 
