@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import SideMenuMobileMenu from '@/components/molecules/SideMenuMobileMenu.vue';
+import SideMenuMobileMenu from '@/components/SideMenu/SideMenuMobileMenu.vue';
 
 const isSideMenuActive = ref('');
 const showMenu = (data) => {

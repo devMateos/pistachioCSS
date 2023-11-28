@@ -1,7 +1,7 @@
 <script setup>
-import Header from '@/components/organisms/Header.vue';
-import SideMenu from '@/components/organisms/SideMenu.vue';
-import StartView from './StartView.vue';
+import Header from '@/components/Header/Index.vue';
+import SideMenu from '@/components/SideMenu/Index.vue';
+import StartView from '@/views/StartView.vue';
 </script>
 
 <template>

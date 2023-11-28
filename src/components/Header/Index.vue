@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue';
+import HeaderLogo from '@/components/Header/HeaderLogo.vue';
+import HeaderNav from '@/components/Header/HeaderNav.vue';
+import SwitchModeButton from '@/components/Header/SwitchModeButton.vue';
+import HeaderMenuIcon from '@/components/Header/HeaderMenuIcon.vue';
 
-import HeaderLogo from '@/components/molecules/HeaderLogo.vue';
-import HeaderNav from '@/components/molecules/HeaderNav.vue';
-import SwitchModeButton from '@/components/atoms/SwitchModeButton.vue';
-import HeaderMenuIcon from '../atoms/HeaderMenuIcon.vue';
+import { ref } from 'vue';
 
 let isMenuActive = ref(false);
 
