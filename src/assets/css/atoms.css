@@ -37,13 +37,13 @@ h2, .h2 {
   font-family: var(--font-heading);
   font-size: var(--font-size-XL);
   font-weight: var(--font-weight-bold);
-  padding: var(--spacing-XS) 0;
+  padding: var(--spacing-M) 0;
 }
 h3, .h3 {
   font-family: var(--font-heading);
   font-size: var(--font-size-L);
   font-weight: var(--font-weight-medium);
-  padding: var(--spacing-XS) 0;
+  padding: var(--spacing-M) 0;
 }
 h4, .h4 {
   font-family: var(--font-heading);
@@ -68,7 +68,7 @@ h4, .h4 {
   border-radius: var(--border-round);
   height: var(--font-size-XL);
   padding: 0;
-  width: var(--font-size-XL);
+  width: var(--font-size-XXL);
 }
 .form__input-item:focus, .form__input-color:focus {
   border-color: var(--color-affirmative);

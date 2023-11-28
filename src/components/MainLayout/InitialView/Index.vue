@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import InitialForm from './InitialForm.vue';
+import InitialSettings from './InitialSettings.vue';
 
 let colors = ref([{
   /* BRAND COLORS */
@@ -18,8 +18,11 @@ let colors = ref([{
     }, {
       cssVariable: '--color-accent-secondary',
       colorCode: '#478054',
-    }, {
-    /* Boolean colors */
+    },
+  ],
+  /* Boolean colors */
+  boolean: [
+    {
       cssVariable: '--color-affirmative-primary',
       colorCode: '#11922f',
     }, {
@@ -124,8 +127,7 @@ console.log(
 
 <template>
   <section>
-    <div class="h1">Let's Start</div>
-      <InitialForm
+      <InitialSettings
         :formSection="'Colors'"
         :formSectionTitle="'Enter the colors of your application or website'"
         :formItemsList="colors[0]"
