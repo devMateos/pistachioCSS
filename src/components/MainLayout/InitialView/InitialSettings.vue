@@ -2,7 +2,9 @@
 import RemoveButton from '@/components/RemoveButton.vue';
 import AddButton from '@/components/AddButton.vue';
 
-const props = defineProps({
+import { reactive } from 'vue';
+
+const props = defineProps(reactive({
   formSection: {
     type: String,
   },
@@ -12,7 +14,11 @@ const props = defineProps({
   formItemsList: {
     type: Object,
   },
-});
+  methods: {
+    type: Function,
+  },
+}));
+
 </script>
 
 <template>
@@ -29,9 +35,9 @@ const props = defineProps({
           :key="index"
         >
           <input type="color" class="form__input-color"
-          :value="`${color.colorCode}`"
-          @input="color.colorCode = $event.target.value"
+          v-model="color.colorCode"
           >
+          <!-- :value="`${color.colorCode}`" -->
           <RemoveButton/>
         </div>
       </div><br>
