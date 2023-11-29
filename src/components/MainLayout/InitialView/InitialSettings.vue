@@ -2,9 +2,7 @@
 import RemoveButton from '@/components/RemoveButton.vue';
 import AddButton from '@/components/AddButton.vue';
 
-import { reactive } from 'vue';
-
-const props = defineProps(reactive({
+const props = defineProps({
   formSection: {
     type: String,
   },
@@ -17,27 +15,54 @@ const props = defineProps(reactive({
   methods: {
     type: Function,
   },
-}));
+});
 
 </script>
 
 <template>
   <h2>{{ formSectionTitle }}</h2>
-  <form class="initial-settings__form">
-    <div class="initial-settings__card"
-      v-for="(item, key) in formItemsList"
+
+  <!-- COLORS FORM -->
+  <form class="initial-settings__form"
+    v-if="formSection === 'Colors'"
+  >
+  <div class="initial-settings__card"
+  v-for="(item, key) in formItemsList"
       :key="key">
       <label class="h3"
         :for="`${key} ${formSection}`">{{ key }} {{ formSection }}</label>
       <div class="card__grid">
         <div class="card__color-item"
-          v-for="(color, index) in item"
-          :key="index"
+        v-for="(color, index) in item"
+        :key="index"
         >
-          <input type="color" class="form__input-color"
-          v-model="color.colorCode"
+        <input type="color" class="form__input-color"
+          v-model="color.variableValue"
           >
-          <!-- :value="`${color.colorCode}`" -->
+          <RemoveButton/>
+        </div>
+      </div><br>
+      <AddButton />
+    </div><br>
+  </form>
+
+  <!-- TYPOGRAPHY FORM -->
+  <form class="initial-settings__form"
+    v-if="formSection === 'Fonts'"
+  >
+  <div class="initial-settings__card"
+  v-for="(item, key) in formItemsList"
+      :key="key">
+      <label class="h3"
+        :for="`${key} ${formSection}`">{{ key }} {{ formSection }}</label>
+      <div class="card__grid">
+        <div class="card__color-item"
+        v-for="(color, index) in item"
+        :key="index"
+        >
+        <input type="color" class="form__input-color"
+          v-model="color.variableValue"
+          >
           <RemoveButton/>
         </div>
       </div><br>
@@ -45,6 +70,7 @@ const props = defineProps(reactive({
     </div><br>
   </form>
 </template>
+
 <style scoped>
 .initial-settings__form {
   display: grid;

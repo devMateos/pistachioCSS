@@ -7,7 +7,7 @@ let colors = reactive([{
   brand: [
     {
       cssVariable: '--color-brand',
-      colorCode: '#98cf58',
+      variableValue: '#98cf58',
       
     },
   ],
@@ -15,11 +15,11 @@ let colors = reactive([{
   action: [
     {
       cssVariable: '--color-accent-primary',
-      colorCode: '#639F55',
+      variableValue: '#639F55',
       
     }, {
       cssVariable: '--color-accent-secondary',
-      colorCode: '#478054',
+      variableValue: '#478054',
       
     },
   ],
@@ -27,19 +27,19 @@ let colors = reactive([{
   boolean: [
     {
       cssVariable: '--color-affirmative-primary',
-      colorCode: '#11922f',
+      variableValue: '#11922f',
       
     }, {
       cssVariable: '--color-affirmative-secondary',
-      colorCode: '#61ab72',
+      variableValue: '#61ab72',
       
     }, {
       cssVariable: '--color-negative-primary',
-      colorCode: '#FF7272',
+      variableValue: '#FF7272',
       
     }, {
       cssVariable: '--color-negative-secondary',
-      colorCode: '#EE0000',
+      variableValue: '#EE0000',
       
     },
   ],
@@ -47,32 +47,32 @@ let colors = reactive([{
   gray: [
     {
       cssVariable: '--color-light',
-      colorCode: '#F8F9FA',
+      variableValue: '#F8F9FA',
       
     }, {
       cssVariable: '--color-light-gray',
-      colorCode: '#E9ECEF',
+      variableValue: '#E9ECEF',
       
     }, {
       cssVariable: '--color-gray',
-      colorCode: '#DEE2E6',
+      variableValue: '#DEE2E6',
       
     }, {
       cssVariable: '--color-dark',
-      colorCode: '#343A40',
+      variableValue: '#343A40',
       
     }, {
       cssVariable: '--color-darker',
-      colorCode: '#212529',
+      variableValue: '#212529',
       
     },
   ],
 }]);
-const findColorCode = (colorVariable) => {
+const findvariableValue = (colorVariable) => {
   for (let key in colors[0]) {
     let color = colors[0][key].find(color => color.cssVariable === colorVariable);
     if (color) {
-      return color.colorCode;
+      return color.variableValue;
     }
   }
   return undefined;
@@ -82,27 +82,27 @@ const findColorCode = (colorVariable) => {
 let lightColors = [
   {
     cssVariable: '--color-background-primary',
-    colorCode:  findColorCode('--color-light'),
+    variableValue:  findvariableValue('--color-light'),
     
   }, {
     cssVariable: '--color-background-secondary',
-    colorCode:  findColorCode('--color-light-gray'),
+    variableValue:  findvariableValue('--color-light-gray'),
     
   }, {
     cssVariable: '--color-text',
-    colorCode:  findColorCode('--color-darker'),
+    variableValue:  findvariableValue('--color-darker'),
     
   }, {
     cssVariable: '--color-action',
-    colorCode:  findColorCode('--color-accent-primary'),
+    variableValue:  findvariableValue('--color-accent-primary'),
     
   }, {
     cssVariable: '--color-action-secondary',
-    colorCode:  findColorCode('--color-accent-secondary'),
+    variableValue:  findvariableValue('--color-accent-secondary'),
     
   }, {
     cssVariable: '--border-color',
-    colorCode:  findColorCode('--color-gray'),
+    variableValue:  findvariableValue('--color-gray'),
     
   },
 ];
@@ -110,61 +110,58 @@ let lightColors = [
 let darkColors = [
   {
     cssVariable: '--color-background-primary',
-    colorCode: findColorCode('--color-dark'),
+    variableValue: findvariableValue('--color-dark'),
     
   }, {
     cssVariable: '--color-background-secondary',
-    colorCode: findColorCode('--color-darker'),
+    variableValue: findvariableValue('--color-darker'),
     
   }, {
     cssVariable: '--color-text',
-    colorCode: findColorCode('--color-light'),
+    variableValue: findvariableValue('--color-light'),
     
   }, {
     cssVariable: '--color-action',
-    colorCode: findColorCode('--color-accent-secondary'),
+    variableValue: findvariableValue('--color-accent-secondary'),
     
   }, {
     cssVariable: '--color-action-secondary',
-    colorCode: findColorCode('--color-accent-primary'),
+    variableValue: findvariableValue('--color-accent-primary'),
     
   }, {
     cssVariable: '--border-color',
-    colorCode: findColorCode('--color-light-gray'),
+    variableValue: findvariableValue('--color-light-gray'),
     
   },
 ];
+/* colors[0].light = lightColors;
+colors[0].dark = darkColors; */
 
-colors[0].light = lightColors;
-colors[0].dark = darkColors;
 
-
-/* let typographies = ref([]); */
-
+let typographies = reactive([{
+  headings: [
+    {
+      cssVariable: '--font-heading',
+      variableValue: 'Times New Roman',
+    },
+  ],
+}]);
 </script>
 
 <template>
   <section>
-      <InitialSettings
-        :formSection="'Colors'"
-        :formSectionTitle="'Enter the colors of your application or website'"
-        :formItemsList="colors[0]"
-        :methods="findColorCode"
-      />
-      <!-- <h2></h2>
-      <form class="start-form__colors">
-        <div class="form__category-color"
-        v-for="(colorCategory, key) in colors" :key="key">
-          <label
-          :for="`${key} colors`">{{ key }} Colors</label>
-          <div
-            v-for="(color, index) in colorCategory" :key="index">
-            <input type="text" :value="`${color.cssVariable}`">
-            <input type="color"
-            :value="`${color.colorCode}`">
-          </div><br>
-        </div><br>
-      </form> -->
+    <InitialSettings
+      :formSection="'Colors'"
+      :formSectionTitle="'Enter the colors of your application or website'"
+      :formItemsList="colors[0]"
+      :methods="findvariableValue"
+    />
+    <InitialSettings
+      :formSection="'Fonts'"
+      :formSectionTitle="'Enter the typography settings'"
+      :formItemsList="typographies[0]"
+      :methods="findvariableValue"
+    />
   </section>
 </template>
 <style></style>
