@@ -1,4 +1,5 @@
 <script setup>
+import { toRefs } from 'vue';
 import RemoveButton from '@/components/RemoveButton.vue';
 import AddButton from '@/components/AddButton.vue';
 
@@ -17,58 +18,96 @@ const props = defineProps({
   },
 });
 
+const { formItemsList } = toRefs(props);
 </script>
 
 <template>
   <h2>{{ formSectionTitle }}</h2>
 
-  <!-- COLORS FORM -->
-  <form class="initial-settings__form"
-    v-if="formSection === 'Colors'"
+  <div class="initial-settings__form"
   >
-  <div class="initial-settings__card"
-  v-for="(item, key) in formItemsList"
-      :key="key">
-      <label class="h3"
-        :for="`${key} ${formSection}`">{{ key }} {{ formSection }}</label>
-      <div class="card__grid">
-        <div class="card__color-item"
-        v-for="(color, index) in item"
-        :key="index"
-        >
-        <input type="color" class="form__input-color"
-          v-model="color.variableValue"
-          >
-          <RemoveButton/>
-        </div>
-      </div><br>
-      <AddButton />
-    </div><br>
-  </form>
+  
+    <div class="initial-settings__card"
+      v-for="(item, key) in formItemsList"
+      :key="key"
+    >
 
-  <!-- TYPOGRAPHY FORM -->
-  <form class="initial-settings__form"
-    v-if="formSection === 'Fonts'"
-  >
-  <div class="initial-settings__card"
-  v-for="(item, key) in formItemsList"
-      :key="key">
       <label class="h3"
-        :for="`${key} ${formSection}`">{{ key }} {{ formSection }}</label>
-      <div class="card__grid">
-        <div class="card__color-item"
-        v-for="(color, index) in item"
-        :key="index"
+        :for="`${key} ${formSection}`"
         >
-        <input type="color" class="form__input-color"
-          v-model="color.variableValue"
+        {{ key }} {{ formSection }}
+      </label>
+      
+    <!-- COLORS FORM -->
+      <div class="card__grid"
+        v-if="formSection === 'Colors'"
+      >
+        <div class="card__item"
+          v-for="(element, index) in item"
+          :key="index"
+        >
+          <input type="color" class="form__input-color"
+            v-model="element.variableValue"
           >
           <RemoveButton/>
         </div>
       </div><br>
+
+    <!-- FONTS FORM -->
+      <div class="card__grid"
+        v-if="formSection === 'Font'"
+      >
+        <!-- Font family -->
+        <div class="card__item"
+        v-if="key === 'family'"
+        >
+        <div
+        v-for="(element, index) in item"
+            :key="index"
+          >
+          <label for="">{{ element.label }}</label>
+            <input type="text" class="form__input-item"
+              v-model="element.variableValue"
+            >
+            <RemoveButton/>
+          </div>
+        </div>
+        
+        <!-- Font weight -->
+        <div class="card__item"
+          v-if="key === 'weight'"
+        >
+          <div
+            v-for="(element, index) in item"
+            :key="index"
+          >
+          <input type="checkbox" class="form__input-checkbox"
+            v-model="element.checked"
+          >
+            <label for="">{{ element.label }}: {{ element.variableValue }}</label>
+          </div>
+        </div>
+      </div><br>
+
+      <!-- Font family -->
+      <div class="card__item"
+      v-if="key === 'size'"
+      >
+        <div
+        v-for="(element, index) in item"
+            :key="index"
+          >
+          <input type="text" class="form__input-item"
+            v-model="element.cssVariable"
+          >
+          <input type="text" class="form__input-item"
+            v-model="element.variableValue"
+          >
+          </div>
+        </div>
       <AddButton />
     </div><br>
-  </form>
+  </div>
 </template>
 
 <style scoped>
@@ -94,7 +133,7 @@ label.h3 {
   gap: var(--spacing-S);
   grid-template-columns: repeat(3, 1fr);
 }
-.card__color-item {
+.card__item {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-XS);

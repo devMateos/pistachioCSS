@@ -57,6 +57,7 @@ h4, .h4 {
 .form__input-item {     /* inputs (text, number, etc.), textarea, select */
   border: var(--border-standard);
   border-radius: var(--border-round);
+  font-family: var(--font-body);
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
   width: 15.2rem;
@@ -66,6 +67,7 @@ h4, .h4 {
   appearance: auto;
   border: var(--border-standard);
   border-radius: var(--border-round);
+  cursor: pointer;
   height: var(--font-size-XL);
   padding: 0;
   width: var(--font-size-XXL);
@@ -93,8 +95,9 @@ h4, .h4 {
   background-color: var(--color-negative);
   border: var(--border-style) var(--border-width) var(--color-negative-secondary);
   border-radius: var(--border-round);
-  height: 2.4rem;
-  width: 2.4rem;
+  cursor: pointer;
+  height: var(--spacing-M);
+  width: var(--spacing-M);
 }
 .form__input-checkbox:checked {
   border-color: var(--color-affirmative);

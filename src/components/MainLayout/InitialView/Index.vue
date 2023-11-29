@@ -139,29 +139,111 @@ colors[0].dark = darkColors; */
 
 
 let typographies = reactive([{
-  headings: [
+  family: [
     {
+      label: 'Headings',
       cssVariable: '--font-heading',
       variableValue: 'Times New Roman',
+    }, {
+      label: 'Body',
+      cssVariable: '--font-body',
+      variableValue: 'Arial',
     },
   ],
+  weight: [
+    {
+      label: 'Thin',
+      cssVariable: '--font-weight-thin',
+      variableValue: 100,
+      checked: false,
+    }, {
+      label: 'Extra Light',
+      cssVariable: '--font-weight-extra-light',
+      variableValue: 200,
+      checked: false,
+    }, {
+      label: 'Light',
+      cssVariable: '--font-weight-light',
+      variableValue: 300,
+      checked: false,
+    }, {
+      label: 'Regular',
+      cssVariable: '--font-weight-regular',
+      variableValue: 400,
+      checked: true,
+    }, {
+      label: 'Medium',
+      cssVariable: '--font-weight-medium',
+      variableValue: 500,
+      checked: true,
+    }, {
+      label: 'Semi Bold',
+      cssVariable: '--font-weight-semi-bold',
+      variableValue: 600,
+      checked: false,
+    }, {
+      label: 'Bold',
+      cssVariable: '--font-weight-bold',
+      variableValue: 700,
+      checked: true,
+    }, {
+      label: 'Extra Bold',
+      cssVariable: '--font-weight-extra-bold',
+      variableValue: 800,
+      checked: false,
+    }, {
+      label: 'Heavy',
+      cssVariable: '--font-weight-heavy',
+      variableValue: 900,
+      checked: false,
+    },
+  ],
+  size: [
+  {
+      label: 'XXL',
+      cssVariable: '--font-size-XXL',
+      variableValue: 4,
+    }, {
+      label: 'XL',
+      cssVariable: '--font-size-XL',
+      variableValue: 3.2,
+    }, {
+      label: 'L',
+      cssVariable: '--font-size-L',
+      variableValue: 2.4,
+    }, {
+      label: 'M',
+      cssVariable: '--font-size-M',
+      variableValue: 2,
+    }, {
+      label: 'S',
+      cssVariable: '--font-size-S',
+      variableValue: 1.6,
+    }, {
+      label: 'XS',
+      cssVariable: '--font-size-XS',
+      variableValue: 1.2,
+    },
+  ]
 }]);
 </script>
 
 <template>
   <section>
-    <InitialSettings
-      :formSection="'Colors'"
-      :formSectionTitle="'Enter the colors of your application or website'"
-      :formItemsList="colors[0]"
-      :methods="findvariableValue"
-    />
-    <InitialSettings
-      :formSection="'Fonts'"
-      :formSectionTitle="'Enter the typography settings'"
-      :formItemsList="typographies[0]"
-      :methods="findvariableValue"
-    />
+    <form action="">
+      <InitialSettings
+        :formSection="'Colors'"
+        :formSectionTitle="'Enter the colors of your application or website'"
+        :formItemsList="colors[0]"
+        :methods="findvariableValue"
+      />
+      <InitialSettings
+        :formSection="'Font'"
+        :formSectionTitle="'Enter the typography settings'"
+        :formItemsList="typographies[0]"
+        :methods="findvariableValue"
+      />
+    </form>
   </section>
 </template>
 <style></style>
