@@ -51,15 +51,15 @@ const { formItemsList } = toRefs(props);
           >
           <RemoveButton/>
         </div>
-      </div><br>
+      </div>
 
     <!-- FONTS FORM -->
       <div class="card__grid"
         v-if="formSection === 'Font'"
       >
-        <!-- Font family & font size -->
+        <!-- Font family -->
         <div class="card__item"
-        v-if="key !== 'weight'"
+        v-if="key === 'family'"
         >
         <div
         v-for="(element, index) in item"
@@ -87,9 +87,26 @@ const { formItemsList } = toRefs(props);
             <label for="">{{ element.label }}: {{ element.variableValue }}</label>
           </div>
         </div>
-      </div><br>
-    <AddButton />
-  </div><br>
+      </div>
+
+      <!-- Font family -->
+      <div class="card__item"
+      v-if="key === 'size'"
+      >
+        <div
+        v-for="(element, index) in item"
+            :key="index"
+          >
+          <input type="text" class="form__input-item"
+            v-model="element.cssVariable"
+          >
+          <input type="number" class="form__input-item"
+            v-model="element.variableValue"
+          >
+          </div>
+        </div>
+      <AddButton />
+    </div>
   </div>
 </template>
 

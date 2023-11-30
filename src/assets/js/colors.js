@@ -1,3 +1,4 @@
+import { findVariableValue } from '@/assets/js/findVariableValue.js'
 export { colors };
 
 let colors = [{
@@ -66,41 +67,32 @@ let colors = [{
     },
   ],
 }];
-const findvariableValue = (colorVariable) => {
-  for (let key in colors[0]) {
-    let color = colors[0][key].find(color => color.cssVariable === colorVariable);
-    if (color) {
-      return color.variableValue;
-    }
-  }
-  return undefined;
-}
 
 /* LIGHT MODE COLORS */
 let lightColors = [
   {
     cssVariable: '--color-background-primary',
-    variableValue:  findvariableValue('--color-light'),
+    variableValue:  findVariableValue('--color-light', colors),
     
   }, {
     cssVariable: '--color-background-secondary',
-    variableValue:  findvariableValue('--color-light-gray'),
+    variableValue:  findVariableValue('--color-light-gray', colors),
     
   }, {
     cssVariable: '--color-text',
-    variableValue:  findvariableValue('--color-darker'),
+    variableValue:  findVariableValue('--color-darker', colors),
     
   }, {
     cssVariable: '--color-action',
-    variableValue:  findvariableValue('--color-accent-primary'),
+    variableValue:  findVariableValue('--color-accent-primary', colors),
     
   }, {
     cssVariable: '--color-action-secondary',
-    variableValue:  findvariableValue('--color-accent-secondary'),
+    variableValue:  findVariableValue('--color-accent-secondary', colors),
     
   }, {
     cssVariable: '--border-color',
-    variableValue:  findvariableValue('--color-gray'),
+    variableValue:  findVariableValue('--color-gray', colors),
     
   },
 ];
@@ -108,27 +100,27 @@ let lightColors = [
 let darkColors = [
   {
     cssVariable: '--color-background-primary',
-    variableValue: findvariableValue('--color-dark'),
+    variableValue: findVariableValue('--color-dark', colors),
     
   }, {
     cssVariable: '--color-background-secondary',
-    variableValue: findvariableValue('--color-darker'),
+    variableValue: findVariableValue('--color-darker', colors),
     
   }, {
     cssVariable: '--color-text',
-    variableValue: findvariableValue('--color-light'),
+    variableValue: findVariableValue('--color-light', colors),
     
   }, {
     cssVariable: '--color-action',
-    variableValue: findvariableValue('--color-accent-secondary'),
+    variableValue: findVariableValue('--color-accent-secondary', colors),
     
   }, {
     cssVariable: '--color-action-secondary',
-    variableValue: findvariableValue('--color-accent-primary'),
+    variableValue: findVariableValue('--color-accent-primary', colors),
     
   }, {
     cssVariable: '--border-color',
-    variableValue: findvariableValue('--color-light-gray'),
+    variableValue: findVariableValue('--color-light-gray', colors),
     
   },
 ];

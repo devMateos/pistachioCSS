@@ -1,6 +1,7 @@
 <script setup>
 import { colors } from '@/assets/js/colors.js'
 import { typographies } from '@/assets/js/typographies.js'
+import { spacing } from '@/assets/js/spacing.js'
 import InitialSettings from './InitialSettings.vue';
 
 </script>
@@ -10,15 +11,18 @@ import InitialSettings from './InitialSettings.vue';
     <form action="">
       <InitialSettings
         :formSection="'Colors'"
-        :formSectionTitle="'Enter the colors of your application or website'"
+        :formSectionTitle="'Enter the colors settings'"
         :formItemsList="colors[0]"
-        :methods="findvariableValue"
       />
       <InitialSettings
         :formSection="'Font'"
         :formSectionTitle="'Enter the typography settings'"
         :formItemsList="typographies[0]"
-        :methods="findvariableValue"
+      />
+      <InitialSettings
+        :formSection="'Spacing'"
+        :formSectionTitle="'Enter the spacing settings'"
+        :formItemsList="spacing[0]"
       />
     </form>
   </section>

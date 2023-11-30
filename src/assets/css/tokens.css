@@ -35,14 +35,14 @@
   --font-size-XS: 1.2rem;
 
   /* Spacing */
-  --spacing-unit: .4rem;
+  --spacing-min-unit: .4rem;
 
-  --spacing-XS: var(--spacing-unit);
-  --spacing-S: calc(var(--spacing-unit) * 2);
-  --spacing-M: calc(var(--spacing-unit) * 4);
-  --spacing-L: calc(var(--spacing-unit) * 6);
-  --spacing-XL: calc(var(--spacing-unit) * 8);
-  --spacing-XXL: calc(var(--spacing-unit) * 10);
+  --spacing-XS: var(--spacing-min-unit);
+  --spacing-S: calc(var(--spacing-min-unit) * 2);
+  --spacing-M: calc(var(--spacing-min-unit) * 4);
+  --spacing-L: calc(var(--spacing-min-unit) * 6);
+  --spacing-XL: calc(var(--spacing-min-unit) * 8);
+  --spacing-XXL: calc(var(--spacing-min-unit) * 10);
 
   /* Colors */
 
