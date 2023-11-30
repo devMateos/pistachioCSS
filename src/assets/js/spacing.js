@@ -1,12 +1,12 @@
 export { spacing };
 
 let spacing = [{
-  minimumSpacingUnit: {
+  'Minimum Spacing Unit': {
       label: 'Minimum spacing unit',
       cssVariable: '--spacing-min-unit',
       variableValue: 0.4,
     },
-  spacingUnits: [
+  'Spacing Units': [
     {
       label: 'XS spacing unit',
       cssVariable: '--spacing-XS',
@@ -39,7 +39,7 @@ let spacing = [{
       variableValue: '',
     },
   ],
-  responsiveMultiplierUnit: [
+  'Responsive Multiplier Unit': [
     {
       label: 'Mobile unit',
       cssVariable: '--responsive-multiplier-unit',
@@ -63,10 +63,10 @@ let spacing = [{
 }];
 
 
-spacing[0].spacingUnits.forEach(e => {
-  let result = spacing[0].minimumSpacingUnit.variableValue * e.multiplier;
+spacing[0]['Spacing Units'].forEach(e => {
+  let result = spacing[0]['Minimum Spacing Unit'].variableValue * e.multiplier;
   e.variableValue = result;
 });
-spacing[0].responsiveMultiplierUnit.forEach(e => {
+spacing[0]['Responsive Multiplier Unit'].forEach(e => {
   e.variableValue = e.multiplier;
 });

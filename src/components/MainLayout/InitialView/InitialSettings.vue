@@ -1,5 +1,4 @@
 <script setup>
-import { toRefs } from 'vue';
 import RemoveButton from '@/components/RemoveButton.vue';
 import AddButton from '@/components/AddButton.vue';
 
@@ -18,7 +17,6 @@ const props = defineProps({
   },
 });
 
-const { formItemsList } = toRefs(props);
 </script>
 
 <template>
@@ -69,7 +67,6 @@ const { formItemsList } = toRefs(props);
             <input type="text" class="form__input-item"
               v-model="element.variableValue"
             >
-            <RemoveButton/>
           </div>
         </div>
         
@@ -89,7 +86,7 @@ const { formItemsList } = toRefs(props);
         </div>
       </div>
 
-      <!-- Font family -->
+      <!-- Font size -->
       <div class="card__item"
       v-if="key === 'size'"
       >
@@ -97,15 +94,37 @@ const { formItemsList } = toRefs(props);
         v-for="(element, index) in item"
             :key="index"
           >
-          <input type="text" class="form__input-item"
-            v-model="element.cssVariable"
-          >
-          <input type="number" class="form__input-item"
+          <label for="">{{ element.label }}</label>
+          <input type="number" class="form__input-item" step="0.1"
             v-model="element.variableValue"
           >
           </div>
-        </div>
-      <AddButton />
+      </div>
+
+      <!-- SPACING FORM -->
+      <!--  -->
+      <div class="card__item"
+      v-if="formSection === 'Spacing' && key === 'Minimum Spacing Unit'"
+      >
+        <input type="number" class="form__input-item" step="0.1"
+          v-model="item.variableValue"
+        >
+      </div>
+      <div class="card__item"
+      v-if="formSection === 'Spacing' && key !== 'Minimum Spacing Unit'"
+      >
+        <div
+        v-for="(element, index) in item"
+            :key="index"
+          >
+          <label for="">{{ element.label }}</label>
+          <input type="number" class="form__input-item" step="0.001"
+            v-model="element.variableValue"
+          >
+          </div>
+      </div>
+      <AddButton
+        v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
     </div>
   </div>
 </template>
