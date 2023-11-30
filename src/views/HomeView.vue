@@ -143,6 +143,7 @@ import MainLayout from '@/components/MainLayout/Index.vue';
   "header"
   "sidebar"
   "main";
+  height: 100vh;
   position: fixed;
   width: 100vw;
 }
@@ -163,7 +164,6 @@ import MainLayout from '@/components/MainLayout/Index.vue';
     "sidebar sidebar main main main main main main main main main main";
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr;
-    height: 100vh;
 
   }
   .l-sidebar {
