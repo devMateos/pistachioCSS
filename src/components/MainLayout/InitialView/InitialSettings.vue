@@ -57,9 +57,9 @@ const { formItemsList } = toRefs(props);
       <div class="card__grid"
         v-if="formSection === 'Font'"
       >
-        <!-- Font family -->
+        <!-- Font family & font size -->
         <div class="card__item"
-        v-if="key === 'family'"
+        v-if="key !== 'weight'"
         >
         <div
         v-for="(element, index) in item"
@@ -88,25 +88,8 @@ const { formItemsList } = toRefs(props);
           </div>
         </div>
       </div><br>
-
-      <!-- Font family -->
-      <div class="card__item"
-      v-if="key === 'size'"
-      >
-        <div
-        v-for="(element, index) in item"
-            :key="index"
-          >
-          <input type="text" class="form__input-item"
-            v-model="element.cssVariable"
-          >
-          <input type="text" class="form__input-item"
-            v-model="element.variableValue"
-          >
-          </div>
-        </div>
-      <AddButton />
-    </div><br>
+    <AddButton />
+  </div><br>
   </div>
 </template>
 
