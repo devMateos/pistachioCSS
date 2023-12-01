@@ -4,122 +4,150 @@ import { spacing } from '@/assets/js/spacing.js';
 
 export { generateTokens }
 
-function generateTokens(spacingData){
+function generateTokens(colorsData, typographiesData, spacingData){
 
-const responsive = {
-  mobile: spacingData[0]['Responsive Multiplier Unit'][0],
-  tablet: spacingData[0]['Responsive Multiplier Unit'][1],
-  desktop: spacingData[0]['Responsive Multiplier Unit'][2],
-}
+  /* COLORS SETTINGS*/
+  const colors = {
+    brand: colorsData[0].brand,
+    action: colorsData[0].action,
+    boolean: colorsData[0].boolean,
+    gray: colorsData[0].gray,
+  };
 
-let tokensBoilerplate = `
-  /* ----- TOKENS ----- */
+  /* TYPOGRAPHIES SETTINGS */
+  const typographies = {
+    family: typographiesData[0].family,
+    weight:typographiesData[0].weight.filter((e) => e.checked === true ),
+    size: typographiesData[0].size,
+  };
+  /* Font Weight template */
+  let fontWeightTemplate = '';
+  typographies.weight.forEach((e) => {
+    fontWeightTemplate += `${e.cssVariable}: ${e.variableValue};
+      `
+  })
 
-  /* CSS Variables */
+  /* SPACING SETTINGS */
+  const minimumSpacingUnit = spacingData[0]['Minimum Spacing Unit'];
+  
+  const spacingUnits = spacingData[0]['Spacing Units'];
+  let spacingUnitsTemplate = '';
+  spacingUnits.forEach((e) => {
+    spacingUnitsTemplate += `${e.cssVariable}: calc(var(${minimumSpacingUnit.cssVariable}) * ${e.multiplier});
+      `
+  })
+
   /* Responsive measures */
+  const responsive = {
+    mobile: spacingData[0]['Responsive Multiplier Unit'][0],
+    tablet: spacingData[0]['Responsive Multiplier Unit'][1],
+    desktop: spacingData[0]['Responsive Multiplier Unit'][2],
+  };
 
-  @media (max-width: ${responsive.mobile.breakpoint}px) {
-    :root {
-      ${responsive.mobile.cssVariable}: ${responsive.mobile.variableValue};
-    }
-  }
-  @media (min-width: ${responsive.mobile.breakpoint}px) and (max-width: ${responsive.tablet.breakpoint}px) {
-    :root {
-      ${responsive.mobile.cssVariable}: ${responsive.tablet.variableValue};
-    }
-  }
-  @media (min-width: ${responsive.tablet.breakpoint}px) {
-    :root {
-      ${responsive.mobile.cssVariable}: ${responsive.desktop.variableValue};
-    }
-  }
-  :root {
-    /* Fonts */
-    --font-heading: 'Montserrat';
-    --font-body: 'Nunito';
-    
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 700;
+  console.log(minimumSpacingUnit);
 
-    --font-size-XXL: 4rem;
-    --font-size-XL: 3.2rem;
-    --font-size-L: 2.4rem;
-    --font-size-M: 2rem;
-    --font-size-S: 1.6rem;
-    --font-size-XS: 1.2rem;
+  let tokensBoilerplate = `
+    /* ----- TOKENS ----- */
+
+    /* CSS Variables */
+
+    :root {
+      /* Colors */
+
+      /* Brand colors */
+      ${colors.brand[0].cssVariable}: ${colors.brand[0].variableValue};
+      /* Action colors */
+      ${colors.action[0].cssVariable}: ${colors.action[0].variableValue};
+      ${colors.action[1].cssVariable}: ${colors.action[1].variableValue};
+      /* Boolean colors */
+      ${colors.boolean[0].cssVariable}: ${colors.boolean[0].variableValue};
+      ${colors.boolean[1].cssVariable}: ${colors.boolean[1].variableValue};
+      ${colors.boolean[2].cssVariable}: ${colors.boolean[2].variableValue};
+      ${colors.boolean[3].cssVariable}: ${colors.boolean[3].variableValue};
+      /* Gray colors */
+      ${colors.gray[0].cssVariable}: ${colors.gray[0].variableValue};
+      ${colors.gray[1].cssVariable}: ${colors.gray[1].variableValue};
+      ${colors.gray[2].cssVariable}: ${colors.gray[2].variableValue};
+      ${colors.gray[3].cssVariable}: ${colors.gray[3].variableValue};
+      ${colors.gray[4].cssVariable}: ${colors.gray[4].variableValue};
+      
+      
+      /* Fonts */
+      ${typographies.family[0].cssVariable}: ${typographies.family[0].variableValue};
+      ${typographies.family[1].cssVariable}: ${typographies.family[1].variableValue};
+      
+      ${fontWeightTemplate}
+      ${typographies.size[0].cssVariable}: ${typographies.size[0].variableValue};
+      ${typographies.size[1].cssVariable}: ${typographies.size[1].variableValue};
+      ${typographies.size[2].cssVariable}: ${typographies.size[2].variableValue};
+      ${typographies.size[3].cssVariable}: ${typographies.size[3].variableValue};
+      ${typographies.size[4].cssVariable}: ${typographies.size[4].variableValue};
+      ${typographies.size[5].cssVariable}: ${typographies.size[5].variableValue};
+      
+      /* Spacing */
+      ${minimumSpacingUnit.cssVariable}: ${minimumSpacingUnit.variableValue}rem;
+
+      ${spacingUnitsTemplate}
+      /* Borders */
+      --border-style: solid;
+      --border-width: 2px;
+      --border-sharp: 0;
+      --border-rounded: var(--spacing-M);
+      --border-round: var(--spacing-L);
+      --border-standard: var(--border-style) var(--border-width) var(--border-color);
+    }
+
+    /* Responsive measures */
+
+    @media (max-width: ${responsive.mobile.breakpoint}px) {
+      :root {
+        ${responsive.mobile.cssVariable}: ${responsive.mobile.variableValue};
+      }
+    }
+    @media (min-width: ${responsive.mobile.breakpoint}px) and (max-width: ${responsive.tablet.breakpoint}px) {
+      :root {
+        ${responsive.mobile.cssVariable}: ${responsive.tablet.variableValue};
+      }
+    }
+    @media (min-width: ${responsive.tablet.breakpoint}px) {
+      :root {
+        ${responsive.mobile.cssVariable}: ${responsive.desktop.variableValue};
+      }
+    }
+
+    /* RESET STYLES */
+    html {
+      font-size: calc(62.5% * var(--responsive-multiplier-unit));
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+    } 
+    li {
+      list-style: none;
+    }
+
+    /* Interface Color */
+    body {
+      background-color: var(--color-background-primary);
+    }
 
     /* Spacing */
-    --spacing-min-unit: .4rem;
-
-    --spacing-XS: var(--spacing-min-unit);
-    --spacing-S: calc(var(--spacing-min-unit) * 2);
-    --spacing-M: calc(var(--spacing-min-unit) * 4);
-    --spacing-L: calc(var(--spacing-min-unit) * 6);
-    --spacing-XL: calc(var(--spacing-min-unit) * 8);
-    --spacing-XXL: calc(var(--spacing-min-unit) * 10);
-
-    /* Colors */
-
-    /* Brand colors */
-    --color-brand: #98cf58;
-    /* Action colors */
-    --color-accent-primary: #639F55;
-    --color-accent-secondary: #478054;
-    /* Boolean colors */
-    --color-affirmative: #11922f;
-    --color-affirmative-secondary: #61ab72;
-    --color-negative: #FF7272;
-    --color-negative-secondary: #EE0000;
-    /* Gray colors */
-    --color-light: #F8F9FA;
-    --color-light-gray: #E9ECEF;
-    --color-gray: #DEE2E6;
-    --color-dark: #343A40;
-    --color-darker: #212529;
-
-    /* Borders */
-    --border-style: solid;
-    --border-width: 2px;
-    --border-sharp: 0;
-    --border-rounded: var(--spacing-M);
-    --border-round: var(--spacing-L);
-    --border-standard: var(--border-style) var(--border-width) var(--border-color);
-  }
-
-  /* RESET STYLES */
-  html {
-    font-size: calc(62.5% * var(--responsive-multiplier-unit));
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-  button {
-    all: unset;
-    cursor: pointer;
-  } 
-  li {
-    list-style: none;
-  }
-
-  /* Interface Color */
-  body {
-    background-color: var(--color-background-primary);
-  }
-
-  /* Spacing */
-  main {
-    padding: 0 var(--spacing-XL);
-  }
-  section {
-    padding: var(--spacing-M) 0;
-  }
-`;
-
-return tokensBoilerplate;
+    main {
+      padding: 0 var(--spacing-XL);
+    }
+    section {
+      padding: var(--spacing-M) 0;
+    }
+  `;
+  
+  return tokensBoilerplate;
 }

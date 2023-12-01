@@ -14,7 +14,7 @@ let showCode = ref(false);
 
 
 const generateTokensCSS = computed(() => {
-  return generateTokens(spacingData);
+  return generateTokens(colorsData, typographiesData, spacingData);
 });
 </script>
 
@@ -37,13 +37,14 @@ const generateTokensCSS = computed(() => {
         :formItemsList="spacingData[0]"
       />
       <button class="button button--primary"
-      @click.prevent="showCode = true; generateCSS()">Create CSS</button>
+      @click.prevent="showCode = true">Create CSS</button>
       <button class="button button--negative"
-      @click.prevent="showCode = false;">Delete</button>
+      @click.prevent="showCode = false">Delete</button>
     </form>
 
-    <div
-    v-if="showCode">{{ generateTokensCSS }}</div>
+    <div style="white-space: pre-wrap;"
+    v-if="showCode"
+    >{{ generateTokensCSS }}</div>
   </section>
 </template>
 <style></style>
