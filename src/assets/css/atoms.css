@@ -135,6 +135,7 @@ h4, .h4 {
 
 /* Buttons */
 .button {
+  border: var(--border-standard);
   border-radius: var(--border-round);
   display: flex;
   font-family: var(--font-body);
@@ -147,29 +148,33 @@ h4, .h4 {
 }
 .button--primary {
   background-color: var(--color-action-primary);
+  border-color: var(--color-action-primary);
   color: var(--color-light);
 }
 .button--primary:hover {
   background-color: var(--color-action-secondary);
+  border-color: var(--color-action-secondary);
   color: var(--color-light);
 }
 .button--secondary {
   background-color: var(--color-background-primary);
-  border: var(--border-style) var(--border-width) var(--color-action-primary);
+  border-color: var(--color-action-primary);
   color: var(--color-action-primary);
 }
 .button--secondary:hover {
+  background-color: var(--color-action-secondary);
   border-color: var(--color-action-secondary);
-  color: var(--color-action-secondary);
+  color: var(--color-light);
 }
 .button--negative {
   background-color: var(--color-background-primary);
-  border: var(--border-style) var(--border-width) var(--color-negative-primary);
+  border-color: var(--color-negative-primary);
   color: var(--color-negative-primary);
 }
 .button--negative:hover {
+  background-color: var(--color-negative-secondary);
   border-color: var(--color-negative-secondary);
-  color: var(--color-negative-secondary);
+  color: var(--color-light);
 }
 
 /* Nav Buttons */

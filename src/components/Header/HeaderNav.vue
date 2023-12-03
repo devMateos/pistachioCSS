@@ -5,7 +5,7 @@
       <li class="navbar__button"><a href="">headerbtn</a></li>
       <li class="navbar__button"><a href="">headerbtn</a></li>
       <li class="navbar__button"><a href="">headerbtn</a></li>
-      <li><a href="" class="button button--primary">Start</a></li>
+      <li><a href="" class="button button--secondary">Start</a></li>
     </ul>
   </nav>
   <div class="navbar__separator"></div>
