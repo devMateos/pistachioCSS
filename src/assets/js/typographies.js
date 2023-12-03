@@ -5,11 +5,11 @@ let typographies = [{
     {
       label: 'Headings',
       cssVariable: '--font-heading',
-      variableValue: 'Times New Roman',
+      variableValue: 'Montserrat',
     }, {
       label: 'Body',
       cssVariable: '--font-body',
-      variableValue: 'Arial',
+      variableValue: 'Nunito',
     },
   ],
   weight: [

@@ -3,7 +3,7 @@
 </template>
 <style>
 .add-button {
-color: var(--color-affirmative);
+color: var(--color-affirmative-primary);
 font-size: var(--font-size-XS);
 }
 .add-button:hover {

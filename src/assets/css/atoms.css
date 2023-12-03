@@ -2,7 +2,7 @@
 
 /* Links */
 a {
-  color: var(--color-action);
+  color: var(--color-action-primary);
 }
 a:hover {
   color: var(--color-action-secondary);
@@ -73,7 +73,7 @@ h4, .h4 {
   width: var(--font-size-XXL);
 }
 .form__input-item:focus, .form__input-color:focus {
-  border-color: var(--color-affirmative);
+  border-color: var(--color-affirmative-primary);
 }
 .form__input-item:disabled, .form__input-color:disabled {
   background-color: var(--color-dark);
@@ -92,7 +92,7 @@ h4, .h4 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--color-negative);
+  background-color: var(--color-negative-primary);
   border: var(--border-style) var(--border-width) var(--color-negative-secondary);
   border-radius: var(--border-round);
   cursor: pointer;
@@ -100,8 +100,8 @@ h4, .h4 {
   width: var(--spacing-M);
 }
 .form__input-checkbox:checked {
-  border-color: var(--color-affirmative);
-  background-color: var(--color-affirmative);
+  border-color: var(--color-affirmative-primary);
+  background-color: var(--color-affirmative-primary);
   background-image: url('/src/assets/icons/checkbox-checked.svg');
 }
 /* Input radio */
@@ -114,13 +114,13 @@ h4, .h4 {
   width: var(--spacing-M);
 }
 .form__input-radio:focus {
-  border-color: var(--color-affirmative);
+  border-color: var(--color-affirmative-primary);
 }
 .form__input-radio:checked {
   background-color: var(--color-affirmative-secondary);
 }
 .form__input-radio:indeterminate {
-  background-color: var(--color-negative);
+  background-color: var(--color-negative-primary);
 }
 /* Form buttons */
 .form__button {
@@ -146,7 +146,7 @@ h4, .h4 {
   width: fit-content;
 }
 .button--primary {
-  background-color: var(--color-action);
+  background-color: var(--color-action-primary);
   color: var(--color-light);
 }
 .button--primary:hover {
@@ -155,8 +155,8 @@ h4, .h4 {
 }
 .button--secondary {
   background-color: var(--color-background-primary);
-  border: var(--border-style) var(--border-width) var(--color-action);
-  color: var(--color-action);
+  border: var(--border-style) var(--border-width) var(--color-action-primary);
+  color: var(--color-action-primary);
 }
 .button--secondary:hover {
   border-color: var(--color-action-secondary);
@@ -164,8 +164,8 @@ h4, .h4 {
 }
 .button--negative {
   background-color: var(--color-background-primary);
-  border: var(--border-style) var(--border-width) var(--color-negative);
-  color: var(--color-negative);
+  border: var(--border-style) var(--border-width) var(--color-negative-primary);
+  color: var(--color-negative-primary);
 }
 .button--negative:hover {
   border-color: var(--color-negative-secondary);
@@ -183,7 +183,7 @@ h4, .h4 {
   color: var(--color-action-secondary);
 }
 .navbar__button--active > a {
-  color: var(--color-action);
+  color: var(--color-action-primary);
 }
 
 .nav-button {

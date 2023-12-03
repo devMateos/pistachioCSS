@@ -3,7 +3,7 @@
 </template>
 <style>
 .remove-button {
-  color: var(--color-negative);
+  color: var(--color-negative-primary);
   font-size: var(--font-size-XS);
 }
 .remove-button:hover {

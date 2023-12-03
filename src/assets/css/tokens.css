@@ -1,6 +1,7 @@
 /* ----- TOKENS ----- */
 
 /* CSS Variables */
+
 :root {
   /* Colors */
 
@@ -10,9 +11,9 @@
   --color-accent-primary: #639F55;
   --color-accent-secondary: #478054;
   /* Boolean colors */
-  --color-affirmative: #11922f;
+  --color-affirmative-primary: #11922f;
   --color-affirmative-secondary: #61ab72;
-  --color-negative: #FF7272;
+  --color-negative-primary: #FF7272;
   --color-negative-secondary: #EE0000;
   /* Gray colors */
   --color-light: #F8F9FA;
@@ -20,33 +21,33 @@
   --color-gray: #DEE2E6;
   --color-dark: #343A40;
   --color-darker: #212529;
-
+  
   
   /* Fonts */
   --font-heading: 'Montserrat';
   --font-body: 'Nunito';
   
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-
+      --font-weight-medium: 500;
+      --font-weight-bold: 700;
+      
   --font-size-XXL: 4rem;
   --font-size-XL: 3.2rem;
   --font-size-L: 2.4rem;
   --font-size-M: 2rem;
   --font-size-S: 1.6rem;
   --font-size-XS: 1.2rem;
-
+  
   /* Spacing */
-  --spacing-min-unit: .5rem;
+  --spacing-min-unit: 0.4rem;
 
-  --spacing-XS: var(--spacing-min-unit);
-  --spacing-S: calc(var(--spacing-min-unit) * 2);
-  --spacing-M: calc(var(--spacing-min-unit) * 4);
-  --spacing-L: calc(var(--spacing-min-unit) * 6);
-  --spacing-XL: calc(var(--spacing-min-unit) * 8);
-  --spacing-XXL: calc(var(--spacing-min-unit) * 10);
-
+  --spacing-XS: calc(var(--spacing-min-unit) * 1);
+      --spacing-S: calc(var(--spacing-min-unit) * 2);
+      --spacing-M: calc(var(--spacing-min-unit) * 4);
+      --spacing-L: calc(var(--spacing-min-unit) * 6);
+      --spacing-XL: calc(var(--spacing-min-unit) * 8);
+      --spacing-XXL: calc(var(--spacing-min-unit) * 10);
+      
   /* Borders */
   --border-style: solid;
   --border-width: 2px;
@@ -60,12 +61,12 @@
 
 @media (max-width: 768px) {
   :root {
-    --responsive-multiplier-unit: .75;
+    --responsive-multiplier-unit: 0.75;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   :root {
-    --responsive-multiplier-unit: .875;
+    --responsive-multiplier-unit: 0.825;
   }
 }
 @media (min-width: 992px) {
@@ -74,8 +75,6 @@
   }
 }
 
-  
-/* TODO: Improve Reset style. Info in this video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
 /* RESET STYLES */
 html {
   font-size: calc(62.5% * var(--responsive-multiplier-unit));
