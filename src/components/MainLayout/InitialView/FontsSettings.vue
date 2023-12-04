@@ -36,18 +36,16 @@ const props = defineProps({
       </label>
       
     <!-- FONTS FORM -->
-      <div class="card__grid"
-        v-if="formSection === 'Font'"
-      >
+      <div class="card__grid">
         <!-- Font family -->
         <div class="card__item"
         v-if="key === 'family'"
         >
-        <div
-        v-for="(element, index) in item"
+          <div
+            v-for="(element, index) in item"
             :key="index"
           >
-          <label for="">{{ element.label }}</label>
+            <label for="">{{ element.label }}</label>
             <input type="text" class="form__input-item"
               v-model="element.variableValue"
             >
@@ -62,31 +60,31 @@ const props = defineProps({
             v-for="(element, index) in item"
             :key="index"
           >
-          <input type="checkbox" class="form__input-checkbox"
-            v-model="element.checked"
-          >
+            <input type="checkbox" class="form__input-checkbox"
+              v-model="element.checked"
+            >
             <label for="">{{ element.label }}: {{ element.variableValue }}</label>
           </div>
         </div>
-      </div>
 
-      <!-- Font size -->
-      <div class="card__item"
-      v-if="key === 'size'"
-      >
-        <div
-        v-for="(element, index) in item"
+        <!-- Font size -->
+        <div class="card__item"
+        v-if="key === 'size'"
+        >
+          <div
+            v-for="(element, index) in item"
             :key="index"
           >
-          <label for="">{{ element.label }}</label>
-          <input type="number" class="form__input-item" step="0.1"
-            v-model="element.variableValue"
-          >
-          </div>
+            <label for="">{{ element.label }}</label>
+            <input type="number" class="form__input-item" step="0.1"
+              v-model="element.variableValue"
+            >
+            </div>
+        </div>
       </div>
-
       <AddButton
-        v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
+        v-if="key !== 'weight'"
+      />
     </div>
   </div>
 </template>
