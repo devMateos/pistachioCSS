@@ -4,6 +4,7 @@ import { computed, reactive, ref } from 'vue';
 import ColorsSettings from './ColorsSettings.vue';
 import FontsSettings from './FontsSettings.vue';
 import SpacingSettings from './SpacingSettings.vue';
+import CodeBlock from '@/components/CodeBlock/Index.vue';
 
 import { colors } from '@/assets/js/colors.js'
 import { typographies } from '@/assets/js/typographies.js'
@@ -46,10 +47,13 @@ const generateTokensCSS = computed(() => {
       <button class="button button--negative"
       @click.prevent="showCode = false">Delete</button>
     </form>
+  </section>
 
-    <div style="white-space: pre-wrap;"
-    v-if="showCode"
-    >{{ generateTokensCSS }}</div>
+  <section>
+    <CodeBlock
+      v-if="showCode"
+      :code="generateTokensCSS"
+    />
   </section>
 </template>
 

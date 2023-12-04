@@ -1,3 +1,4 @@
+
 /* ----- TOKENS ----- */
 
 /* CSS Variables */
@@ -28,9 +29,9 @@
   --font-body: 'Nunito';
   
   --font-weight-regular: 400;
-      --font-weight-medium: 500;
-      --font-weight-bold: 700;
-      
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
   --font-size-XXL: 4rem;
   --font-size-XL: 3.2rem;
   --font-size-L: 2.4rem;
@@ -42,12 +43,12 @@
   --spacing-min-unit: 0.4rem;
 
   --spacing-XS: calc(var(--spacing-min-unit) * 1);
-      --spacing-S: calc(var(--spacing-min-unit) * 2);
-      --spacing-M: calc(var(--spacing-min-unit) * 4);
-      --spacing-L: calc(var(--spacing-min-unit) * 6);
-      --spacing-XL: calc(var(--spacing-min-unit) * 8);
-      --spacing-XXL: calc(var(--spacing-min-unit) * 10);
-      
+  --spacing-S: calc(var(--spacing-min-unit) * 2);
+  --spacing-M: calc(var(--spacing-min-unit) * 4);
+  --spacing-L: calc(var(--spacing-min-unit) * 6);
+  --spacing-XL: calc(var(--spacing-min-unit) * 8);
+  --spacing-XXL: calc(var(--spacing-min-unit) * 10);
+  
   /* Borders */
   --border-style: solid;
   --border-width: 2px;
@@ -66,7 +67,7 @@
 }
 @media (min-width: 768px) and (max-width: 992px) {
   :root {
-    --responsive-multiplier-unit: 0.825;
+    --responsive-multiplier-unit: 0.875;
   }
 }
 @media (min-width: 992px) {

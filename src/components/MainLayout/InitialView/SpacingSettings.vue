@@ -38,14 +38,14 @@ const props = defineProps({
       <!-- SPACING FORM -->
       <!--  -->
       <div class="card__item"
-      v-if="formSection === 'Spacing' && key === 'Minimum Spacing Unit'"
+      v-if="key === 'Minimum Spacing Unit'"
       >
         <input type="number" class="form__input-item" step="0.1"
           v-model="item.variableValue"
         >
       </div>
       <div class="card__item"
-      v-if="formSection === 'Spacing' && key !== 'Minimum Spacing Unit'"
+      v-if="key !== 'Minimum Spacing Unit'"
       >
         <div
         v-for="(element, index) in item"
@@ -53,12 +53,12 @@ const props = defineProps({
           >
           <label for="">{{ element.label }}</label>
           <input type="number" class="form__input-item" step="0.001"
-            v-model="element.variableValue"
+            v-model="element.multiplier"
           >
           </div>
       </div>
       <AddButton
-        v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
+        v-if="key !== 'Minimum Spacing Unit'"/>
     </div>
   </div>
 </template>

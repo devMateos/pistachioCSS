@@ -42,7 +42,7 @@ let spacing = [{
     }, {
       label: 'Tablet unit',
       cssVariable: '--responsive-multiplier-unit',
-      multiplier: 0.825,
+      multiplier: 0.875,
       breakpoint: 992,
     }, {
       label: 'Desktop unit',
