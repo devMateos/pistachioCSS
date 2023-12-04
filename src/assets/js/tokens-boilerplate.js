@@ -1,7 +1,3 @@
-import { colors } from '@/assets/js/colors.js';
-import { typographies } from '@/assets/js/typographies.js';
-import { spacing } from '@/assets/js/spacing.js';
-
 export { generateTokens }
 
 function generateTokens(colorsData, typographiesData, spacingData){
@@ -24,7 +20,7 @@ function generateTokens(colorsData, typographiesData, spacingData){
   let fontWeightTemplate = '';
   typographies.weight.forEach((e) => {
     fontWeightTemplate += `${e.cssVariable}: ${e.variableValue};
-      `
+  `
   })
 
   /* SPACING SETTINGS */
@@ -34,7 +30,7 @@ function generateTokens(colorsData, typographiesData, spacingData){
   let spacingUnitsTemplate = '';
   spacingUnits.forEach((e) => {
     spacingUnitsTemplate += `${e.cssVariable}: calc(var(${minimumSpacingUnit.cssVariable}) * ${e.multiplier});
-      `
+  `
   })
 
   /* Responsive measures */
