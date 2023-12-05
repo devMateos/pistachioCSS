@@ -7,6 +7,8 @@ import { spacing } from '@/assets/js/settings-objects/spacing.js'
 import { borders } from '@/assets/js/settings-objects/borders.js'
 
 import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
+import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
+import { darkColorsTemplate } from '@/assets/js/boilerplates/dark-colors.js'
 
 import ColorsSettings from './ColorsSettings.vue';
 import FontsSettings from './FontsSettings.vue';
@@ -21,9 +23,19 @@ let borderData = reactive(borders);
 
 let showCode = ref(false);
 
+const generateCode = computed((data) => {
+  return data;
+});
+
 
 const generateTokensCSS = computed(() => {
   return generateTokens(colorsData, typographiesData, spacingData, borderData);
+});
+const generateLightTokens = computed(() => {
+  return lightColorsTemplate;
+});
+const generateDarkTokens = computed(() => {
+  return darkColorsTemplate;
 });
 </script>
 
@@ -71,10 +83,18 @@ const generateTokensCSS = computed(() => {
     </form>
   </section>
 
-  <section>
+  <section v-if="showCode">
     <CodeBlock
-      v-if="showCode"
+      :codeBlockName="'Tokens'"
       :code="generateTokensCSS"
+    />
+    <CodeBlock
+      :codeBlockName="'Light Mode'"
+      :code="generateLightTokens"
+    />
+    <CodeBlock
+      :codeBlockName="'Dark Mode'"
+      :code="generateDarkTokens"
     />
   </section>
 </template>

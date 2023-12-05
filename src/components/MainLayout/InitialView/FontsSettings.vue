@@ -80,9 +80,6 @@ const props = defineProps({
             </div>
         </div>
       </div>
-      <AddButton
-        v-if="key !== 'weight'"
-      />
     </div>
   </div>
 </template>

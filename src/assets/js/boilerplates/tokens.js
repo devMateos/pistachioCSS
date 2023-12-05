@@ -49,9 +49,7 @@ function generateTokens(colorsData, typographiesData, spacingData, borderData){
   };
 
 let tokensBoilerplate = `
-/* ----- TOKENS ----- */
-
-/* CSS Variables */
+/* ----- Custom properties (Tokens) ----- */
 
 :root {
   /* Colors */
@@ -139,19 +137,6 @@ button {
 } 
 li {
   list-style: none;
-}
-
-/* Interface Color */
-body {
-  background-color: var(--color-background-primary);
-}
-
-/* Spacing */
-main {
-  padding: 0 var(--spacing-XL);
-}
-section {
-  padding: var(--spacing-M) 0;
 }
 `;
   
