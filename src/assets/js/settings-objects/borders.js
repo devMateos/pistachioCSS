@@ -13,7 +13,7 @@ let borders = [{
     },
   radius: {
       label: 'Border Radius',
-      cssVariable: '--border-radius',
-      variableValue: 'var(--border-sharp)',
+      cssVariable: '--border-radius-standard',
+      variableValue: 'var(--border-round)',
     },
 }];

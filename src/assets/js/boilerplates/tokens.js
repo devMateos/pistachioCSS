@@ -1,6 +1,6 @@
 export { generateTokens }
 
-function generateTokens(colorsData, typographiesData, spacingData){
+function generateTokens(colorsData, typographiesData, spacingData, borderData){
 
   /* COLORS SETTINGS*/
   const colors = {
@@ -40,7 +40,13 @@ function generateTokens(colorsData, typographiesData, spacingData){
     desktop: spacingData[0]['Responsive Multiplier Unit'][2],
   };
 
-  console.log(minimumSpacingUnit);
+
+  /* BORDER SETTINGS */
+  const border = {
+    style: borderData[0].style,
+    width: borderData[0].width,
+    radius: borderData[0].radius,
+  };
 
 let tokensBoilerplate = `
 /* ----- TOKENS ----- */
@@ -87,14 +93,14 @@ let tokensBoilerplate = `
   ${spacingUnitsTemplate}
   
   /* Borders */
-  --border-style: solid;
-  --border-width: 0.2rem;
+  ${border.style.cssVariable}: ${border.style.variableValue};
+  ${border.width.cssVariable}: ${border.width.variableValue}rem;
   --border-sharp: 0;
   --border-rounded: var(--spacing-M);
   --border-round: var(--spacing-L);
-
+  
   --border-standard: var(--border-style) var(--border-width) var(--border-color);
-  --border-radius-standard:
+  ${border.radius.cssVariable}: ${border.radius.variableValue};
 }
 
 /* Responsive measures */

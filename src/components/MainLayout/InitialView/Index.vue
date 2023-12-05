@@ -1,11 +1,12 @@
 <script setup>
 import { computed, reactive, ref } from 'vue';
 
-import { colors } from '@/assets/js/colors.js'
-import { typographies } from '@/assets/js/typographies.js'
-import { spacing } from '@/assets/js/spacing.js'
-import { borders } from '@/assets/js/borders.js'
-import { generateTokens } from '@/assets/js/tokens-boilerplate.js'
+import { colors } from '@/assets/js/settings-objects/colors.js'
+import { typographies } from '@/assets/js/settings-objects/typographies.js'
+import { spacing } from '@/assets/js/settings-objects/spacing.js'
+import { borders } from '@/assets/js/settings-objects/borders.js'
+
+import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
 
 import ColorsSettings from './ColorsSettings.vue';
 import FontsSettings from './FontsSettings.vue';
@@ -16,39 +17,50 @@ import CodeBlock from '@/components/CodeBlock/Index.vue';
 let colorsData = reactive(colors);
 let typographiesData = reactive(typographies);
 let spacingData = reactive(spacing);
-let bordersData = reactive(borders);
+let borderData = reactive(borders);
 
 let showCode = ref(false);
 
 
 const generateTokensCSS = computed(() => {
-  return generateTokens(colorsData, typographiesData, spacingData);
+  return generateTokens(colorsData, typographiesData, spacingData, borderData);
 });
 </script>
 
 <template>
   <section>
     <form action="">
-      <ColorsSettings
-        :formSection="'Colors'"
-        :formSectionTitle="'Enter the colors settings'"
-        :formItemsList="colorsData[0]"
-      />
-      <FontsSettings
-        :formSection="'Typographies'"
-        :formSectionTitle="'Enter the typographies settings'"
-        :formItemsList="typographiesData[0]"
-      />
-      <SpacingSettings
-        :formSection="'Spacing'"
-        :formSectionTitle="'Enter the spacing settings'"
-        :formItemsList="spacingData[0]"
-      />
-      <BorderSettings
-        :formSection="'Border'"
-        :formSectionTitle="'Enter the border settings'"
-        :formItemsList="bordersData[0]"
-      />
+      <section>
+        <ColorsSettings
+          :formSection="'Colors'"
+          :formSectionTitle="'Enter the colors settings'"
+          :formItemsList="colorsData[0]"
+        />
+      </section>
+
+      <section>
+        <FontsSettings
+          :formSection="'Typographies'"
+          :formSectionTitle="'Enter the typographies settings'"
+          :formItemsList="typographiesData[0]"
+        />
+      </section>
+      
+      <section>
+        <SpacingSettings
+          :formSection="'Spacing'"
+          :formSectionTitle="'Enter the spacing settings'"
+          :formItemsList="spacingData[0]"
+        />
+      </section>
+      
+      <section>
+        <BorderSettings
+          :formSection="'Border'"
+          :formSectionTitle="'Enter the border settings'"
+          :formItemsList="borderData[0]"
+        />
+      </section>
       
       <button class="button button--primary"
       @click.prevent="showCode = true">Create CSS</button>

@@ -20,45 +20,39 @@ const props = defineProps({
 </script>
 
 <template>
-  <section>
-    <h2>{{ formSectionTitle }}</h2>
+  <h2>{{ formSectionTitle }}</h2>
 
-    <div class="initial-settings__form"
+  <div class="initial-settings__form"
+  >
+  
+    <div class="initial-settings__card"
+      v-for="(item, key) in formItemsList"
+      :key="key"
     >
-    
-      <div class="initial-settings__card"
-        v-for="(item, key) in formItemsList"
-        :key="key"
-      >
 
-        <label class="h3"
-          :for="`${key} ${formSection}`"
-          >
-          {{ key }} {{ formSection }}
-        </label>
-        
-      <!-- COLORS FORM -->
-        <div class="card__grid"
-          v-if="formSection === 'Colors'"
+      <label class="h3"
+        :for="`${key} ${formSection}`"
         >
-          <div class="card__item"
-            v-for="(element, index) in item"
-            :key="index"
+        {{ key }} {{ formSection }}
+      </label>
+      
+    <!-- COLORS FORM -->
+      <div class="card__grid"
+        v-if="formSection === 'Colors'"
+      >
+        <div class="card__item"
+          v-for="(element, index) in item"
+          :key="index"
+        >
+          <input type="color" class="form__input-color"
+            v-model="element.variableValue"
           >
-            <div
-              v-if="item !== light"
-            >
-              <input type="color" class="form__input-color"
-                v-model="element.variableValue"
-              >
-              <RemoveButton/>
-            </div>
+          <RemoveButton/>
           </div>
         </div>
 
-        <AddButton
-          v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
-      </div>
+      <AddButton
+        v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
     </div>
-  </section>
+  </div>
 </template>

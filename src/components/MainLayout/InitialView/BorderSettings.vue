@@ -64,19 +64,33 @@ const props = defineProps({
       </div>
 
       <!-- Radius -->
-      <div class="card__item"
+      <div class="card__radio-options"
       v-if="key === 'radius'"
       >
       
-        <label for="sharp border">Sharp</label>
-        <input type="radio" v-model="item.variableValue" value="var(--border-sharp)">
+        <div>
+          <input type="radio" v-model="item.variableValue" value="var(--border-sharp)">
+          <label for="sharp border">Sharp</label>
+        </div>
 
-        <label for="rounded border">Rounded</label>
-        <input type="radio" v-model="item.variableValue" value="var(--border-rounded)">
+        <div>
+          <input type="radio" v-model="item.variableValue" value="var(--border-rounded)">
+          <label for="rounded border">Rounded</label>
+        </div>
 
-        <label for="round border">Round</label>
-        <input type="radio" v-model="item.variableValue" value="var(--border-round)">
+        <div>
+          <input type="radio" v-model="item.variableValue" value="var(--border-round)">
+          <label for="round border">Round</label>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.card__radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-S);
+}
+</style>

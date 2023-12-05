@@ -1,4 +1,4 @@
-import { findVariableValue } from '@/assets/js/findVariableValue.js'
+import { findVariableValue } from './findVariableValue.js'
 export { colors, lightColors, darkColors };
 
 let colors = [{
