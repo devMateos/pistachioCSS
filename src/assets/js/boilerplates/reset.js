@@ -1,3 +1,6 @@
+export { resetTemplate }
+
+const resetTemplate = `
 /* RESET CSS */
 * {
   box-sizing: border-box;
@@ -14,3 +17,4 @@ button {
 li {
   list-style: none;
 }
+`;

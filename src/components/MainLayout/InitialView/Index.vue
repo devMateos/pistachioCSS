@@ -9,6 +9,7 @@ import { borders } from '@/assets/js/settings-objects/borders.js'
 import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
 import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
 import { darkColorsTemplate } from '@/assets/js/boilerplates/dark-colors.js'
+import { resetTemplate } from '@/assets/js/boilerplates/reset.js'
 import { atomsTemplate } from '@/assets/js/boilerplates/atoms.js'
 
 import ColorsSettings from './ColorsSettings.vue';
@@ -16,6 +17,7 @@ import FontsSettings from './FontsSettings.vue';
 import SpacingSettings from './SpacingSettings.vue';
 import BorderSettings from './BorderSettings.vue';
 import CodeBlock from '@/components/CodeBlock/Index.vue';
+import CopyButton from '../../CodeBlock/CopyButton.vue';
 
 let colorsData = reactive(colors);
 let typographiesData = reactive(typographies);
@@ -38,10 +40,18 @@ const generateLightTokens = computed(() => {
 const generateDarkTokens = computed(() => {
   return darkColorsTemplate;
 });
-
-const generateAtomsTokens = computed(() => {
+const generateReset = computed(() => {
+  return resetTemplate;
+});
+const generateAtoms = computed(() => {
   return atomsTemplate;
 });
+
+const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtoms.value;
+
+function copy(text) {
+  navigator.clipboard.writeText(text);
+}
 </script>
 
 <template>
@@ -80,6 +90,11 @@ const generateAtomsTokens = computed(() => {
       </section>
       
       <div class="form__button-container">
+        <CopyButton class="button copy-complete-code"
+          :text="'Copy all'"
+          v-if="showCode"
+          @copy-code="copy(completeCSS)"
+        />
         <button class="button button--primary"
         @click.prevent="showCode = true">Create CSS</button>
         <button class="button button--negative"
@@ -102,8 +117,12 @@ const generateAtomsTokens = computed(() => {
       :code="generateDarkTokens"
     />
     <CodeBlock
+      :codeBlockName="'ResetCSS'"
+      :code="generateReset"
+    />
+    <CodeBlock
       :codeBlockName="'Items'"
-      :code="generateAtomsTokens"
+      :code="generateAtoms"
     />
   </section>
 </template>
@@ -119,7 +138,7 @@ const generateAtomsTokens = computed(() => {
   display: flex;
   flex-direction: column;
   border: var(--border-standard);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
   padding: var(--spacing-XL);
   position: relative;
 }
@@ -155,5 +174,9 @@ label.h3 {
 }
 .form__button-container > .button {
   padding: var(--spacing-S) var(--spacing-M);
+}
+
+.copy-complete-code {
+  background-color: var(--color-light-text);
 }
 </style>

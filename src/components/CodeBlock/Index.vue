@@ -31,7 +31,7 @@ function copy(text) {
   margin: var(--spacing-M) 0;
 }
 .code-block__top-bar {
-  border-radius: var(--border-round) var(--border-round) 0 0;
+  border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
   display: flex;
   background-color: var(--color-text);
   justify-content: space-between;
@@ -42,7 +42,7 @@ function copy(text) {
   text-transform: uppercase;
 }
 .code-block__content {
-  border-radius: 0 0 var(--border-round) var(--border-round);
+  border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
   background-color: var(--color-light-text);
   color: var(--color-background-primary);
   padding: var(--spacing-S) var(--spacing-XL);

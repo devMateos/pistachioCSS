@@ -1,7 +1,7 @@
 export { atomsTemplate }
 
 const atomsTemplate = `
-/* ATOMS */
+/* ----- Items (Atoms) ----- */
 
 /* Interface Color */
 body {
@@ -159,7 +159,7 @@ h5, .h5 {
 
 /* FORMS */
 /* Input */
-.form__input-item {     /* inputs (text, number, etc.), textarea, select */
+.form__input-item {
   border: var(--border-standard);
   border-radius: var(--border-round);
   font-family: var(--font-body);
@@ -193,10 +193,6 @@ h5, .h5 {
 /* Input checkbox */
 .form__input-checkbox {
   appearance: none;
-  background-image: url('/src/assets/icons/checkbox-not-checked.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: var(--color-negative-primary);
   border: var(--border-style) var(--border-width) var(--color-negative-secondary);
   border-radius: var(--border-round);
@@ -207,7 +203,6 @@ h5, .h5 {
 .form__input-checkbox:checked {
   border-color: var(--color-affirmative-primary);
   background-color: var(--color-affirmative-primary);
-  background-image: url('/src/assets/icons/checkbox-checked.svg');
 }
 /* Input radio */
 .form__input-radio {
