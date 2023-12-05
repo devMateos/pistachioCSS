@@ -1,5 +1,5 @@
 import { findVariableValue } from '@/assets/js/findVariableValue.js'
-export { colors };
+export { colors, lightColors, darkColors };
 
 let colors = [{
   /* BRAND COLORS */

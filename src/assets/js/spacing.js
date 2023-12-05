@@ -53,11 +53,6 @@ let spacing = [{
   ],
 }];
 
-
-/* spacing[0]['Spacing Units'].forEach(e => {
-  let result = spacing[0]['Minimum Spacing Unit'].variableValue * e.multiplier;
-  e.variableValue = result;
-}); */
 spacing[0]['Responsive Multiplier Unit'].forEach(e => {
   e.variableValue = e.multiplier;
 });

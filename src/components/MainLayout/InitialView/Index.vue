@@ -1,19 +1,22 @@
 <script setup>
 import { computed, reactive, ref } from 'vue';
 
-import ColorsSettings from './ColorsSettings.vue';
-import FontsSettings from './FontsSettings.vue';
-import SpacingSettings from './SpacingSettings.vue';
-import CodeBlock from '@/components/CodeBlock/Index.vue';
-
 import { colors } from '@/assets/js/colors.js'
 import { typographies } from '@/assets/js/typographies.js'
 import { spacing } from '@/assets/js/spacing.js'
+import { borders } from '@/assets/js/borders.js'
 import { generateTokens } from '@/assets/js/tokens-boilerplate.js'
+
+import ColorsSettings from './ColorsSettings.vue';
+import FontsSettings from './FontsSettings.vue';
+import SpacingSettings from './SpacingSettings.vue';
+import BorderSettings from './BorderSettings.vue';
+import CodeBlock from '@/components/CodeBlock/Index.vue';
 
 let colorsData = reactive(colors);
 let typographiesData = reactive(typographies);
 let spacingData = reactive(spacing);
+let bordersData = reactive(borders);
 
 let showCode = ref(false);
 
@@ -40,6 +43,11 @@ const generateTokensCSS = computed(() => {
         :formSection="'Spacing'"
         :formSectionTitle="'Enter the spacing settings'"
         :formItemsList="spacingData[0]"
+      />
+      <BorderSettings
+        :formSection="'Border'"
+        :formSectionTitle="'Enter the border settings'"
+        :formItemsList="bordersData[0]"
       />
       
       <button class="button button--primary"

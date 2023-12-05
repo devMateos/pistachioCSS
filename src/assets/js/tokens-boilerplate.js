@@ -88,11 +88,13 @@ let tokensBoilerplate = `
   
   /* Borders */
   --border-style: solid;
-  --border-width: 2px;
+  --border-width: 0.2rem;
   --border-sharp: 0;
   --border-rounded: var(--spacing-M);
   --border-round: var(--spacing-L);
+
   --border-standard: var(--border-style) var(--border-width) var(--border-color);
+  --border-radius-standard:
 }
 
 /* Responsive measures */
