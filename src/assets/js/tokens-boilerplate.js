@@ -80,10 +80,12 @@ let tokensBoilerplate = `
   ${typographies.size[4].cssVariable}: ${typographies.size[4].variableValue}rem;
   ${typographies.size[5].cssVariable}: ${typographies.size[5].variableValue}rem;
   
+
   /* Spacing */
   ${minimumSpacingUnit.cssVariable}: ${minimumSpacingUnit.variableValue}rem;
 
   ${spacingUnitsTemplate}
+  
   /* Borders */
   --border-style: solid;
   --border-width: 2px;

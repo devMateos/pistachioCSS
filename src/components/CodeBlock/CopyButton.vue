@@ -19,13 +19,13 @@ const copyCode = () => emit('copy-code');
 <style scoped>
 button {
   align-items: center;
-  color: var(--color-gray);
+  color: var(--color-background-primary);
   display: flex;
   gap: var(--spacing-XS);
-  stroke: var(--color-gray);
+  stroke: var(--color-background-primary);
 }
 button:hover {
-  color: var(--color-light);
-  stroke: var(--color-light);
+  color: var(--color-gray);
+  stroke: var(--color-gray);
 }
 </style>
