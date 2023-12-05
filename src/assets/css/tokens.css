@@ -1,4 +1,3 @@
-
 /* ----- TOKENS ----- */
 
 /* CSS Variables */
@@ -63,7 +62,6 @@
 }
 
 /* Responsive measures */
-
 @media (max-width: 768px) {
   :root {
     --responsive-multiplier-unit: 0.75;
@@ -79,36 +77,6 @@
     --responsive-multiplier-unit: 1;
   }
 }
-
-/* RESET STYLES */
 html {
   font-size: calc(62.5% * var(--responsive-multiplier-unit));
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-button {
-  all: unset;
-  cursor: pointer;
-} 
-li {
-  list-style: none;
-}
-
-/* Interface Color */
-body {
-  background-color: var(--color-background-primary);
-}
-
-/* Spacing */
-main {
-  padding: 0 var(--spacing-XL);
-}
-section {
-  padding: var(--spacing-M) 0;
 }

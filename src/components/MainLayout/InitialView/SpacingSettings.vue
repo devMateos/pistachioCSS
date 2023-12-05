@@ -1,6 +1,4 @@
 <script setup>
-import AddButton from '@/components/AddButton.vue';
-
 const props = defineProps({
   formSection: {
     type: String,
@@ -57,8 +55,6 @@ const props = defineProps({
           >
           </div>
       </div>
-      <AddButton
-        v-if="key !== 'Minimum Spacing Unit'"/>
     </div>
   </div>
 </template>

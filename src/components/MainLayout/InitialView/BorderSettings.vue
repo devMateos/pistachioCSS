@@ -67,21 +67,22 @@ const props = defineProps({
       <div class="card__radio-options"
       v-if="key === 'radius'"
       >
-      
+        
         <div>
-          <input type="radio" v-model="item.variableValue" value="var(--border-sharp)">
+          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-round)">
+          <label for="round border">Round</label>
+        </div>
+
+        <div>
+          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-rounded)">
+          <label for="rounded border">Rounded</label>
+        </div>
+        
+        <div>
+          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-sharp)">
           <label for="sharp border">Sharp</label>
         </div>
 
-        <div>
-          <input type="radio" v-model="item.variableValue" value="var(--border-rounded)">
-          <label for="rounded border">Rounded</label>
-        </div>
-
-        <div>
-          <input type="radio" v-model="item.variableValue" value="var(--border-round)">
-          <label for="round border">Round</label>
-        </div>
       </div>
     </div>
   </div>

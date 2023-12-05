@@ -62,10 +62,12 @@ const generateTokensCSS = computed(() => {
         />
       </section>
       
-      <button class="button button--primary"
-      @click.prevent="showCode = true">Create CSS</button>
-      <button class="button button--negative"
-      @click.prevent="showCode = false">Delete</button>
+      <div class="form__button-container">
+        <button class="button button--primary"
+        @click.prevent="showCode = true">Create CSS</button>
+        <button class="button button--negative"
+        @click.prevent="showCode = false">Delete</button>
+      </div>
     </form>
   </section>
 
@@ -115,5 +117,14 @@ label.h3 {
 .add-button {
   position: relative;
   bottom: 0;
+}
+
+.form__button-container {
+  display: flex;
+  gap: var(--spacing-M);
+  justify-content: end;
+}
+.form__button-container > .button {
+  padding: var(--spacing-S) var(--spacing-M);
 }
 </style>

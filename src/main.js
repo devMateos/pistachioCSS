@@ -1,7 +1,8 @@
-import '/src/assets/css/light-colors.css';
-import '/src/assets/css/dark-colors.css';
 import '/src/assets/fonts/fonts.css';
 import '/src/assets/css/tokens.css';
+import '/src/assets/css/light-colors.css';
+import '/src/assets/css/dark-colors.css';
+import '/src/assets/css/reset.css';
 import '/src/assets/css/atoms.css';
 
 import { createApp } from 'vue'

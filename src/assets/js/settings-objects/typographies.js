@@ -17,17 +17,17 @@ let typographies = [{
       label: 'Thin',
       cssVariable: '--font-weight-thin',
       variableValue: 100,
-      checked: false,
+      checked: true,
     }, {
       label: 'Extra Light',
       cssVariable: '--font-weight-extra-light',
       variableValue: 200,
-      checked: false,
+      checked: true,
     }, {
       label: 'Light',
       cssVariable: '--font-weight-light',
       variableValue: 300,
-      checked: false,
+      checked: true,
     }, {
       label: 'Regular',
       cssVariable: '--font-weight-regular',
@@ -42,7 +42,7 @@ let typographies = [{
       label: 'Semi Bold',
       cssVariable: '--font-weight-semi-bold',
       variableValue: 600,
-      checked: false,
+      checked: true,
     }, {
       label: 'Bold',
       cssVariable: '--font-weight-bold',
@@ -52,12 +52,12 @@ let typographies = [{
       label: 'Extra Bold',
       cssVariable: '--font-weight-extra-bold',
       variableValue: 800,
-      checked: false,
+      checked: true,
     }, {
       label: 'Heavy',
       cssVariable: '--font-weight-heavy',
       variableValue: 900,
-      checked: false,
+      checked: true,
     },
   ],
   size: [

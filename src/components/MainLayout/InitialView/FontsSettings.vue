@@ -1,6 +1,4 @@
 <script setup>
-import AddButton from '@/components/AddButton.vue';
-
 const props = defineProps({
   formSection: {
     type: String,

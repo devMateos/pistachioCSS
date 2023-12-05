@@ -1,5 +1,18 @@
 /* ATOMS */
 
+/* Interface Color */
+body {
+  background-color: var(--color-background-primary);
+}
+
+/* Spacing */
+main {
+  padding: 0 var(--spacing-XL);
+}
+section {
+  padding: var(--spacing-M) 0;
+}
+
 /* Links */
 a {
   color: var(--color-action-primary);

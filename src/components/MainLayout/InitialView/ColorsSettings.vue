@@ -1,7 +1,4 @@
 <script setup>
-import RemoveButton from '@/components/RemoveButton.vue';
-import AddButton from '@/components/AddButton.vue';
-
 const props = defineProps({
   formSection: {
     type: String,
@@ -47,12 +44,8 @@ const props = defineProps({
           <input type="color" class="form__input-color"
             v-model="element.variableValue"
           >
-          <RemoveButton/>
           </div>
         </div>
-
-      <AddButton
-        v-if="key !== 'Minimum Spacing Unit' && key !== 'weight'"/>
     </div>
   </div>
 </template>
