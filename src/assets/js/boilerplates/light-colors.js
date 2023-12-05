@@ -8,7 +8,7 @@ const lightColorsTemplate = `
   /* Text colors */
   --color-text: var(--color-darker);
   --color-light-text: var(--color-dark);
-  /* Affirmative colors */
+  /* Action colors */
   --color-action-primary: var(--color-accent-primary);
   --color-action-secondary: var(--color-accent-secondary);
   /* Border colors */

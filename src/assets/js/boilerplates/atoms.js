@@ -1,3 +1,6 @@
+export { atomsTemplate }
+
+const atomsTemplate = `
 /* ATOMS */
 
 /* Interface Color */
@@ -224,3 +227,4 @@ h5, .h5 {
 .form__input-radio:indeterminate {
   background-color: var(--color-negative-primary);
 }
+`;

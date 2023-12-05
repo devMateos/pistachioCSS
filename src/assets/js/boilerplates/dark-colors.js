@@ -9,7 +9,7 @@ const darkColorsTemplate = `
   /* Text colors */
   --color-text: var(--color-light);
   --color-light-text: var(--color-light-gray);
-  /* Affirmative colors */
+  /* Action colors */
   --color-action-primary: var(--color-accent-secondary);
   --color-action-secondary: var(--color-accent-primary);
   /* Border colors */

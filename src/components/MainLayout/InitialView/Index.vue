@@ -9,6 +9,7 @@ import { borders } from '@/assets/js/settings-objects/borders.js'
 import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
 import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
 import { darkColorsTemplate } from '@/assets/js/boilerplates/dark-colors.js'
+import { atomsTemplate } from '@/assets/js/boilerplates/atoms.js'
 
 import ColorsSettings from './ColorsSettings.vue';
 import FontsSettings from './FontsSettings.vue';
@@ -36,6 +37,10 @@ const generateLightTokens = computed(() => {
 });
 const generateDarkTokens = computed(() => {
   return darkColorsTemplate;
+});
+
+const generateAtomsTokens = computed(() => {
+  return atomsTemplate;
 });
 </script>
 
@@ -95,6 +100,10 @@ const generateDarkTokens = computed(() => {
     <CodeBlock
       :codeBlockName="'Dark Mode'"
       :code="generateDarkTokens"
+    />
+    <CodeBlock
+      :codeBlockName="'Items'"
+      :code="generateAtomsTokens"
     />
   </section>
 </template>
