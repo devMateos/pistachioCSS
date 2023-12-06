@@ -13,15 +13,15 @@ function generateTokens(colorsData, typographiesData, spacingData, borderData){
   /* TYPOGRAPHIES SETTINGS */
   const typographies = {
     family: typographiesData[0].family,
-    weight:typographiesData[0].weight.filter((e) => e.checked === true ),
+    /* weight:typographiesData[0].weight.filter((e) => e.checked === true ), */
     size: typographiesData[0].size,
   };
   /* Font Weight template */
-  let fontWeightTemplate = '';
+/*   let fontWeightTemplate = '';
   typographies.weight.forEach((e) => {
     fontWeightTemplate += `${e.cssVariable}: ${e.variableValue};
   `
-  })
+  }) */
 
   /* SPACING SETTINGS */
   const minimumSpacingUnit = spacingData[0]['Minimum Spacing Unit'];
@@ -76,7 +76,16 @@ let tokensBoilerplate = `
   ${typographies.family[0].cssVariable}: '${typographies.family[0].variableValue}';
   ${typographies.family[1].cssVariable}: '${typographies.family[1].variableValue}';
   
-  ${fontWeightTemplate}
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-heavy: 900;
+
   ${typographies.size[0].cssVariable}: ${typographies.size[0].variableValue}rem;
   ${typographies.size[1].cssVariable}: ${typographies.size[1].variableValue}rem;
   ${typographies.size[2].cssVariable}: ${typographies.size[2].variableValue}rem;

@@ -4,15 +4,15 @@ let typographies = [{
   family: [
     {
       label: 'Headings',
-      cssVariable: '--font-heading',
+      cssVariable: '--font-family-heading',
       variableValue: 'Montserrat',
     }, {
       label: 'Body',
-      cssVariable: '--font-body',
+      cssVariable: '--font-family-body',
       variableValue: 'Nunito',
     },
   ],
-  weight: [
+/*   weight: [
     {
       label: 'Thin',
       cssVariable: '--font-weight-thin',
@@ -59,7 +59,7 @@ let typographies = [{
       variableValue: 900,
       checked: true,
     },
-  ],
+  ], */
   size: [
   {
       label: 'XXL',
@@ -86,5 +86,43 @@ let typographies = [{
       cssVariable: '--font-size-XS',
       variableValue: 1.2,
     },
-  ]
+  ],
+  config: [
+    {
+      label: 'H1',
+      family: 'heading',
+      size: 'XXL',
+      weight: 'bold',
+    }, {
+      label: 'H2',
+      family: 'heading',
+      size: 'XL',
+      weight: 'bold',
+    }, {
+      label: 'H3',
+      family: 'heading',
+      size: 'L',
+      weight: 'medium',
+    }, {
+      label: 'H4',
+      family: 'heading',
+      size: 'M',
+      weight: 'medium',
+    }, {
+      label: 'H5',
+      family: 'heading',
+      size: 'S',
+      weight: 'medium',
+    }, {
+      label: 'Body',
+      family: 'body',
+      size: 'S',
+      weight: 'regular',
+    }, {
+      label: 'Small',
+      family: 'body',
+      size: 'XS',
+      weight: 'regular',
+    },
+  ],
 }];

@@ -30,7 +30,7 @@ const props = defineProps({
       <label class="h3"
         :for="`${key} ${formSection}`"
         >
-        {{ key }} {{ formSection }}
+        Font {{ key }}
       </label>
       
     <!-- FONTS FORM -->
@@ -50,8 +50,8 @@ const props = defineProps({
           </div>
         </div>
         
-        <!-- Font weight -->
-        <div class="card__item"
+        <!-- Font weight --> <!-- ⛔ TEMPORARILY DISABLED -->
+<!--         <div class="card__item"
           v-if="key === 'weight'"
         >
           <div
@@ -63,7 +63,7 @@ const props = defineProps({
             >
             <label for="">{{ element.label }}: {{ element.variableValue }}</label>
           </div>
-        </div>
+        </div> -->
 
         <!-- Font size -->
         <div class="card__item"
@@ -79,7 +79,58 @@ const props = defineProps({
             >
             </div>
         </div>
+
+        <!-- Font config -->
+        <div class="card__item--two-column"
+        v-if="key === 'config'"
+        >
+          <div
+            v-for="(element, index) in item"
+            :key="index"
+          >
+            <div>
+              <label for="">{{ element.label }}</label>
+              <select class="form__input-item"
+                v-model="element.family"
+              >
+                <option value="heading">Heading</option>
+                <option value="body">Body</option>
+              </select>
+              <select class="form__input-item"
+                v-model="element.size"
+              >
+                <option value="XXL">XXL</option>
+                <option value="XL">XL</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="S">S</option>
+                <option value="XS">XS</option>
+              </select>
+              <select class="form__input-item"
+                v-model="element.weight"
+              >
+                <option value="thin">Thin (100)</option>
+                <option value="extra-light">Extra Light (200)</option>
+                <option value="light">Light (300)</option>
+                <option value="regular">Regular (400)</option>
+                <option value="medium">Medium (500)</option>
+                <option value="Semi Bold">Semi Bold (600)</option>
+                <option value="bold">Bold (700)</option>
+                <option value="extra-bold">Extra Bold (800)</option>
+                <option value="Heavy">Heavy (900)</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.card__item--two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-M);
+}
+</style>
