@@ -10,7 +10,7 @@ import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
 import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
 import { darkColorsTemplate } from '@/assets/js/boilerplates/dark-colors.js'
 import { resetTemplate } from '@/assets/js/boilerplates/reset.js'
-import { atomsTemplate } from '@/assets/js/boilerplates/atoms.js'
+import { generateAtoms } from '@/assets/js/boilerplates/atoms.js'
 
 import ColorsSettings from './ColorsSettings.vue';
 import FontsSettings from './FontsSettings.vue';
@@ -26,10 +26,6 @@ let borderData = reactive(borders);
 
 let showCode = ref(false);
 
-const generateCode = computed((data) => {
-  return data;
-});
-
 
 const generateTokensCSS = computed(() => {
   return generateTokens(colorsData, typographiesData, spacingData, borderData);
@@ -43,11 +39,11 @@ const generateDarkTokens = computed(() => {
 const generateReset = computed(() => {
   return resetTemplate;
 });
-const generateAtoms = computed(() => {
-  return atomsTemplate;
+const generateAtomsCSS = computed(() => {
+  return generateAtoms(typographiesData);
 });
 
-const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtoms.value;
+const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtomsCSS.value;
 
 function copy(text) {
   navigator.clipboard.writeText(text);
@@ -122,7 +118,7 @@ function copy(text) {
     />
     <CodeBlock
       :codeBlockName="'Items'"
-      :code="generateAtoms"
+      :code="generateAtomsCSS"
     />
   </section>
 </template>

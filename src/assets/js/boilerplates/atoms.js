@@ -1,5 +1,7 @@
-export { atomsTemplate }
+export { generateAtoms }
 
+function generateAtoms(typographiesData){
+  const typographiesConfig = typographiesData[0].config;
 const atomsTemplate = `
 /* ----- Items (Atoms) ----- */
 
@@ -37,50 +39,44 @@ a:hover {
 /* Text */
 label, li, p, small {
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-regular);
-  padding: var(--spacing-XS) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 small {
-  font-size: var(--font-size-XS);
+  font-size: var(--font-size-${typographiesConfig[0].size});
 }
 div {
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 /* Headings */
 h1, .h1 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-XXL);
-  font-weight: var(--font-weight-bold);
-  padding: var(--spacing-L) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h2, .h2 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-XL);
-  font-weight: var(--font-weight-bold);
-  padding: var(--spacing-M) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h3, .h3 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-L);
-  font-weight: var(--font-weight-medium);
-  padding: var(--spacing-M) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h4, .h4 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-M);
-  font-weight: var(--font-weight-medium);
-  padding: var(--spacing-XS) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h5, .h5 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-medium);
-  padding: var(--spacing-XS) 0;
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 
 /* BUTTONS */
@@ -88,9 +84,9 @@ h5, .h5 {
   border: var(--border-standard);
   border-radius: var(--border-round);
   display: flex;
-  font-family: var(--font-body);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
   justify-content: center;
   min-width: 9.6rem;
   padding: var(--spacing-XS) var(--spacing-S);
@@ -130,9 +126,9 @@ h5, .h5 {
 /* Nav Buttons */
 .navbar__button > a {
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: var(--font-size-S);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-${typographiesConfig[0].family});
+  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 .navbar__button > a:hover {
   color: var(--color-action-secondary);
@@ -162,7 +158,7 @@ h5, .h5 {
 .form__input-item {
   border: var(--border-standard);
   border-radius: var(--border-round);
-  font-family: var(--font-body);
+  font-family: var(--font-family-${typographiesConfig[0].family});
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
   width: 15.2rem;
@@ -173,9 +169,9 @@ h5, .h5 {
   border: var(--border-standard);
   border-radius: var(--border-round);
   cursor: pointer;
-  height: var(--font-size-XL);
+  height: var(--font-size-${typographiesConfig[0].size});
   padding: 0;
-  width: var(--font-size-XXL);
+  width: var(--font-size-${typographiesConfig[0].size});
 }
 .form__input-item:focus, .form__input-color:focus {
   border-color: var(--color-affirmative-primary);
@@ -223,3 +219,6 @@ h5, .h5 {
   background-color: var(--color-negative-primary);
 }
 `;
+
+return atomsTemplate;
+}

@@ -12,7 +12,7 @@ let typographies = [{
       variableValue: 'Nunito',
     },
   ],
-/*   weight: [
+/*   weight: [    <!-- ⛔ TEMPORARILY DISABLED -->
     {
       label: 'Thin',
       cssVariable: '--font-weight-thin',
