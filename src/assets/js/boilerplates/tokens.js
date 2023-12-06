@@ -127,26 +127,6 @@ let tokensBoilerplate = `
     ${responsive.mobile.cssVariable}: ${responsive.desktop.variableValue};
   }
 }
-
-/* RESET STYLES */
-html {
-  font-size: calc(62.5% * var(--responsive-multiplier-unit));
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-button {
-  all: unset;
-  cursor: pointer;
-} 
-li {
-  list-style: none;
-}
 `;
   
   return tokensBoilerplate;

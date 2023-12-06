@@ -5,6 +5,8 @@ import '/src/assets/css/dark-colors.css';
 import '/src/assets/css/reset.css';
 import '/src/assets/css/atoms.css';
 
+import '/src/assets/css/utility-classes.css';
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
