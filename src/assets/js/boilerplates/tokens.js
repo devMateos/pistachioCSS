@@ -114,17 +114,17 @@ let tokensBoilerplate = `
 
 @media (max-width: ${responsive.mobile.breakpoint}px) {
   :root {
-    ${responsive.mobile.cssVariable}: ${responsive.mobile.variableValue};
+    ${responsive.mobile.cssVariable}: ${responsive.mobile.multiplier};
   }
 }
 @media (min-width: ${responsive.mobile.breakpoint}px) and (max-width: ${responsive.tablet.breakpoint}px) {
   :root {
-    ${responsive.mobile.cssVariable}: ${responsive.tablet.variableValue};
+    ${responsive.mobile.cssVariable}: ${responsive.tablet.multiplier};
   }
 }
 @media (min-width: ${responsive.tablet.breakpoint}px) {
   :root {
-    ${responsive.mobile.cssVariable}: ${responsive.desktop.variableValue};
+    ${responsive.mobile.cssVariable}: ${responsive.desktop.multiplier};
   }
 }
 `;

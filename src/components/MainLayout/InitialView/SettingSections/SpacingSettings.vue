@@ -39,7 +39,7 @@ const props = defineProps({
       v-if="key === 'Minimum Spacing Unit'"
       >
         <input type="number" class="form__input-item" step="0.1"
-          v-model="item.variableValue"
+          v-model="item.multiplier"
         >
       </div>
       <div class="card__item"
@@ -50,7 +50,7 @@ const props = defineProps({
             :key="index"
           >
           <label for="">{{ element.label }}</label>
-          <input type="number" class="form__input-item" step="0.001"
+          <input type="number" class="form__input-item" step="0.1"
             v-model="element.multiplier"
           >
           </div>

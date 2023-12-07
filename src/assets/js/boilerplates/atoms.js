@@ -37,21 +37,18 @@ a:hover {
 }
 
 /* Text */
-label, li, p, small {
+label, li, p, small, div {
   color: var(--color-text);
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-${typographiesConfig[5].family});
+  font-size: var(--font-size-${typographiesConfig[5].size});
+  font-weight: var(--font-weight-${typographiesConfig[5].weight});
 }
 small {
-  font-size: var(--font-size-${typographiesConfig[0].size});
+  font-family: var(--font-family-${typographiesConfig[6].family});
+  font-size: var(--font-size-${typographiesConfig[6].size});
+  font-weight: var(--font-weight-${typographiesConfig[6].weight});
 }
-div {
-  color: var(--color-text);
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
-}
+
 /* Headings */
 h1, .h1 {
   font-family: var(--font-family-${typographiesConfig[0].family});
@@ -59,24 +56,24 @@ h1, .h1 {
   font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h2, .h2 {
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-${typographiesConfig[1].family});
+  font-size: var(--font-size-${typographiesConfig[1].size});
+  font-weight: var(--font-weight-${typographiesConfig[1].weight});
 }
 h3, .h3 {
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-${typographiesConfig[2].family});
+  font-size: var(--font-size-${typographiesConfig[2].size});
+  font-weight: var(--font-weight-${typographiesConfig[2].weight});
 }
 h4, .h4 {
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-${typographiesConfig[3].family});
+  font-size: var(--font-size-${typographiesConfig[3].size});
+  font-weight: var(--font-weight-${typographiesConfig[3].weight});
 }
 h5, .h5 {
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-${typographiesConfig[4].family});
+  font-size: var(--font-size-${typographiesConfig[4].size});
+  font-weight: var(--font-weight-${typographiesConfig[4].weight});
 }
 
 /* BUTTONS */

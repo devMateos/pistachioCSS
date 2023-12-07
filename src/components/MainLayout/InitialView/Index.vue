@@ -11,11 +11,12 @@ import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
 import { darkColorsTemplate } from '@/assets/js/boilerplates/dark-colors.js'
 import { resetTemplate } from '@/assets/js/boilerplates/reset.js'
 import { generateAtoms } from '@/assets/js/boilerplates/atoms.js'
+import { utilityClasses } from '@/assets/js/boilerplates/utility-classes.js'
 
-import ColorsSettings from './ColorsSettings.vue';
-import FontsSettings from './FontsSettings.vue';
-import SpacingSettings from './SpacingSettings.vue';
-import BorderSettings from './BorderSettings.vue';
+import ColorsSettings from './SettingSections/ColorsSettings.vue';
+import FontsSettings from './SettingSections/FontsSettings.vue';
+import SpacingSettings from './SettingSections/SpacingSettings.vue';
+import BorderSettings from './SettingSections/BorderSettings.vue';
 import CodeBlock from '@/components/CodeBlock/Index.vue';
 import CopyButton from '../../CodeBlock/CopyButton.vue';
 
@@ -43,7 +44,11 @@ const generateAtomsCSS = computed(() => {
   return generateAtoms(typographiesData);
 });
 
-const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtomsCSS.value;
+const generateUtilityClasses = computed(() => {
+  return utilityClasses;
+});
+
+const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtomsCSS.value + generateUtilityClasses.value;
 
 function copy(text) {
   navigator.clipboard.writeText(text);
@@ -119,6 +124,11 @@ function copy(text) {
     <CodeBlock
       :codeBlockName="'Items'"
       :code="generateAtomsCSS"
+    />
+
+    <CodeBlock
+      :codeBlockName="'Utility Classes'"
+      :code="generateUtilityClasses"
     />
   </section>
 </template>
