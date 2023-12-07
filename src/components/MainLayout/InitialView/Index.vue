@@ -56,17 +56,16 @@ function copy(text) {
 </script>
 
 <template>
-  <section>
+  <section id="settings">
     <form action="">
-      <section>
+      <section id="settings-colors">
         <ColorsSettings
           :formSection="'Colors'"
           :formSectionTitle="'Enter the colors settings'"
           :formItemsList="colorsData[0]"
         />
       </section>
-
-      <section>
+      <section id="settings-typographies">
         <FontsSettings
           :formSection="'Typographies'"
           :formSectionTitle="'Enter the typographies settings'"
@@ -74,7 +73,7 @@ function copy(text) {
         />
       </section>
       
-      <section>
+      <section id="settings-spacing">
         <SpacingSettings
           :formSection="'Spacing'"
           :formSectionTitle="'Enter the spacing settings'"
@@ -82,7 +81,7 @@ function copy(text) {
         />
       </section>
       
-      <section>
+      <section id="settings-border">
         <BorderSettings
           :formSection="'Border'"
           :formSectionTitle="'Enter the border settings'"
@@ -104,32 +103,46 @@ function copy(text) {
     </form>
   </section>
 
-  <section v-if="showCode">
-    <CodeBlock
-      :codeBlockName="'Tokens'"
-      :code="generateTokensCSS"
-    />
-    <CodeBlock
-      :codeBlockName="'Light Mode'"
-      :code="generateLightTokens"
-    />
-    <CodeBlock
-      :codeBlockName="'Dark Mode'"
-      :code="generateDarkTokens"
-    />
-    <CodeBlock
-      :codeBlockName="'ResetCSS'"
-      :code="generateReset"
-    />
-    <CodeBlock
-      :codeBlockName="'Items'"
-      :code="generateAtomsCSS"
-    />
+  <section id="code"
+    v-if="showCode"
+    >
+    <section id="code-tokens">
+      <CodeBlock
+        :codeBlockName="'Tokens'"
+        :code="generateTokensCSS"
+      />
+    </section>
+    <section id="code-light">
+      <CodeBlock
+        :codeBlockName="'Light Mode'"
+        :code="generateLightTokens"
+      />
+    </section>
+    <section id="code-dark">
+      <CodeBlock
+        :codeBlockName="'Dark Mode'"
+        :code="generateDarkTokens"
+      />
+    </section>
+    <section id="code-reset">
+      <CodeBlock
+        :codeBlockName="'ResetCSS'"
+        :code="generateReset"
+      />
+    </section>
+    <section id="code-items">
+      <CodeBlock
+        :codeBlockName="'Items'"
+        :code="generateAtomsCSS"
+      />
+    </section>
 
-    <CodeBlock
-      :codeBlockName="'Utility Classes'"
-      :code="generateUtilityClasses"
-    />
+    <section id="code-utility">
+      <CodeBlock
+        :codeBlockName="'Utility Classes'"
+        :code="generateUtilityClasses"
+      />
+    </section>
   </section>
 </template>
 

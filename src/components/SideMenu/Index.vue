@@ -13,49 +13,24 @@ const showMenu = (data) => {
     <SideMenuMobileMenu @open-menu="showMenu" />
     <nav :class="{ 'side-navmenu': true, 'side-navmenu--active': isSideMenuActive }">
       <ul>
-        <li class="nav-menu__category navbar__button navbar__button--active">
-          <a href="">TOKENS</a>
+        <li class="nav-menu__category navbar__button">
+          <a href="#settings">SETTINGS</a>
           <ul>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 1</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 2</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 3</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 4</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#settings-colors">Colors</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#settings-typographies">Typographies</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#settings-spacing">Spacing</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#settings-border">Borders</a></li>
           </ul>
         </li>
         <li class="nav-menu__category navbar__button">
-          <a href="">ATOMS</a>
+          <a href="#code">CODE</a>
           <ul>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 1</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 2</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 3</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 4</a></li>
-          </ul>
-        </li>
-        <li class="nav-menu__category navbar__button">
-          <a href="">MOLECULES</a>
-          <ul>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 1</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 2</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 3</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 4</a></li>
-          </ul>
-        </li>
-        <li class="nav-menu__category navbar__button">
-          <a href="">ORGANISMS</a>
-          <ul>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 1</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 2</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 3</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 4</a></li>
-          </ul>
-        </li>
-        <li class="nav-menu__category navbar__button">
-          <a href="">TEMPLATES</a>
-          <ul>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 1</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 2</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 3</a></li>
-            <li class="nav-menu__item navbar__button"><a href="">Categoría 4</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-tokens">Custom properties (Tokens)</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-light">Light Mode Colors</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-dark">Dark Mode Colors</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-reset">ResetCSS</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-items">Items (Atoms)</a></li>
+            <li class="nav-menu__item navbar__button"><a href="#code-utility">Utility Classes</a></li>
           </ul>
         </li>
       </ul>
@@ -86,7 +61,7 @@ const showMenu = (data) => {
 
 .nav-menu__item{
   font-weight: var(--font-weight-medium);
-  margin: var(--spacing-S) 0 0 var(--spacing-S);
+  margin: var(--spacing-XS) 0 0 var(--spacing-XS);
 }
 @media(min-width: 778px) {
   .left-aside {
@@ -96,11 +71,11 @@ const showMenu = (data) => {
   .side-navmenu {
     display: flex;
   }
-  .side-navmenu .nav-menu__category > ul {
+  /* .side-navmenu .nav-menu__category > ul {
     display: none;
   }
   .side-navmenu .navbar__button--active > ul {
     display: block;
-  }
+  } */
 }
 </style>
