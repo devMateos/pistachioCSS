@@ -6,8 +6,8 @@
   --color-text: var(--color-light);
   --color-light-text: var(--color-light-gray);
   /* Affirmative colors */
-  --color-action-primary: var(--color-accent-secondary);
-  --color-action-secondary: var(--color-accent-primary);
+  --color-action-default: var(--color-accent-secondary);
+  --color-action-active: var(--color-accent-primary);
   /* Border colors */
   --border-color: var(--color-light-gray);
 }

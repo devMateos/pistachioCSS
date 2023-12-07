@@ -1,5 +1,5 @@
 import { findVariableValue } from './findVariableValue.js'
-export { colors, lightColors, darkColors };
+export { colors, lightColors, darkColors, colorsInfo };
 
 let colors = [{
   /* BRAND COLORS */
@@ -7,7 +7,6 @@ let colors = [{
     {
       cssVariable: '--color-brand',
       variableValue: '#98cf58',
-      info: '',
     },
   ],
   /* ACTION COLORS */
@@ -124,5 +123,14 @@ let darkColors = [
     
   },
 ];
+
+const colorsInfo = {
+  brand: `This parameter, represented by "--color-brand," sets the primary tone that will identify and stand out across your interface. Choose a color that reflects your project's personality and style, creating a cohesive and memorable experience for users.`,
+  action: `Action colors play a pivotal role in steering user interactions across the app. The parameters, denoted by "--color-action-primary" and "--color-action-secondary," define the primary and secondary colors, respectively. The primary color serves as the default action color, while the secondary color activates upon interaction, such as hovering over specific elements. This distinction enhances user engagement by providing clear visual feedback and reinforcing the hierarchy of interactive elements`,
+  boolean: ``,
+  gray: ``,
+  lightColors: ``,
+  darkColors: ``,
+}
 /* colors[0].light = lightColors;
 colors[0].dark = darkColors; */

@@ -1,5 +1,5 @@
 <script setup>
-import InfoIcon from '../../../InfoIcon.vue';
+import ToolTip from '../../../ToolTip.vue';
 
 const props = defineProps({
   formSection: {
@@ -33,7 +33,7 @@ const props = defineProps({
         :for="`${key} ${formSection}`"
         >
         {{ key }}
-        <InfoIcon :info="item[0].info"/>
+        <ToolTip :info="`info.${key}`"/>
       </label>
       <!-- SPACING FORM -->
       <!--  -->

@@ -1,5 +1,5 @@
 <script setup>
-import InfoIcon from '../../../InfoIcon.vue';
+import ToolTip from '../../../ToolTip.vue';
 
 const props = defineProps({
   formSection: {
@@ -11,11 +11,11 @@ const props = defineProps({
   formItemsList: {
     type: Object,
   },
-  methods: {
-    type: Function,
-  },
+  info: {
+    type: Object,
+  }
 });
-
+console.log(props.info);
 </script>
 
 <template>
@@ -32,8 +32,8 @@ const props = defineProps({
           :for="`${key} ${formSection}`"
           >
           {{ key }} {{ formSection }}
-          <InfoIcon
-            :info="item[0].info"
+          <ToolTip
+            :info="info[key]"
           />
         </label>
     <!-- COLORS FORM -->
