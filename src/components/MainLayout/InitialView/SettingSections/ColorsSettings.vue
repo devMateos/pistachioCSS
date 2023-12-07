@@ -1,4 +1,6 @@
 <script setup>
+import InfoIcon from '../../../InfoIcon.vue';
+
 const props = defineProps({
   formSection: {
     type: String,
@@ -26,13 +28,14 @@ const props = defineProps({
       v-for="(item, key) in formItemsList"
       :key="key"
     >
-
-      <label class="h3"
-        :for="`${key} ${formSection}`"
-        >
-        {{ key }} {{ formSection }}
-      </label>
-      
+        <label class="h3"
+          :for="`${key} ${formSection}`"
+          >
+          {{ key }} {{ formSection }}
+          <InfoIcon
+            :info="item[0].info"
+          />
+        </label>
     <!-- COLORS FORM -->
       <div class="card__grid"
         v-if="formSection === 'Colors'"
@@ -45,7 +48,7 @@ const props = defineProps({
             v-model="element.variableValue"
           >
           </div>
-        </div>
+      </div>
     </div>
   </div>
 </template>

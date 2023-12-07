@@ -161,6 +161,10 @@ function copy(text) {
   padding: var(--spacing-XL);
   position: relative;
 }
+.card__title {
+  align-items: center;
+  display: flex;
+}
 label.h3 {
   text-transform: capitalize;
 }

@@ -1,4 +1,6 @@
 <script setup>
+import InfoIcon from '../../../InfoIcon.vue';
+
 const props = defineProps({
   formSection: {
     type: String,
@@ -30,7 +32,10 @@ const props = defineProps({
       <label class="h3"
         :for="`${key} ${formSection}`"
         >
-        {{ item.label }}
+        {{ item[0].label }}
+        <InfoIcon
+          :info="item[0].info"
+        />
       </label>
       
       <!-- BORDERS FORM -->
@@ -39,7 +44,7 @@ const props = defineProps({
       v-if="key === 'style'"
       >
         <select id="borderStyle" class="form__input-item"
-          v-model="item.variableValue"
+          v-model="item[0].variableValue"
         >
           <option value="solid">Solid</option>
           <option value="hidden">Hidden</option>
@@ -59,7 +64,7 @@ const props = defineProps({
       v-if="key === 'width'"
       >
         <input type="number" class="form__input-item" step="0.1"
-          v-model="item.variableValue"
+          v-model="item[0].variableValue"
         >
       </div>
 
@@ -69,17 +74,17 @@ const props = defineProps({
       >
         
         <div>
-          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-round)">
+          <input type="radio" class="form__input-radio" v-model="item[0].variableValue" value="var(--border-round)">
           <label for="round border">Round</label>
         </div>
 
         <div>
-          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-rounded)">
+          <input type="radio" class="form__input-radio" v-model="item[0].variableValue" value="var(--border-rounded)">
           <label for="rounded border">Rounded</label>
         </div>
         
         <div>
-          <input type="radio" class="form__input-radio" v-model="item.variableValue" value="var(--border-sharp)">
+          <input type="radio" class="form__input-radio" v-model="item[0].variableValue" value="var(--border-sharp)">
           <label for="sharp border">Sharp</label>
         </div>
 

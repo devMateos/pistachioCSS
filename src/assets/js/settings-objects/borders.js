@@ -1,19 +1,19 @@
 export { borders };
 
 let borders = [{
-  style: {
+  style: [{
       label: 'Border Style',
       cssVariable: '--border-style',
       variableValue: 'solid',
-    },
-  width: {
+    }],
+  width: [{
       label: 'Border Width',
       cssVariable: '--border-width',
       variableValue: 0.2,
-    },
-  radius: {
+    }],
+  radius: [{
       label: 'Border Radius',
       cssVariable: '--border-radius-standard',
       variableValue: 'var(--border-round)',
-    },
+    }],
 }];

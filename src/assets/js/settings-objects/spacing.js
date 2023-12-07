@@ -1,11 +1,11 @@
 export { spacing };
 
 let spacing = [{
-  'Minimum Spacing Unit': {
+  'Minimum Spacing Unit': [{
       label: 'Minimum spacing unit',
       cssVariable: '--spacing-min-unit',
       variableValue: 0.4,
-    },
+    }],
   'Spacing Units': [
     {
       label: 'XS spacing unit',

@@ -7,7 +7,7 @@ let colors = [{
     {
       cssVariable: '--color-brand',
       variableValue: '#98cf58',
-      
+      info: '',
     },
   ],
   /* ACTION COLORS */

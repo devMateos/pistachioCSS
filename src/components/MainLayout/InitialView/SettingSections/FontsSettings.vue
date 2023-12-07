@@ -1,4 +1,6 @@
 <script setup>
+import InfoIcon from '../../../InfoIcon.vue';
+
 const props = defineProps({
   formSection: {
     type: String,
@@ -26,11 +28,13 @@ const props = defineProps({
       v-for="(item, key) in formItemsList"
       :key="key"
     >
-
       <label class="h3"
         :for="`${key} ${formSection}`"
         >
         Font {{ key }}
+        <InfoIcon
+          :info="item[0].info"
+        />
       </label>
       
     <!-- FONTS FORM -->

@@ -1,4 +1,6 @@
 <script setup>
+import InfoIcon from '../../../InfoIcon.vue';
+
 const props = defineProps({
   formSection: {
     type: String,
@@ -31,15 +33,15 @@ const props = defineProps({
         :for="`${key} ${formSection}`"
         >
         {{ key }}
+        <InfoIcon :info="item[0].info"/>
       </label>
-      
       <!-- SPACING FORM -->
       <!--  -->
       <div class="card__item"
       v-if="key === 'Minimum Spacing Unit'"
       >
         <input type="number" class="form__input-item" step="0.1"
-          v-model="item.variableValue"
+          v-model="item[0].variableValue"
         >
       </div>
       <div class="card__item"
