@@ -30,7 +30,7 @@ const props = defineProps({
       <label class="h3"
         :for="`${key} ${formSection}`"
         >
-        {{ key }} {{ formSection }}
+        {{ key }}
       </label>
       
       <!-- SPACING FORM -->
