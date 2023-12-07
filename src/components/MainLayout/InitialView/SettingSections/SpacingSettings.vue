@@ -39,7 +39,7 @@ const props = defineProps({
       v-if="key === 'Minimum Spacing Unit'"
       >
         <input type="number" class="form__input-item" step="0.1"
-          v-model="item.multiplier"
+          v-model="item.variableValue"
         >
       </div>
       <div class="card__item"
