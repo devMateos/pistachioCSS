@@ -4,10 +4,10 @@ const utilityClasses = `
 /* Background color */
 .bg-brand {
   background-color: var(--color-brand);
-}.bg-accent-primary {
-  background-color: var(--color-accent-primary);
-}.bg-accent-secondary {
-  background-color: var(--color-accent-secondary);
+}.bg-action-primary {
+  background-color: var(--color-action-primary);
+}.bg-action-secondary {
+  background-color: var(--color-action-secondary);
 }.bg-affirmative-primary {
   background-color: var(--color-affirmative-primary);
 }.bg-affirmative-secondary {
@@ -31,10 +31,10 @@ const utilityClasses = `
 /* Text color */
 .text-brand {
   color: var(--color-brand);
-}.text-accent-primary {
-  color: var(--color-accent-primary);
-}.text-accent-secondary {
-  color: var(--color-accent-secondary);
+}.text-action-primary {
+  color: var(--color-action-primary);
+}.text-action-secondary {
+  color: var(--color-action-secondary);
 }.text-affirmative-primary {
   color: var(--color-affirmative-primary);
 }.text-affirmative-secondary {
@@ -466,10 +466,10 @@ const utilityClasses = `
 /* Border color */
 .border-brand {
   border-color: var(--color-brand);
-}.border-accent-primary {
-  border-color: var(--color-accent-primary);
-}.border-accent-secondary {
-  border-color: var(--color-accent-secondary);
+}.border-action-primary {
+  border-color: var(--color-action-primary);
+}.border-action-secondary {
+  border-color: var(--color-action-secondary);
 }.border-affirmative-primary {
   border-color: var(--color-affirmative-primary);
 }.border-affirmative-secondary {

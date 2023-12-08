@@ -2,7 +2,7 @@
 import { computed, reactive, ref } from 'vue';
 
 import { colors, colorsInfo } from '@/assets/js/settings-objects/colors.js'
-import { typographies } from '@/assets/js/settings-objects/typographies.js'
+import { typographies, typographiesInfo } from '@/assets/js/settings-objects/typographies.js'
 import { spacing } from '@/assets/js/settings-objects/spacing.js'
 import { borders } from '@/assets/js/settings-objects/borders.js'
 
@@ -64,13 +64,14 @@ function copy(text) {
           :formSectionTitle="'Enter the colors settings'"
           :formItemsList="colorsData[0]"
           :info="colorsInfo"
-        />
-      </section>
-      <section id="settings-typographies">
-        <FontsSettings
+          />
+        </section>
+        <section id="settings-typographies">
+          <FontsSettings
           :formSection="'Typographies'"
           :formSectionTitle="'Enter the typographies settings'"
           :formItemsList="typographiesData[0]"
+          :info="typographiesInfo"
         />
       </section>
       

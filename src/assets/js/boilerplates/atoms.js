@@ -29,10 +29,10 @@ section {
 
 /* Links */
 a {
-  color: var(--color-action-primary);
+  color: var(--color-action-default);
 }
 a:hover {
-  color: var(--color-action-secondary);
+  color: var(--color-action-active);
   cursor: pointer;
 }
 
@@ -90,23 +90,23 @@ h5, .h5 {
   width: fit-content;
 }
 .button--primary {
-  background-color: var(--color-action-primary);
-  border-color: var(--color-action-primary);
+  background-color: var(--color-action-default);
+  border-color: var(--color-action-default);
   color: var(--color-light);
 }
 .button--primary:hover {
-  background-color: var(--color-action-secondary);
-  border-color: var(--color-action-secondary);
+  background-color: var(--color-action-active);
+  border-color: var(--color-action-active);
   color: var(--color-light);
 }
 .button--secondary {
   background-color: var(--color-background-primary);
-  border-color: var(--color-action-primary);
-  color: var(--color-action-primary);
+  border-color: var(--color-action-default);
+  color: var(--color-action-default);
 }
 .button--secondary:hover {
-  background-color: var(--color-action-secondary);
-  border-color: var(--color-action-secondary);
+  background-color: var(--color-action-active);
+  border-color: var(--color-action-active);
   color: var(--color-light);
 }
 .button--negative {
@@ -128,10 +128,10 @@ h5, .h5 {
   font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 .navbar__button > a:hover {
-  color: var(--color-action-secondary);
+  color: var(--color-action-active);
 }
 .navbar__button--active > a {
-  color: var(--color-action-primary);
+  color: var(--color-action-default);
 }
 
 .nav-button {
@@ -144,10 +144,10 @@ h5, .h5 {
   stroke: var(--color-text);
 }
 .nav-button:hover * {
-  color: var(--color-action-secondary);
+  color: var(--color-action-active);
 }
 .nav-button:hover .nav-button__icon {
-  stroke: var(--color-action-secondary);
+  stroke: var(--color-action-active);
 }
 
 /* FORMS */

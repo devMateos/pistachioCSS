@@ -5,9 +5,9 @@
   /* Text colors */
   --color-text: var(--color-light);
   --color-light-text: var(--color-light-gray);
-  /* Affirmative colors */
-  --color-action-default: var(--color-accent-secondary);
-  --color-action-active: var(--color-accent-primary);
+  /* Action colors */
+  --color-action-default: var(--color-action-secondary);
+  --color-action-active: var(--color-action-primary);
   /* Border colors */
   --border-color: var(--color-light-gray);
 }

@@ -1,4 +1,4 @@
-export { typographies };
+export { typographies, typographiesInfo };
 
 let typographies = [{
   family: [
@@ -126,3 +126,12 @@ let typographies = [{
     },
   ],
 }];
+
+const typographiesInfo = {
+family: `Specify the font family for your headings and body text by entering the respective font names. While you provide the font family names here, remember to integrate the actual font files into your application's CSS for them to take effect. This ensures consistent and cohesive typography across your headings and body text`,
+size: `Specify font sizes using the rem unit for XXL, XL, L, M, S, and XS. Keep in mind that Pistachio defaults to setting 1rem as equivalent to 10px`,
+config: `Customize typography for each element by entering these parameters:
+- Font Family
+- Font Size
+- Font Weight`,
+}
