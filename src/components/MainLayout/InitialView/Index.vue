@@ -3,8 +3,8 @@ import { computed, reactive, ref } from 'vue';
 
 import { colors, colorsInfo } from '@/assets/js/settings-objects/colors.js'
 import { typographies, typographiesInfo } from '@/assets/js/settings-objects/typographies.js'
-import { spacing } from '@/assets/js/settings-objects/spacing.js'
-import { borders } from '@/assets/js/settings-objects/borders.js'
+import { spacing, spacingInfo } from '@/assets/js/settings-objects/spacing.js'
+import { borders, bordersInfo } from '@/assets/js/settings-objects/borders.js'
 
 import { generateTokens } from '@/assets/js/boilerplates/tokens.js'
 import { lightColorsTemplate } from '@/assets/js/boilerplates/light-colors.js'
@@ -72,22 +72,24 @@ function copy(text) {
           :formSectionTitle="'Enter the typographies settings'"
           :formItemsList="typographiesData[0]"
           :info="typographiesInfo"
-        />
-      </section>
+          />
+        </section>
       
       <section id="settings-spacing">
         <SpacingSettings
           :formSection="'Spacing'"
           :formSectionTitle="'Enter the spacing settings'"
           :formItemsList="spacingData[0]"
-        />
-      </section>
-      
-      <section id="settings-border">
-        <BorderSettings
+          :info="spacingInfo"
+          />
+        </section>
+        
+        <section id="settings-border">
+          <BorderSettings
           :formSection="'Border'"
           :formSectionTitle="'Enter the border settings'"
           :formItemsList="borderData[0]"
+          :info="bordersInfo"
         />
       </section>
       

@@ -12,7 +12,7 @@ const props = defineProps({
     type: Object,
   },
   info: {
-    type: String,
+    type: Object,
   }
 });
 
@@ -34,7 +34,7 @@ const props = defineProps({
         >
         {{ item[0].label }}
         <ToolTip
-          :info="`info.${key}`"
+          :info="info[key]"
         />
       </label>
       

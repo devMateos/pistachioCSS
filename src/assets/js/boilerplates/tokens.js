@@ -127,6 +127,9 @@ let tokensBoilerplate = `
     ${responsive.mobile.cssVariable}: ${responsive.desktop.multiplier};
   }
 }
+html {
+  font-size: calc(62.5% * var(--responsive-multiplier-unit));
+}
 `;
   
   return tokensBoilerplate;

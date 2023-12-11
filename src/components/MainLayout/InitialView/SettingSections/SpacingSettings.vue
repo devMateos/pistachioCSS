@@ -11,8 +11,8 @@ const props = defineProps({
   formItemsList: {
     type: Object,
   },
-  methods: {
-    type: Function,
+  info: {
+    type: Object,
   },
 });
 
@@ -33,7 +33,7 @@ const props = defineProps({
         :for="`${key} ${formSection}`"
         >
         {{ key }}
-        <ToolTip :info="`info.${key}`"/>
+        <ToolTip :info="info[key]"/>
       </label>
       <!-- SPACING FORM -->
       <!--  -->
