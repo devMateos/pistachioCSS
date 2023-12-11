@@ -1,10 +1,10 @@
 <template>
   <nav class="header__nav">
     <ul>
-      <li class="navbar__button navbar__button--active"><a href="">headerbtn</a></li>
-      <li class="navbar__button"><a href="">headerbtn</a></li>
-      <li class="navbar__button"><a href="">headerbtn</a></li>
-      <li class="navbar__button"><a href="">headerbtn</a></li>
+      <li class="navbar__button"><a href="">What is Pistachio?</a></li>
+      <li class="navbar__button"><a href="">How to use</a></li>
+      <li class="navbar__button"><a href="">About Me</a></li>
+      <li class="navbar__button"><a href="">Support Us</a></li>
       <li><a href="" class="button button--secondary">Start</a></li>
     </ul>
   </nav>

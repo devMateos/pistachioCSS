@@ -158,7 +158,7 @@ h5, .h5 {
   font-family: var(--font-family-${typographiesConfig[0].family});
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
-  width: 15.2rem;
+  width: 100%;
 }
 /* Input color */
 .form__input-color {
