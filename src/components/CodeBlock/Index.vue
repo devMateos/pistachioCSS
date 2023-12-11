@@ -1,4 +1,5 @@
 <script setup>
+import ToolTip from '../ToolTip.vue';
 import CopyButton from './CopyButton.vue';
 
 const props = defineProps({
@@ -6,6 +7,9 @@ const props = defineProps({
     type: String,
   },
   codeBlockName: {
+    type: String,
+  },
+  info: {
     type: String,
   }
 });
@@ -18,7 +22,12 @@ function copy(text) {
 <template>
   <div class="code-block">
     <div class="code-block__top-bar">
-      <p>{{ codeBlockName }}</p>
+      <p>{{ codeBlockName }}
+        <ToolTip
+          v-if="info"
+          :info="info"
+        />
+      </p>
       <CopyButton @copy-code="copy(code)"/>
     </div>
     <pre class="code-block__content">

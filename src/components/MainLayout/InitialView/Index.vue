@@ -114,30 +114,43 @@ function copy(text) {
       <CodeBlock
         :codeBlockName="'Tokens'"
         :code="generateTokensCSS"
+        :info="`The following code contains all the previously set custom properties ('tokens' in Atomic Design). These properties systematize and automate your design, offering a simplified approach to ensure a consistent style throughout your application`"
       />
     </section>
     <section id="code-light">
       <CodeBlock
         :codeBlockName="'Light Mode'"
         :code="generateLightTokens"
-      />
-    </section>
-    <section id="code-dark">
-      <CodeBlock
+        :info="colorsInfo.lightColors"
+        />
+      </section>
+      <section id="code-dark">
+        <CodeBlock
         :codeBlockName="'Dark Mode'"
         :code="generateDarkTokens"
-      />
-    </section>
-    <section id="code-reset">
-      <CodeBlock
+        :info="colorsInfo.darkColors"
+        />
+      </section>
+      <section id="code-reset">
+        <CodeBlock
         :codeBlockName="'ResetCSS'"
         :code="generateReset"
+        :info="`Copy the CSS reset snippet from this section to reset certain default styles, giving you a clean starting point for customization. It ensures consistent styling and helps avoid unexpected conflicts with existing styles in your project, as this technique is designed to overlay and reset the browser's original styles`"
       />
     </section>
     <section id="code-items">
       <CodeBlock
         :codeBlockName="'Items'"
         :code="generateAtomsCSS"
+        :info="`The following code block includes styles for various elements related to Atomic Design's atoms, the smallest components of a design system. Currently, you'll find settings for:
+        Interface color
+        Spacing (for main and section tags)
+        Scrollbar
+        Links
+        Text (label, li, p, small and headings)
+        Buttons (primary, secondary, affirmative, negative, and navigation buttons)
+        Form elements (input text, color, checkbox, radio)
+        I'll be adding more items over time`"
       />
     </section>
 

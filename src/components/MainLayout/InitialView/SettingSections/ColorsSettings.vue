@@ -15,7 +15,6 @@ const props = defineProps({
     type: Object,
   }
 });
-console.log(props.info);
 </script>
 
 <template>

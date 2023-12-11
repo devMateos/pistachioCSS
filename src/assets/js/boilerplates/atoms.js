@@ -109,6 +109,15 @@ h5, .h5 {
   border-color: var(--color-action-active);
   color: var(--color-light);
 }
+.button--affirmative {
+  background-color: var(--color-background-primary);
+  border-color: var(--color-affirmative-primary);
+  color: var(--color-affirmative-primary);
+}
+.button--affirmative:hover {
+  background-color: var(--color-affirmative-secondary);
+  border-color: var(--color-affirmative-secondary);
+  color: var(--color-light);
 .button--negative {
   background-color: var(--color-background-primary);
   border-color: var(--color-negative-primary);
@@ -121,16 +130,16 @@ h5, .h5 {
 }
 
 /* Nav Buttons */
-.navbar__button > a {
+.navbar__button {
   color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[0].family});
   font-size: var(--font-size-${typographiesConfig[0].size});
   font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
-.navbar__button > a:hover {
+.navbar__button:hover {
   color: var(--color-action-active);
 }
-.navbar__button--active > a {
+.navbar__button--active {
   color: var(--color-action-default);
 }
 

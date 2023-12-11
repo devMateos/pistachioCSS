@@ -113,6 +113,16 @@ h5, .h5 {
   border-color: var(--color-action-active);
   color: var(--color-light);
 }
+.button--affirmative {
+  background-color: var(--color-background-primary);
+  border-color: var(--color-affirmative-primary);
+  color: var(--color-affirmative-primary);
+}
+.button--affirmative:hover {
+  background-color: var(--color-affirmative-secondary);
+  border-color: var(--color-affirmative-secondary);
+  color: var(--color-light);
+}
 .button--negative {
   background-color: var(--color-background-primary);
   border-color: var(--color-negative-primary);
@@ -202,17 +212,17 @@ h5, .h5 {
   width: var(--spacing-M);
 }
 .form__input-checkbox:checked {
-  border-color: var(--color-affirmative-primary);
   background-color: var(--color-affirmative-primary);
   background-image: url('/src/assets/icons/checkbox-checked.svg');
+  border-color: var(--color-affirmative-primary);
 }
 /* Input radio */
 .form__input-radio {
   appearance: none;
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
-  margin: 0 var(--spacing-XS);
   height: var(--spacing-M);
+  margin: 0 var(--spacing-XS);
   width: var(--spacing-M);
 }
 .form__input-radio:focus {
