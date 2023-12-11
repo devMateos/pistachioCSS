@@ -51,7 +51,7 @@ const props = defineProps({
         v-for="(element, index) in item"
             :key="index"
           >
-          <label for="">{{ element.label }}</label>
+          <label for="" class="ml-S">{{ element.label }}</label>
           <input type="number" class="form__input-item" step="0.1"
             v-model="element.multiplier"
           >

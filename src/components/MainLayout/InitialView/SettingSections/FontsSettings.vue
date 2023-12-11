@@ -38,7 +38,7 @@ const props = defineProps({
       </label>
       
     <!-- FONTS FORM -->
-      <div class="card__grid">
+
         <!-- Font family -->
         <div class="card__item"
         v-if="key === 'family'"
@@ -47,7 +47,7 @@ const props = defineProps({
             v-for="(element, index) in item"
             :key="index"
           >
-            <label for="">{{ element.label }}</label>
+            <label for="" class="ml-S">{{ element.label }}</label>
             <input type="text" class="form__input-item"
               v-model="element.variableValue"
             >
@@ -77,7 +77,7 @@ const props = defineProps({
             v-for="(element, index) in item"
             :key="index"
           >
-            <label for="">{{ element.label }}</label>
+            <label class="ml-S" for="">{{ element.label }}</label>
             <input type="number" class="form__input-item" step="0.1"
               v-model="element.variableValue"
             >
@@ -93,7 +93,7 @@ const props = defineProps({
             :key="index"
           >
             <div>
-              <label for="">{{ element.label }}</label>
+              <label for="" class="ml-S">{{ element.label }}</label>
               <select class="form__input-item"
                 v-model="element.family"
               >
@@ -128,13 +128,20 @@ const props = defineProps({
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <style scoped>
 .card__item--two-column {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-auto-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(15.2rem, 1fr));
   gap: var(--spacing-M);
+  width: 100%;
+}
+.card__item--two-column > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 </style>
