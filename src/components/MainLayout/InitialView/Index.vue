@@ -158,9 +158,7 @@ function copy(text) {
       <CodeBlock
         :codeBlockName="'Utility Classes'"
         :code="generateUtilityClasses"
-        :info="`How to Use Utility Classes:
-
-These utility classes simplify styling based on previously defined custom properties. Apply them to elements in your HTML to achieve consistent design choices effortlessly.
+        :info="`These utility classes simplify styling based on previously defined custom properties. Apply them to elements in your HTML to achieve consistent design choices effortlessly.
 
 Background Color: 'bg-[color name]'
 Example: 'bg-action-primary'
@@ -172,7 +170,27 @@ Font Family: 'font-[family]'
 Example: 'font-heading', 'font-body'
 
 Font Weight: 'font-[weight]'
-Example: 'font-regular'`"
+Example: 'font-regular'
+
+Font Size: 'text-[size]'
+Example: 'text-M'
+
+Margin and Padding:
+- m for margin and p for padding
+- x for 'x axis' (left + right), y for 'y axis' (top + bottom) or t/r/b/l for top, right, bottom, left respectively. Don't use it to apply a general margin or padding
+- Spacing (XS, S, M, L, XL, XXL)
+Example: 'm-L', 'px-XS'
+
+Gap: '[row/column]-gap-[spacing]', 'gap-[spacing]' (general gap)
+
+Border color: 'border-[color]'
+Example: 'border-action-color'
+
+Border Width: 'border-[width]'
+Example: 'border-thin'
+
+Border Radius: 'border-[sharp/rounded/round]'
+Example: 'border-round'`"
       />
     </section>
   </section>

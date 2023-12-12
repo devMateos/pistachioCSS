@@ -491,11 +491,11 @@ const utilityClasses = `
 }
 
 /* Border width */
-.border-width-thin {
+.border-thin {
   border-width: var(--border-width);
 }
 
-.border-width-thick {
+.border-thick {
   border-width: calc(var(--border-width) * 2);
 } 
 
