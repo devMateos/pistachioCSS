@@ -158,6 +158,21 @@ function copy(text) {
       <CodeBlock
         :codeBlockName="'Utility Classes'"
         :code="generateUtilityClasses"
+        :info="`How to Use Utility Classes:
+
+These utility classes simplify styling based on previously defined custom properties. Apply them to elements in your HTML to achieve consistent design choices effortlessly.
+
+Background Color: 'bg-[color name]'
+Example: 'bg-action-primary'
+
+Text Color: 'text-[color name]'
+Example: 'text-brand'
+
+Font Family: 'font-[family]'
+Example: 'font-heading', 'font-body'
+
+Font Weight: 'font-[weight]'
+Example: 'font-regular'`"
       />
     </section>
   </section>
