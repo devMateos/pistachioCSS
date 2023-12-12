@@ -24,7 +24,7 @@ function generateTokens(colorsData, typographiesData, spacingData, borderData){
   }) */
 
   /* SPACING SETTINGS */
-  const minimumSpacingUnit = spacingData[0]['Minimum Spacing Unit'];
+  const minimumSpacingUnit = spacingData[0]['Minimum Spacing Unit'][0];
   
   const spacingUnits = spacingData[0]['Spacing Units'];
   let spacingUnitsTemplate = '';
@@ -43,9 +43,9 @@ function generateTokens(colorsData, typographiesData, spacingData, borderData){
 
   /* BORDER SETTINGS */
   const border = {
-    style: borderData[0].style,
-    width: borderData[0].width,
-    radius: borderData[0].radius,
+    style: borderData[0].style[0],
+    width: borderData[0].width[0],
+    radius: borderData[0].radius[0],
   };
 
 let tokensBoilerplate = `

@@ -13,24 +13,24 @@ const showMenu = (data) => {
     <SideMenuMobileMenu @open-menu="showMenu" />
     <nav :class="{ 'side-navmenu': true, 'side-navmenu--active': isSideMenuActive }">
       <ul>
-        <li class="nav-menu__category navbar__button">
-          <a href="#settings">SETTINGS</a>
+        <li class="nav-menu__category">
+          <a class="navbar__button" href="#settings">SETTINGS</a>
           <ul>
-            <li class="nav-menu__item navbar__button"><a href="#settings-colors">Colors</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#settings-typographies">Typographies</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#settings-spacing">Spacing</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#settings-border">Borders</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#settings-colors">Colors</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#settings-typographies">Typographies</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#settings-spacing">Spacing</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#settings-border">Borders</a></li>
           </ul>
         </li>
-        <li class="nav-menu__category navbar__button">
-          <a href="#code">CODE</a>
+        <li class="nav-menu__category">
+          <a class="navbar__button" href="#code">CODE</a>
           <ul>
-            <li class="nav-menu__item navbar__button"><a href="#code-tokens">Custom properties (Tokens)</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#code-light">Light Mode Colors</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#code-dark">Dark Mode Colors</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#code-reset">ResetCSS</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#code-items">Items (Atoms)</a></li>
-            <li class="nav-menu__item navbar__button"><a href="#code-utility">Utility Classes</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-tokens">Custom properties (Tokens)</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-light">Light Mode Colors</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-dark">Dark Mode Colors</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-reset">ResetCSS</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-items">Items (Atoms)</a></li>
+            <li><a class="nav-menu__item navbar__button" href="#code-utility">Utility Classes</a></li>
           </ul>
         </li>
       </ul>
@@ -71,11 +71,5 @@ const showMenu = (data) => {
   .side-navmenu {
     display: flex;
   }
-  /* .side-navmenu .nav-menu__category > ul {
-    display: none;
-  }
-  .side-navmenu .navbar__button--active > ul {
-    display: block;
-  } */
 }
 </style>

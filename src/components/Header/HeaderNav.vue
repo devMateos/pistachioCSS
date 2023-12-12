@@ -1,10 +1,10 @@
 <template>
   <nav class="header__nav">
     <ul>
-      <li class="navbar__button"><a href="">What is Pistachio?</a></li>
-      <li class="navbar__button"><a href="">How to use</a></li>
-      <li class="navbar__button"><a href="">About Me</a></li>
-      <li class="navbar__button"><a href="">Support Us</a></li>
+      <li><a href="" class="navbar__button text-gray text-gray-hover" title="This page is not finished">What is Pistachio?</a></li>
+      <li><a href="" class="navbar__button text-gray text-gray-hover" title="This page is not finished">How to use</a></li>
+      <li><a href="" class="navbar__button text-gray text-gray-hover" title="This page is not finished">About Me</a></li>
+      <li><a href="" class="navbar__button text-gray text-gray-hover" title="This page is not finished">Support Us</a></li>
       <li><a href="" class="button button--secondary">Start</a></li>
     </ul>
   </nav>
@@ -26,7 +26,11 @@
   gap: var(--spacing-L);
 }
 
-@media(min-width: 778px) {
+.header__nav a{
+  cursor: not-allowed;
+}
+
+@media(min-width: 768px) {
   .navbar__separator {
     border: var(--border-style) .1rem var(--border-color);
     display: flex;

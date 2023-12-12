@@ -135,16 +135,16 @@ h5, .h5 {
 }
 
 /* Nav Buttons */
-.navbar__button > a {
+.navbar__button {
   color: var(--color-text);
   font-family: var(--font-family-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
 }
-.navbar__button > a:hover {
+.navbar__button:hover {
   color: var(--color-action-active);
 }
-.navbar__button--active > a {
+.navbar__button--active {
   color: var(--color-action-default);
 }
 
