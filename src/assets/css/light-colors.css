@@ -10,4 +10,5 @@
   --color-action-active: var(--color-action-secondary);
   /* Border colors */
   --border-color: var(--color-gray);
+  --border-standard: var(--border-style) var(--border-width) var(--border-color);
 }

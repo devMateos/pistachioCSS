@@ -50,30 +50,35 @@ div {
 }
 /* Headings */
 h1, .h1 {
+  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-XXL);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-L) 0;
 }
 h2, .h2 {
+  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-XL);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-M) 0;
 }
 h3, .h3 {
+  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-L);
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-M) 0;
 }
 h4, .h4 {
+  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-XS) 0;
 }
 h5, .h5 {
+  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-medium);
@@ -91,7 +96,6 @@ h5, .h5 {
   justify-content: center;
   min-width: 9.6rem;
   padding: var(--spacing-XS) var(--spacing-S);
-  width: fit-content;
 }
 .button--primary {
   background-color: var(--color-action-default);

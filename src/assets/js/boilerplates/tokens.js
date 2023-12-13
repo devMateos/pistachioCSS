@@ -103,10 +103,9 @@ let tokensBoilerplate = `
   ${border.style.cssVariable}: ${border.style.variableValue};
   ${border.width.cssVariable}: ${border.width.variableValue}rem;
   --border-sharp: 0;
-  --border-rounded: var(--spacing-M);
+  --border-rounded: var(--spacing-S);
   --border-round: var(--spacing-L);
   
-  --border-standard: var(--border-style) var(--border-width) var(--border-color);
   ${border.radius.cssVariable}: ${border.radius.variableValue};
 }
 

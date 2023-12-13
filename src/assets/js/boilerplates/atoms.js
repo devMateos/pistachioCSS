@@ -11,9 +11,6 @@ body {
 }
 
 /* Spacing */
-main {
-  padding: 0 var(--spacing-XL);
-}
 section {
   padding: var(--spacing-M) 0;
 }
@@ -24,7 +21,7 @@ section {
 }
 * ::-webkit-scrollbar-thumb {
   background: var(--color-gray);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
 }
 
 /* Links */
@@ -51,26 +48,31 @@ small {
 
 /* Headings */
 h1, .h1 {
+  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[0].family});
   font-size: var(--font-size-${typographiesConfig[0].size});
   font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h2, .h2 {
+  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[1].family});
   font-size: var(--font-size-${typographiesConfig[1].size});
   font-weight: var(--font-weight-${typographiesConfig[1].weight});
 }
 h3, .h3 {
+  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[2].family});
   font-size: var(--font-size-${typographiesConfig[2].size});
   font-weight: var(--font-weight-${typographiesConfig[2].weight});
 }
 h4, .h4 {
+  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[3].family});
   font-size: var(--font-size-${typographiesConfig[3].size});
   font-weight: var(--font-weight-${typographiesConfig[3].weight});
 }
 h5, .h5 {
+  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[4].family});
   font-size: var(--font-size-${typographiesConfig[4].size});
   font-weight: var(--font-weight-${typographiesConfig[4].weight});
@@ -79,15 +81,14 @@ h5, .h5 {
 /* BUTTONS */
 .button {
   border: var(--border-standard);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
   display: flex;
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-bold);
   justify-content: center;
-  min-width: 9.6rem;
-  padding: var(--spacing-XS) var(--spacing-S);
-  width: fit-content;
+  max-width: 16rem;
+  padding: var(--spacing-XS) var(--spacing-M);
 }
 .button--primary {
   background-color: var(--color-action-default);
@@ -118,6 +119,7 @@ h5, .h5 {
   background-color: var(--color-affirmative-secondary);
   border-color: var(--color-affirmative-secondary);
   color: var(--color-light);
+}
 .button--negative {
   background-color: var(--color-background-primary);
   border-color: var(--color-negative-primary);
@@ -132,9 +134,9 @@ h5, .h5 {
 /* Nav Buttons */
 .navbar__button {
   color: var(--color-text);
-  font-family: var(--font-family-${typographiesConfig[0].family});
-  font-size: var(--font-size-${typographiesConfig[0].size});
-  font-weight: var(--font-weight-${typographiesConfig[0].weight});
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-S);
+  font-weight: var(--font-weight-bold);
 }
 .navbar__button:hover {
   color: var(--color-action-active);
@@ -163,21 +165,20 @@ h5, .h5 {
 /* Input */
 .form__input-item {
   border: var(--border-standard);
-  border-radius: var(--border-round);
-  font-family: var(--font-family-${typographiesConfig[0].family});
+  border-radius: var(--border-radius-standard);
+  font-family: var(--font-family-body);
   outline: none;
   padding: var(--spacing-XS) var(--spacing-S);
-  width: 100%;
 }
 /* Input color */
 .form__input-color {
   appearance: auto;
   border: var(--border-standard);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
   cursor: pointer;
-  height: var(--font-size-${typographiesConfig[0].size});
+  height: var(--font-size-XXL);
   padding: 0;
-  width: var(--font-size-${typographiesConfig[0].size});
+  width: var(--font-size-XXL);
 }
 .form__input-item:focus, .form__input-color:focus {
   border-color: var(--color-affirmative-primary);
@@ -190,14 +191,14 @@ h5, .h5 {
   padding: 0;
 }
 .form__input-color::-webkit-color-swatch {
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
 }
 /* Input checkbox */
 .form__input-checkbox {
   appearance: none;
   background-color: var(--color-negative-primary);
   border: var(--border-style) var(--border-width) var(--color-negative-secondary);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
   cursor: pointer;
   height: var(--spacing-M);
   width: var(--spacing-M);
@@ -210,7 +211,7 @@ h5, .h5 {
 .form__input-radio {
   appearance: none;
   border: var(--border-standard);
-  border-radius: var(--border-round);
+  border-radius: var(--border-radius-standard);
   margin: 0 var(--spacing-XS);
   height: var(--spacing-M);
   width: var(--spacing-M);

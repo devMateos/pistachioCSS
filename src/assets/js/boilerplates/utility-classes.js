@@ -39,6 +39,25 @@ const utilityClasses = `
   background-color: var(--color-darker);
 }
 
+.bg-background-primary {
+  background-color: var(--color-background-primary);
+}
+.bg-background-secondary {
+  background-color: var(--color-background-secondary);
+}
+.bg-text {
+  background-color: var(--color-text);
+}
+.bg-light-text {
+  background-color: var(--color-light-text);
+}
+.bg-action-default {
+  background-color: var(--color-action-default);
+}
+.bg-action-active {
+  background-color: var(--color-action-active);
+}
+
 /* Text color */
 .text-brand {
   color: var(--color-brand);
@@ -75,6 +94,82 @@ const utilityClasses = `
 }
 .text-darker {
   color: var(--color-darker);
+}
+
+.text-background-primary {
+  color: var(--color-background-primary);
+}
+.text-background-secondary {
+  color: var(--color-background-secondary);
+}
+.text-text {
+  color: var(--color-text);
+}
+.text-light-text {
+  color: var(--color-light-text);
+}
+.text-action-default {
+  color: var(--color-action-default);
+}
+.text-action-active {
+  color: var(--color-action-active);
+}
+
+/* Text color hover */
+.text-brand-hover:hover {
+  color: var(--color-brand);
+}
+.text-action-primary-hover:hover {
+  color: var(--color-action-primary);
+}
+.text-action-secondary-hover:hover {
+  color: var(--color-action-secondary);
+}
+.text-affirmative-primary-hover:hover {
+  color: var(--color-affirmative-primary);
+}
+.text-affirmative-secondary-hover:hover {
+  color: var(--color-affirmative-secondary);
+}
+.text-negative-primary-hover:hover {
+  color: var(--color-negative-primary);
+}
+.text-negative-secondary-hover:hover {
+  color: var(--color-negative-secondary);
+}
+.text-light-hover:hover {
+  color: var(--color-light);
+}
+.text-light-gray-hover:hover {
+  color: var(--color-light-gray);
+}
+.text-gray-hover:hover {
+  color: var(--color-gray);
+}
+.text-dark-hover:hover {
+  color: var(--color-dark);
+}
+.text-darker-hover:hover {
+  color: var(--color-darker);
+}
+
+.text-background-primary-hover:hover {
+  color: var(--color-background-primary);
+}
+.text-background-secondary-hover:hover {
+  color: var(--color-background-secondary);
+}
+.text-text-hover:hover {
+  color: var(--color-text);
+}
+.text-light-text-hover:hover {
+  color: var(--color-light-text);
+}
+.text-action-default-hover:hover {
+  color: var(--color-action-default);
+}
+.text-action-active-hover:hover {
+  color: var(--color-action-active);
 }
 
 /* Font family */

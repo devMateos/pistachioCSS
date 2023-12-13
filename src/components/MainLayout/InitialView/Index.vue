@@ -48,7 +48,9 @@ const generateUtilityClasses = computed(() => {
   return utilityClasses;
 });
 
-const completeCSS = generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtomsCSS.value + generateUtilityClasses.value;
+const completeCSS = computed(() => {
+  return generateTokensCSS.value + generateLightTokens.value + generateDarkTokens.value + generateReset.value + generateAtomsCSS.value + generateUtilityClasses.value;
+})
 
 function copy(text) {
   navigator.clipboard.writeText(text);
