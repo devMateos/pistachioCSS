@@ -95,7 +95,7 @@ function copy(text) {
         />
       </section>
       
-      <div class="form__button-container pb-L">
+      <div class="form__button-container pb-XL">
         <CopyButton class="button copy-complete-code"
           :text="'Copy all'"
           v-if="showCode"
