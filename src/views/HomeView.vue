@@ -31,7 +31,6 @@ import MainLayout from '@/components/MainLayout/Index.vue';
 }
 .l-main {
   grid-area: main;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 @media(min-width: 778px) {
