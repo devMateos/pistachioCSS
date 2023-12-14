@@ -54,6 +54,7 @@ function copy(text) {
   border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
   background-color: var(--color-light-text);
   color: var(--color-background-primary);
+  overflow-x: auto;
   padding: var(--spacing-S) var(--spacing-XL);
 }
 </style>
