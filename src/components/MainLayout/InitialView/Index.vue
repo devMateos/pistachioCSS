@@ -203,7 +203,7 @@ Example: 'border-round'`"
   display: grid;
   gap: var(--spacing-M);
   grid-auto-columns: auto;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-template-columns: 1fr;
 }
 .initial-settings__card {
   display: flex;
@@ -253,5 +253,11 @@ label.h3 {
 
 .copy-complete-code {
   background-color: var(--color-light-text);
+}
+
+@media (min-width: 768px){
+  .initial-settings__form {
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
 }
 </style>
