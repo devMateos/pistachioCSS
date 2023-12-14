@@ -151,13 +151,14 @@ h5, .h5 {
   display: flex;
   gap: var(--spacing-XS);
 }
-.nav-button__icon {
+.nav-button * {
+  color: var(--color-text);
+  fill: var(--color-text);
   stroke: var(--color-text);
 }
 .nav-button:hover * {
   color: var(--color-action-active);
-}
-.nav-button:hover .nav-button__icon {
+  fill: var(--color-action-active);
   stroke: var(--color-action-active);
 }
 

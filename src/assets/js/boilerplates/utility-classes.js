@@ -58,6 +58,63 @@ const utilityClasses = `
   background-color: var(--color-action-active);
 }
 
+/* Background hover */
+.bg-brand-hover:hover {
+  background-color: var(--color-brand);
+}
+.bg-action-primary-hover:hover {
+  background-color: var(--color-action-primary);
+}
+.bg-action-secondary-hover:hover {
+  background-color: var(--color-action-secondary);
+}
+.bg-affirmative-primary-hover:hover {
+  background-color: var(--color-affirmative-primary);
+}
+.bg-affirmative-secondary-hover:hover {
+  background-color: var(--color-affirmative-secondary);
+}
+.bg-negative-primary-hover:hover {
+  background-color: var(--color-negative-primary);
+}
+.bg-negative-secondary-hover:hover {
+  background-color: var(--color-negative-secondary);
+}
+.bg-light-hover:hover {
+  background-color: var(--color-light);
+}
+.bg-light-gray-hover:hover {
+  background-color: var(--color-light-gray);
+}
+.bg-gray-hover:hover {
+  background-color: var(--color-gray);
+}
+.bg-dark-hover:hover {
+  background-color: var(--color-dark);
+}
+.bg-darker-hover:hover {
+  background-color: var(--color-darker);
+}
+
+.bg-background-primary-hover:hover {
+  background-color: var(--color-background-primary);
+}
+.bg-background-secondary-hover:hover {
+  background-color: var(--color-background-secondary);
+}
+.bg-text-hover:hover {
+  background-color: var(--color-text);
+}
+.bg-light-text-hover:hover {
+  background-color: var(--color-light-text);
+}
+.bg-action-default-hover:hover {
+  background-color: var(--color-action-default);
+}
+.bg-action-active-hover:hover {
+  background-color: var(--color-action-active);
+}
+
 /* Text color */
 .text-brand {
   color: var(--color-brand);
@@ -629,6 +686,44 @@ const utilityClasses = `
   border-color: var(--color-dark);
 }
 .border-darker {
+  border-color: var(--color-darker);
+}
+
+/* Border color hover */
+.border-brand-hover:hover {
+  border-color: var(--color-brand);
+}
+.border-action-primary-hover:hover {
+  border-color: var(--color-action-primary);
+}
+.border-action-secondary-hover:hover {
+  border-color: var(--color-action-secondary);
+}
+.border-affirmative-primary-hover:hover {
+  border-color: var(--color-affirmative-primary);
+}
+.border-affirmative-secondary-hover:hover {
+  border-color: var(--color-affirmative-secondary);
+}
+.border-negative-primary-hover:hover {
+  border-color: var(--color-negative-primary);
+}
+.border-negative-secondary-hover:hover {
+  border-color: var(--color-negative-secondary);
+}
+.border-light-hover:hover {
+  border-color: var(--color-light);
+}
+.border-light-gray-hover:hover {
+  border-color: var(--color-light-gray);
+}
+.border-gray-hover:hover {
+  border-color: var(--color-gray);
+}
+.border-dark-hover:hover {
+  border-color: var(--color-dark);
+}
+.border-darker-hover:hover {
   border-color: var(--color-darker);
 }
 
