@@ -118,10 +118,10 @@ const props = defineProps({
                 <option value="light">Light (300)</option>
                 <option value="regular">Regular (400)</option>
                 <option value="medium">Medium (500)</option>
-                <option value="Semi Bold">Semi Bold (600)</option>
+                <option value="semi-bold">Semi Bold (600)</option>
                 <option value="bold">Bold (700)</option>
                 <option value="extra-bold">Extra Bold (800)</option>
-                <option value="Heavy">Heavy (900)</option>
+                <option value="heavy">Heavy (900)</option>
               </select>
             </div>
           </div>
