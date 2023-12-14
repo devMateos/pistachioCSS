@@ -47,6 +47,8 @@ const showMenu = (data) => {
   display: none;
   margin: auto;
   padding: var(--spacing-S);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 

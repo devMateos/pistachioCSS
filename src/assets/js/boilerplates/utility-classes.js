@@ -632,22 +632,28 @@ const utilityClasses = `
 
 /* Column-gap */
 .column-gap-XS {
-  column-gap: var(--spacing-XS);
+  -moz-column-gap: var(--spacing-XS);
+       column-gap: var(--spacing-XS);
 }
 .column-gap-S {
-  column-gap: var(--spacing-S);
+  -moz-column-gap: var(--spacing-S);
+       column-gap: var(--spacing-S);
 }
 .column-gap-M {
-  column-gap: var(--spacing-M);
+  -moz-column-gap: var(--spacing-M);
+       column-gap: var(--spacing-M);
 }
 .column-gap-L {
-  column-gap: var(--spacing-L);
+  -moz-column-gap: var(--spacing-L);
+       column-gap: var(--spacing-L);
 }
 .column-gap-XL {
-  column-gap: var(--spacing-XL);
+  -moz-column-gap: var(--spacing-XL);
+       column-gap: var(--spacing-XL);
 }
 .column-gap-XXL {
-  column-gap: var(--spacing-XXL);
+  -moz-column-gap: var(--spacing-XXL);
+       column-gap: var(--spacing-XXL);
 }
 
 

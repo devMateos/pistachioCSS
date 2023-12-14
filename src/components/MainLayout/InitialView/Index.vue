@@ -245,7 +245,7 @@ label.h3 {
 .form__button-container {
   display: flex;
   gap: var(--spacing-M);
-  justify-content: end;
+  justify-content: flex-end;
 }
 .form__button-container > .button {
   padding: var(--spacing-S) var(--spacing-M);

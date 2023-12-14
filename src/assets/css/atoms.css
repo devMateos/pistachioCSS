@@ -180,7 +180,9 @@ h5, .h5 {
 }
 /* Input color */
 .form__input-color {
-  appearance: auto;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
   cursor: pointer;
@@ -203,7 +205,9 @@ h5, .h5 {
 }
 /* Input checkbox */
 .form__input-checkbox {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: url('/src/assets/icons/checkbox-not-checked.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -222,7 +226,9 @@ h5, .h5 {
 }
 /* Input radio */
 .form__input-radio {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
   height: var(--spacing-M);

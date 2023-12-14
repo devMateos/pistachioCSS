@@ -173,6 +173,8 @@ h5, .h5 {
 }
 /* Input color */
 .form__input-color {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
   appearance: auto;
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
@@ -196,6 +198,8 @@ h5, .h5 {
 }
 /* Input checkbox */
 .form__input-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: var(--color-negative-primary);
   border: var(--border-style) var(--border-width) var(--color-negative-secondary);
@@ -210,6 +214,8 @@ h5, .h5 {
 }
 /* Input radio */
 .form__input-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);

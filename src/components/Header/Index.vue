@@ -42,6 +42,8 @@ header {
   display: none;
   flex-direction: column;
   gap: var(--spacing-XL);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   left: 0;
   padding: var(--spacing-XL);
@@ -62,7 +64,7 @@ header {
     border: none;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     left: 0;
     padding: 0;
     position: relative;
