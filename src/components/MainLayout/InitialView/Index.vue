@@ -58,7 +58,7 @@ function copy(text) {
 </script>
 
 <template>
-  <section id="settings">
+  <section id="settings" class="pb-XXL">
     <form action="">
       <section id="settings-colors">
         <ColorsSettings
@@ -95,7 +95,7 @@ function copy(text) {
         />
       </section>
       
-      <div class="form__button-container pb-XL">
+      <div class="form__button-container mb-XXL">
         <CopyButton class="button copy-complete-code"
           :text="'Copy all'"
           v-if="showCode"
