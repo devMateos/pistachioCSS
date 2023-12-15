@@ -14,6 +14,9 @@ section {
 }
 
 /* Scrollbar */
+.custom-scrollbar {
+  scroll-behavior: smooth;
+}
 .custom-scrollbar::-webkit-scrollbar {
   height: var(--spacing-S);
   width: var(--spacing-S);

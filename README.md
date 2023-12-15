@@ -20,7 +20,7 @@ PistachioCSS is a web application designed to streamline the creation of a CSS d
 
 ## Versioning
 
-We follow [SemVer](http://semver.org/) for versioning. As this project is in its early stages and the main functionality is yet to be developed, we will start with version 0.1.0.
+We follow [SemVer](http://semver.org/) for versioning. Actual version 0.2.0.
 
 ## Project Status
 
