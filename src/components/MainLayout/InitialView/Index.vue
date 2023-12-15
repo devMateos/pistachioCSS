@@ -199,11 +199,15 @@ Example: 'border-round'`"
 </template>
 
 <style>
+#settings, #settings > form {
+  width: 100%;
+}
 .initial-settings__form {
   display: grid;
   gap: var(--spacing-M);
   grid-auto-columns: auto;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  width: 100%;
 }
 .initial-settings__card {
   background-color: var(--color-background-secondary);
