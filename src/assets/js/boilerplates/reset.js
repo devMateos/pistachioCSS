@@ -2,19 +2,65 @@ export { resetTemplate }
 
 const resetTemplate = `
 /* RESET CSS */
+/* This Reset CSS is based on Eduardo Fierro's Reset CSS. For more information, watch the next video: https://www.youtube.com/watch?v=Foieq2jTajE&ab_channel=EduardoFierro */
 * {
+  border: 0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  vertical-align: baseline;
+}
+img, picture, video, iframe, figure {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
 }
 a {
+  display: block;
   text-decoration: none;
 }
-button {
-  all: unset;
-  cursor: pointer;
-} 
+p a {
+  display: inline;
+}
 li {
-  list-style: none;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: '';
+}
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-text);
+}
+form, input, textarea, select, button, label {
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+}
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: var(--color-background-primary);
+  color: var(--color-text);
+  font-family: var(--font-family-body);
+  font-size: 100%;
+  min-height: 100vh;
 }
 `;

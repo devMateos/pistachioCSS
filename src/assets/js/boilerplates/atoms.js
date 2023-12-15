@@ -3,39 +3,28 @@ export { generateAtoms }
 function generateAtoms(typographiesData){
   const typographiesConfig = typographiesData[0].config;
 const atomsTemplate = `
-/* ----- Items (Atoms) ----- */
-
-/* Interface Color */
-body {
-  background-color: var(--color-background-primary);
-}
+/* ATOMS */
 
 /* Spacing */
+main {
+  padding: 0 var(--spacing-XL);
+}
 section {
   padding: var(--spacing-M) 0;
 }
 
 /* Scrollbar */
-*::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
+  height: var(--spacing-S);
   width: var(--spacing-S);
 }
-* ::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background: var(--color-gray);
   border-radius: var(--border-radius-standard);
 }
 
-/* Links */
-a {
-  color: var(--color-action-default);
-}
-a:hover {
-  color: var(--color-action-active);
-  cursor: pointer;
-}
-
 /* Text */
 label, li, p, small, div {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[5].family});
   font-size: var(--font-size-${typographiesConfig[5].size});
   font-weight: var(--font-weight-${typographiesConfig[5].weight});
@@ -48,31 +37,26 @@ small {
 
 /* Headings */
 h1, .h1 {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[0].family});
   font-size: var(--font-size-${typographiesConfig[0].size});
   font-weight: var(--font-weight-${typographiesConfig[0].weight});
 }
 h2, .h2 {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[1].family});
   font-size: var(--font-size-${typographiesConfig[1].size});
   font-weight: var(--font-weight-${typographiesConfig[1].weight});
 }
 h3, .h3 {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[2].family});
   font-size: var(--font-size-${typographiesConfig[2].size});
   font-weight: var(--font-weight-${typographiesConfig[2].weight});
 }
 h4, .h4 {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[3].family});
   font-size: var(--font-size-${typographiesConfig[3].size});
   font-weight: var(--font-weight-${typographiesConfig[3].weight});
 }
 h5, .h5 {
-  color: var(--color-text);
   font-family: var(--font-family-${typographiesConfig[4].family});
   font-size: var(--font-size-${typographiesConfig[4].size});
   font-weight: var(--font-weight-${typographiesConfig[4].weight});
@@ -133,7 +117,6 @@ h5, .h5 {
 
 /* Nav Buttons */
 .navbar__button {
-  color: var(--color-text);
   font-family: var(--font-family-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
@@ -147,12 +130,10 @@ h5, .h5 {
 
 .nav-button {
   align-items: center;
-  color: var(--color-text);
   display: flex;
   gap: var(--spacing-XS);
 }
 .nav-button * {
-  color: var(--color-text);
   fill: var(--color-text);
   stroke: var(--color-text);
 }
@@ -165,6 +146,7 @@ h5, .h5 {
 /* FORMS */
 /* Input */
 .form__input-item {
+  background-color: var(--color-background-primary);
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
   font-family: var(--font-family-body);

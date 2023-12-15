@@ -30,7 +30,7 @@ function copy(text) {
       </p>
       <CopyButton @copy-code="copy(code)"/>
     </div>
-    <pre class="code-block__content">
+    <pre class="code-block__content custom-scrollbar">
       <code>{{ code }}</code>
     </pre>
   </div>

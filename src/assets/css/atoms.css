@@ -1,10 +1,5 @@
 /* ATOMS */
 
-/* Interface Color */
-body {
-  background-color: var(--color-background-primary);
-}
-
 /* Spacing */
 main {
   padding: 0 var(--spacing-XL);
@@ -14,26 +9,17 @@ section {
 }
 
 /* Scrollbar */
-*::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
+  height: var(--spacing-S);
   width: var(--spacing-S);
 }
-* ::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background: var(--color-gray);
   border-radius: var(--border-radius-standard);
 }
 
-/* Links */
-a {
-  color: var(--color-action-default);
-}
-a:hover {
-  color: var(--color-action-active);
-  cursor: pointer;
-}
-
 /* Text */
 label, li, p, small {
-  color: var(--color-text);
   font-family: var(--font-family-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-regular);
@@ -43,42 +29,36 @@ small {
   font-size: var(--font-size-XS);
 }
 div {
-  color: var(--color-text);
   font-family: var(--font-family-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-regular);
 }
 /* Headings */
 h1, .h1 {
-  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-XXL);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-L) 0;
 }
 h2, .h2 {
-  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-XL);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-M) 0;
 }
 h3, .h3 {
-  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-L);
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-M) 0;
 }
 h4, .h4 {
-  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-M);
   font-weight: var(--font-weight-medium);
   padding: var(--spacing-XS) 0;
 }
 h5, .h5 {
-  color: var(--color-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-medium);
@@ -140,7 +120,6 @@ h5, .h5 {
 
 /* Nav Buttons */
 .navbar__button {
-  color: var(--color-text);
   font-family: var(--font-family-body);
   font-size: var(--font-size-S);
   font-weight: var(--font-weight-bold);
@@ -154,7 +133,6 @@ h5, .h5 {
 
 .nav-button {
   align-items: center;
-  color: var(--color-text);
   display: flex;
   gap: var(--spacing-XS);
 }
@@ -171,6 +149,7 @@ h5, .h5 {
 /* FORMS */
 /* Input */
 .form__input-item {
+  background-color: var(--color-background-primary);
   border: var(--border-standard);
   border-radius: var(--border-radius-standard);
   font-family: var(--font-family-body);

@@ -8,7 +8,7 @@ import MainLayout from '@/components/MainLayout/Index.vue';
   <div class="grid-layout">
     <Header class="l-header"/>
     <SideMenu class="l-sidebar"/>
-    <MainLayout class="l-main"/>
+    <MainLayout class="l-main custom-scrollbar"/>
   </div>
 </template>
 

@@ -15,7 +15,7 @@ const props = defineProps({
 <style scoped>
 svg {
   cursor: help;
-  fill: var(--color-gray);
+  fill: var(--color-light-text);
   height: var(--spacing-M);
 }
 svg:hover {

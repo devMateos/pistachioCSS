@@ -206,6 +206,7 @@ Example: 'border-round'`"
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
 }
 .initial-settings__card {
+  background-color: var(--color-background-secondary);
   display: flex;
   flex-direction: column;
   border: var(--border-standard);

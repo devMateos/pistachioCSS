@@ -99,4 +99,9 @@ const props = defineProps({
   flex-direction: column;
   gap: var(--spacing-S);
 }
+.card__radio-options > div {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-XS);
+}
 </style>
