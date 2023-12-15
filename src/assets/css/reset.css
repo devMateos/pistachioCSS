@@ -9,10 +9,8 @@
 }
 img, picture, video, iframe, figure {
   display: block;
-  max-width: 100%;
   object-fit: cover;
   object-position: center center;
-  width: 100%;
 }
 a {
   display: block;
